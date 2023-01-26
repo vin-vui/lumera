@@ -1,0 +1,36 @@
+.a-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 0;
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: $font-regular;
+  line-height: 1.25;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 350ms $anim-easing,
+    color 350ms $anim-easing;
+  appearance: none;
+
+  &.-primary {
+    padding: 2.2rem 3.6rem;
+    border-radius: 4px;
+    background-color: clr(black);
+    color: clr(white);
+    text-align: center;
+
+    &:hover, &:focus {
+      background-color: clr(primary);
+      color: clr(white);
+    }
+  }
+
+  &.-disabled, &[disabled] {
+    opacity: .3;
+    cursor: default;
+  }
+}

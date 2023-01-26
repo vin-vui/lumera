@@ -1,0 +1,33 @@
+a {
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+b,
+em,
+strong,
+i,
+button,
+input,
+select,
+textarea {
+  font-variant-numeric: inherit;
+}

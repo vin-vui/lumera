@@ -16,7 +16,11 @@ use App\Http\Livewire\CaseStudies;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/styleguide', function () {
+    return view('styleguide');
 });
 
 Route::middleware([

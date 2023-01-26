@@ -1,0 +1,42 @@
+@each $bp_o in $bps {
+  $bp_k: nth($bp_o, 1);
+  $bp_v: nth($bp_o, 2);
+
+  @media #{$bp_k} {
+    //  Text align
+    //  ───────────────────────────────────
+    @include selector('.text-left', $bp_v) {
+      text-align: left;
+    }
+
+    @include selector('.text-center', $bp_v) {
+      text-align: center;
+    }
+
+    @include selector('.text-right', $bp_v) {
+      text-align: right;
+    }
+
+    //  Colors
+    //  ───────────────────────────────────
+    @each $color in $colors {
+      $c_name: nth($color, 1);
+      $c_hex: nth($color, 2);
+
+      @include selector('.text-#{$c_name}', $bp_v) {
+        &,
+        p,
+        a:not(.button) {
+          color: clr(#{$c_name});
+        }
+      }
+      @include selector('.bg-#{$c_name}', $bp_v) {
+        background-color: clr(#{$c_name});
+      }
+    }
+  }
+}
+
+.order-1 {
+  order: 1;
+}
