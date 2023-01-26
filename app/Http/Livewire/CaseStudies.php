@@ -16,20 +16,27 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $logo, $title, $description, $display, $type, $case_id, $selected_tags = [];
+    public $case_tags, $logo, $title, $description, $display, $type, $case_id, $selected_tags = [];
     public $confirming;
     public $isOpen = false;
+    protected $listeners = ['reRenderParent'];
 
     public function mount()
     {
+        $this->case_tags = Tag::all();
+    }
+
+    public function reRenderParent()
+    {
+        $this->mount();
     }
 
     public function render()
     {
         $cases = CaseStudy::all();
-        $tags = Tag::all();
 
-        return view('admin.cases', compact('cases', 'tags'))->layout('layouts.app');
+
+        return view('admin.cases', compact('cases'))->layout('layouts.app');
     }
 
     public function create()
