@@ -17,6 +17,7 @@ class CaseStudy extends Model
     protected $fillable = [
         'logo',
         'title',
+        'bloc',
         'description',
         'display',
         'type',

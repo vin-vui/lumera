@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('logo')->nullable();
             $table->text('description')->nullable();
+            $table->text('bloc')->nullable();
             $table->enum('type', ['tiktok', 'instagram', 'twitch'])->nullable();
             $table->boolean('display')->nullable();
             $table->timestamps();

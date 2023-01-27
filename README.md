@@ -41,6 +41,11 @@
 {{ $case->description }}
 ```
 
+### bloc tiktok/insta
+```html
+{!! $case->bloc !!}
+```
+
 ### tags
 ```html
 @foreach ($case->tags as $tag)

@@ -16,7 +16,7 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $logo, $title, $description, $display, $type, $case_id, $selected_tags = [];
+    public $case_tags, $logo, $title, $bloc, $description, $display, $type, $case_id, $selected_tags = [];
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
@@ -60,6 +60,7 @@ class CaseStudies extends Component
         $this->case_id = '';
         $this->logo = '';
         $this->title = '';
+        $this->bloc = '';
         $this->description = '';
         $this->display = false;
         $this->type = '';
@@ -73,6 +74,7 @@ class CaseStudies extends Component
         $dataValid = $this->validate([
             'logo' => 'nullable',
             'title' => 'required',
+            'bloc' => 'nullable',
             'description' => 'required',
             'display' => 'required',
             'type' => 'required',
@@ -111,6 +113,7 @@ class CaseStudies extends Component
         $this->case_id = $id;
         $this->logo = $case->logo;
         $this->title = $case->title;
+        $this->bloc = $case->bloc;
         $this->description = $case->description;
         $this->display = $case->display;
         $this->type = $case->type;

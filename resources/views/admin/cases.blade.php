@@ -143,6 +143,11 @@
                             <option @if ($this->type === 'twitch') selected="selected" @endif>twitch</option>
                         </select>
                     </div>
+                    <div class="mb-4">
+                        <x-jet-label for="bloc" value="Code intégré" />
+                        <x-jet-input id="bloc" class="block mt-1 w-full" type="text" name="bloc" wire:model="bloc" />
+                        @error('bloc') <span class="text-red-500">{{ $message }}</span>@enderror
+                    </div>
                     <div class="mb-4" x-data="{ tagManager: false }">
                         <x-jet-label value="Tags" />
                         <div class="flex flex-wrap gap-2 mt-1">
