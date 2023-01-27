@@ -1,14 +1,17 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <div class="pb-24">
+        <header class="">
+            <div class="mx-auto py-4 px-4 sm:px-6 lg:px-12">
+                <div class="flex items-center justify-between h-6 border-l">
+                    <h2 class="font-semibold text-xl text-white leading-tight ml-2">
+                        Tableau de bord
+                    </h2>
+                </div>
+            </div>
+        </header>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
+        <div class="mx-auto sm:px-6 lg:px-12">
+            <div class="bg-white overflow-hidden flex flex-col sm:flex-row flex-wrap items-center sm:my-12 my-6 p-0 gap-4">
             </div>
         </div>
     </div>

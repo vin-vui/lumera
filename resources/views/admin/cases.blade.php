@@ -1,8 +1,8 @@
 <div class="pb-24">
-    <header class="bg-white shadow-ùd sticky top-0">
+    <header class="bg-transparent">
         <div class="mx-auto py-4 px-4 sm:px-6 lg:px-12">
-            <div class="flex items-center justify-between h-6">
-                <h2 class="font-semibold text-xl text-indigo-800 leading-tight">
+            <div class="flex items-center justify-between h-6 border-l">
+                <h2 class="font-semibold text-xl text-white leading-tight ml-2">
                     Études de cas
                 </h2>
                 <div class="">
@@ -15,21 +15,21 @@
     </header>
 
     <div class="mx-auto sm:px-6 lg:px-12">
-        <div class="bg-white overflow-hidden flex flex-col sm:flex-row flex-wrap items-center sm:my-12 my-6 p-0 gap-4">
-            <table class="w-full divide-y divide-gray-300">
-                <thead class="bg-gray-900">
+        <div class="overflow-hidden flex flex-col sm:flex-row flex-wrap items-center sm:my-12 my-6 p-0 gap-4">
+            <table class="w-full">
+                <thead class="bg-transparent">
                     <tr>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Logo</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Type</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Titre</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Description</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Tags</th>
-                        <th scope="col" class="px-4 py-3.5 whitespace-nowrap text-center text-md font-semibold text-gray-50">Publié ?</th>
+                        <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Publié</th>
                     </tr>
                 </thead>
-                <tbody class=" bg-white">
+                <tbody class="shadow-md bg-white">
                     @foreach ($cases as $case)
-                    <tr wire:click="edit({{ $case->id }})" class="cursor-pointer hover:bg-yellow-50 transition-all">
+                    <tr wire:click="edit({{ $case->id }})" class="cursor-pointer hover:bg-rose-100 transition-all">
                         <td class="p-4 whitespace-nowrap">
                             <img class="h-10 object-cover mx-auto" src="{{ Storage::disk('uploads')->url($case->logo) }}" alt="">
                         </td>
@@ -51,17 +51,21 @@
                         <td class="px-4 py-4 text-sm font-medium text-gray-900">
                             <div class="flex gap-2">
                                 @foreach ($case->tags as $tag)
-                                <span class="text-md items-center font-semibold px-2.5 py-0.5 whitespace-nowrap rounded-full bg-blue-900 text-gray-50">
+                                <span class="text-md items-center font-semibold px-2.5 py-0.5 whitespace-nowrap rounded-full bg-orange-400 text-white">
                                     {{ $tag->label }}
                                 </span>
                                 @endforeach
                             </div>
                         </td>
-                        <td class="px-4 whitespace-nowrap text-center py-4 text-sm font-medium text-gray-900">
+                        <td class="p-4 whitespace-nowrap">
                             @if($case->display)
-                            <span class="bg-green-600 text-white py-1 px-2 font-mono">oui</span>
+                            <svg class="text-green-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/>
+                            </svg>
                             @else
-                            <span class="bg-red-600 text-white py-1 px-2 font-mono">non</span>
+                            <svg class="text-red-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7.7 16.3q.275.275.7.275q.425 0 .7-.275l2.9-2.9l2.925 2.925q.275.275.688.262q.412-.012.687-.287q.275-.275.275-.7q0-.425-.275-.7L13.4 12l2.925-2.925q.275-.275.262-.688q-.012-.412-.287-.687q-.275-.275-.7-.275q-.425 0-.7.275L12 10.6L9.075 7.675Q8.8 7.4 8.388 7.412q-.413.013-.688.288q-.275.275-.275.7q0 .425.275.7l2.9 2.9l-2.925 2.925q-.275.275-.262.687q.012.413.287.688ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/>
+                            </svg>
                             @endif
                         </td>
                     </tr>
@@ -83,8 +87,8 @@
 
             <div class="inline-block w-full overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
-                <div class="px-4 py-5 bg-yellow-400 sm:px-6">
-                    <h3 class="text-lg font-extrabold leading-6 text-gray-900">
+                <div class="px-4 py-5 bg-gradient-to-r from-indigo-300 via-rose-200 to-orange-300 sm:px-6">
+                    <h3 class="text-lg font-extrabold leading-6 text-white">
                         @if ($this->case_id == '')
                         Ajouter une étude de cas
                         @else
@@ -174,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between px-4 py-4 sm:py-4 sm:px-6 bg-gray-900">
+                <div class="flex items-center justify-between px-4 py-4 sm:py-4 sm:px-6 bg-gray-50">
                     <div class="">
                         @if($this->case_id != '')
                         @if($confirming === $this->case_id)
@@ -182,14 +186,14 @@
                             Etes-vous sûr ?
                         </button>
                         @else
-                        <button wire:click="confirmDelete({{ $this->case_id }})" class="px-4 py-2 text-sm font-medium border border-red-600 text-red-600">
+                        <button wire:click="confirmDelete({{ $this->case_id }})" class="px-4 py-2 text-sm font-medium border bg-white border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all">
                             Supprimer
                         </button>
                         @endif
                         @endif
                     </div>
                     <div class="flex gap-2">
-                        <button wire:click="closeModal" type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-1 transition-all">
+                        <button wire:click="closeModal" type="button" class="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-200 bg-white hover:bg-gray-100 focus:outline-none focus:ring-1 transition-all">
                             Annuler
                         </button>
                         <button wire:click.prevent="store" type="button" class="inline-flex justify-center px-8 py-2 font-extrabold text-white bg-green-600 border border-transparent shadow-sm transition-all hover:bg-green-700 focus:outline-none focus:ring-1">
