@@ -1,0 +1,109 @@
+html {
+  color: clr(black);
+  font-weight: normal;
+  font-size: 62.5%;
+  font-family: $font-regular;
+  font-variant-numeric: lining-nums;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+
+  &.is-loading,
+  &.is-loading * {
+    cursor: progress;
+    pointer-events: none;
+  }
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricprecision;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: clr(white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+hr {
+  width: 100%;
+  margin: 2rem auto;
+  border: 0;
+  border-bottom: 1px solid clr(primary);
+}
+
+main {
+  padding-top: 8rem;
+  @media #{$md} {
+    padding-top: 15rem;
+  }
+}
+
+.c-scrollbar {
+  z-index: 2;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+[data-scroll-container] {
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    margin-top: auto;
+  }
+}
+
+::selection  {
+  background: rgba(clr(primary), .8);
+  color: clr(black);
+}
+
+::selection  {
+  background: rgba(clr(primary), .8);
+  color: clr(black);
+}
+
+input,
+textarea,
+button,
+select,
+label,
+a  {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
+}
+
+.sr-only  {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+}
+
+// See Alpine.js: https://alpinejs.dev/directives/cloak
+[x-cloak] { display: none !important; }
