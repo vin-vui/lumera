@@ -61,7 +61,7 @@ class CaseStudies extends Component
         $this->logo = '';
         $this->title = '';
         $this->description = '';
-        $this->display = '';
+        $this->display = false;
         $this->type = '';
         $this->selected_tags = [];
     }
@@ -122,6 +122,11 @@ class CaseStudies extends Component
     public function confirmDelete($id)
     {
         $this->confirming = $id;
+    }
+
+    public function changeDisplay()
+    {
+        $this->display = !$this->display;
     }
 
     public function delete($id)

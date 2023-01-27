@@ -27,7 +27,7 @@
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <span class="inline-flex rounded-md">
-                                <button type="button" class="inline-flex items-center px-3 py-2 border border-white text-sm leading-4 font-medium text-white bg-transparent hover:text-gray-900 hover:bg-white focus:outline-none focus:bg-white active:bg-white focus:text-gray-900 active:text-gray-900 transition">
+                                <button type="button" class="inline-flex items-center px-3 py-2 border border-white text-sm leading-4 font-medium text-white bg-transparent hover:text-gray-900 hover:bg-white focus:outline-none focus:bg-white active:bg-white focus:text-gray-900 active:text-gray-900 transition-all">
                                     Compte
 
                                     <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

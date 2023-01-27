@@ -6725,16 +6725,16 @@
         },
         {
             "name": "laravel-lang/attributes",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/attributes.git",
-                "reference": "3a8f56e3995f5892a0b9dedf9ba3b2386a8b43f9"
+                "reference": "fd50ffcee9a472df1bf6567f4670de69d6adbc92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/3a8f56e3995f5892a0b9dedf9ba3b2386a8b43f9",
-                "reference": "3a8f56e3995f5892a0b9dedf9ba3b2386a8b43f9",
+                "url": "https://api.github.com/repos/Laravel-Lang/attributes/zipball/fd50ffcee9a472df1bf6567f4670de69d6adbc92",
+                "reference": "fd50ffcee9a472df1bf6567f4670de69d6adbc92",
                 "shasum": ""
             },
             "require": {
@@ -6792,7 +6792,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Lang/attributes/issues",
-                "source": "https://github.com/Laravel-Lang/attributes/tree/v2.1.0"
+                "source": "https://github.com/Laravel-Lang/attributes/tree/v2.1.1"
             },
             "funding": [
                 {
@@ -6800,20 +6800,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-01-22T15:37:33+00:00"
+            "time": "2023-01-26T07:41:39+00:00"
         },
         {
             "name": "laravel-lang/lang",
-            "version": "12.14.0",
+            "version": "12.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "fd9859e39bf499b764ab54641d26b8c4dffdb10e"
+                "reference": "13c8c691f563d2b95980035aecfe1ef499a38060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/fd9859e39bf499b764ab54641d26b8c4dffdb10e",
-                "reference": "fd9859e39bf499b764ab54641d26b8c4dffdb10e",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/13c8c691f563d2b95980035aecfe1ef499a38060",
+                "reference": "13c8c691f563d2b95980035aecfe1ef499a38060",
                 "shasum": ""
             },
             "require": {
@@ -6875,7 +6875,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-01-25T08:35:13+00:00"
+            "time": "2023-01-26T07:40:41+00:00"
         },
         {
             "name": "laravel-lang/publisher",
@@ -7443,16 +7443,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.23",
+            "version": "9.2.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "9f1f0f9a2fbb680b26d1cf9b61b6eac43a6e4e9c"
+                "reference": "2cf940ebc6355a9d430462811b5aaa308b174bed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/9f1f0f9a2fbb680b26d1cf9b61b6eac43a6e4e9c",
-                "reference": "9f1f0f9a2fbb680b26d1cf9b61b6eac43a6e4e9c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2cf940ebc6355a9d430462811b5aaa308b174bed",
+                "reference": "2cf940ebc6355a9d430462811b5aaa308b174bed",
                 "shasum": ""
             },
             "require": {
@@ -7508,7 +7508,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.23"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.24"
             },
             "funding": [
                 {
@@ -7516,7 +7516,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-28T12:41:10+00:00"
+            "time": "2023-01-26T08:26:55+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
