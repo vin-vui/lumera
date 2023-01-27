@@ -20,18 +20,11 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
-        <livewire:toasts />
-
         <div class="min-h-screen bg-gradient-to-br from-indigo-400 via-rose-300 to-orange-400">
-            @livewire('navigation-menu')
             <main>
                 {{ $slot }}
             </main>
         </div>
-
-        @stack('modals')
-
         @livewireScripts
     </body>
 </html>
