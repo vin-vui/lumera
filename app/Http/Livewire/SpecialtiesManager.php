@@ -2,22 +2,22 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Tag;
+use App\Models\Specialty;
 
 use Livewire\Component;
 use Usernotnull\Toast\Concerns\WireToast;
 use Carbon\Carbon;
 
-class TagsManager extends Component
+class SpecialtiesManager extends Component
 {
     use WireToast;
 
-    public $tags, $label, $tag_id, $selected_tag;
+    public $specialties, $label, $specialty_id, $selected_specialty;
     public $isOpen = 0;
 
     public function mount()
     {
-        $this->tags = Tag::all();
+        $this->specialties = Specialty::all();
     }
 
     public function openModal()
@@ -33,7 +33,7 @@ class TagsManager extends Component
     private function resetInputFields()
     {
         $this->label = '';
-        $this->selected_tag = '';
+        $this->selected_specialty = '';
     }
 
     function new()
@@ -48,16 +48,16 @@ class TagsManager extends Component
             'label' => 'required',
         ]);
 
-        Tag::updateOrCreate(['id' => $this->selected_tag], $dataValid);
+        Specialty::updateOrCreate(['id' => $this->selected_specialty], $dataValid);
 
         $this->closeModal();
         $this->resetInputFields();
         $this->mount();
 
-        if ($this->selected_tag == null) {
-            toast()->success("Nouveau tag ajouté avec succès.")->push();
+        if ($this->selected_specialty == null) {
+            toast()->success("Nouveau domaine ajouté")->push();
         } else {
-            toast()->success("Tag modifié avec succès.")->push();
+            toast()->success("Domaine modifié")->push();
         }
 
         $this->emit('reRenderParent');
@@ -65,15 +65,15 @@ class TagsManager extends Component
 
     public function edit()
     {
-        $this->label = Tag::find($this->selected_tag)->label;
+        $this->label = Specialty::find($this->selected_specialty)->label;
         $this->openModal();
     }
 
     public function delete()
     {
-        Tag::find($this->selected_tag)->delete();
+        Specialty::find($this->selected_specialty)->delete();
 
-        toast()->success("Tag supprimé avec succès.")->push();
+        toast()->success("Domaine supprimé")->push();
 
         $this->closeModal();
         $this->resetInputFields();

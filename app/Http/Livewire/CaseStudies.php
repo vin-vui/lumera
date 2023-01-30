@@ -36,7 +36,7 @@ class CaseStudies extends Component
         $cases = CaseStudy::all();
 
 
-        return view('admin.cases', compact('cases'))->layout('layouts.app');
+        return view('admin.cases.index', compact('cases'))->layout('layouts.app');
     }
 
     public function create()

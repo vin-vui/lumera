@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         {{-- <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
-        <link rel="shortcut icon" href="{{ asset('lumera_logo_white.png') }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('Symbol_Color@2x.png') }}" type="image/x-icon">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -20,11 +20,11 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-jet-banner />
+
         <livewire:toasts />
 
         <div class="min-h-screen bg-gradient-to-br from-indigo-400 via-rose-300 to-orange-400">
-            @livewire('navigation-menu')
+            @include('admin.navigation-menu')
             <main>
                 {{ $slot }}
             </main>

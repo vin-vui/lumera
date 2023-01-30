@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\CaseStudies;
+use App\Http\Livewire\Creators;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('dashboard', function () { return view('dashboard'); })->name('dashboard');
+    Route::get('dashboard', function () { return view('admin.dashboard'); })->name('dashboard');
     Route::get('cases', CaseStudies::class)->name('cases');
+    Route::get('creators', Creators::class)->name('creators');
 });

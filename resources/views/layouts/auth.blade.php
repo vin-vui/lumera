@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         {{-- <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> --}}
-        <link rel="shortcut icon" href="{{ asset('lumera_logo_white.png') }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('Symbol_Color@2x.png') }}" type="image/x-icon">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
