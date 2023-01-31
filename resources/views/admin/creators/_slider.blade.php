@@ -21,33 +21,42 @@
                         </div>
 
                         <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
-                            <div class="mb-4">
-                                <label class="block">
-                                    <x-jet-label for="image" value="Image" />
-                                    <input wire:model="image" type="file" class="block w-full cursor-pointer text-sm mt-2 border-indigo-50 focus:border-indigo-200 focus:ring-indigo-200 focus:outline-none text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
-                                </label>
+                            <div class="">
+                                <x-jet-label value="Visuel" />
+                                @if($this->image != null)
+                                    @if (!is_string($this->image))
+                                    <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @else
+                                    <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @endif
+                                @endif
+                            </div>
+                            <div x-data="{photoName: null, photoPreview: null}">
+                                <input type="file" class="hidden" wire:model="image" x-ref="photo" />
+                                <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                                    <span class="py-1">sélectionner une nouvelle image</span>
+                                    <div wire:loading wire:target="image" wire:key="image">
+                                        <svg class="ml-3 text-green-600 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+                                                <path stroke-dasharray="2 4" stroke-dashoffset="6" d="M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3">
+                                                    <animate attributeName="stroke-dashoffset" dur="0.6s" repeatCount="indefinite" values="6;0" />
+                                                </path>
+                                                <path stroke-dasharray="30" stroke-dashoffset="30" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.1s" dur="0.3s" values="30;0" />
+                                                </path>
+                                                <path stroke-dasharray="10" stroke-dashoffset="10" d="M12 16v-7.5">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="10;0" />
+                                                </path>
+                                                <path stroke-dasharray="6" stroke-dashoffset="6" d="M12 8.5l3.5 3.5M12 8.5l-3.5 3.5">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" values="6;0" />
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </x-jet-secondary-button>
                                 @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div wire:loading wire:target="image" wire:key="image">Téléversement</div>
-                            <div class="flex mb-4 gap-4">
-                                @if ($this->creator_id != '')
-                                <div class="">
-                                    <x-jet-label value="Image actuelle" />
-                                    <img wire:ignore src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 w-64 object-cover">
-                                </div>
-                                @endif
-                                @if (!is_string($this->image))
-                                <div class="">
-                                    @if ($this->creator_id != '')
-                                    <x-jet-label value="Remplacée par" />
-                                    @else
-                                    <x-jet-label value="Apreçu" />
-                                    @endif
-                                    <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 w-64 object-cover">
-                                </div>
-                                @endif
-                            </div>
-                            <div class="mb-4">
+                            <div class="my-4">
                                 <x-jet-label for="first_name" value="Prénom" />
                                 <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" wire:model="first_name" />
                                 @error('first_name') <span class="text-red-500">{{ $message }}</span>@enderror

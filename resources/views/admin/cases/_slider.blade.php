@@ -21,33 +21,42 @@
                         </div>
 
                         <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
-                            <div class="mb-4">
-                                <label class="block">
-                                    <x-jet-label for="logo" value="Image" />
-                                    <input wire:model="logo" type="file" class="block w-full cursor-pointer text-sm mt-2 border-indigo-50 focus:border-indigo-200 focus:ring-indigo-200 focus:outline-none text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
-                                </label>
-                                @error('logo') <span class="text-red-500">{{ $message }}</span>@enderror
-                            </div>
-                            <div wire:loading wire:target="logo" wire:key="logo">Téléversement</div>
-                            <div class="flex mb-4 gap-4">
-                                @if ($this->case_id != '')
-                                <div class="">
-                                    <x-jet-label value="Image actuelle" />
-                                    <img wire:ignore src="{{ Storage::disk('uploads')->url($this->logo) }}" alt="" class="mt-2 h-24">
-                                </div>
+                            <div class="">
+                                <x-jet-label value="Visuel" />
+                                @if($this->image != null)
+                                @if (!is_string($this->image))
+                                <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                @else
+                                <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
                                 @endif
-                                @if (!is_string($this->logo))
-                                <div class="">
-                                    @if ($this->case_id != '')
-                                    <x-jet-label value="Remplacée par" />
-                                    @else
-                                    <x-jet-label value="Apreçu" />
-                                    @endif
-                                    <img src="{{ $this->logo->temporaryUrl() }}" alt="" class="mt-2 h-24">
-                                </div>
                                 @endif
                             </div>
-                            <div class="mb-4">
+                            <div x-data="{photoName: null, photoPreview: null}">
+                                <input type="file" class="hidden" wire:model="image" x-ref="photo" />
+                                <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                                    <span class="py-1">sélectionner une nouvelle image</span>
+                                    <div wire:loading wire:target="image" wire:key="image">
+                                        <svg class="ml-3 text-green-600 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+                                                <path stroke-dasharray="2 4" stroke-dashoffset="6" d="M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3">
+                                                    <animate attributeName="stroke-dashoffset" dur="0.6s" repeatCount="indefinite" values="6;0" />
+                                                </path>
+                                                <path stroke-dasharray="30" stroke-dashoffset="30" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.1s" dur="0.3s" values="30;0" />
+                                                </path>
+                                                <path stroke-dasharray="10" stroke-dashoffset="10" d="M12 16v-7.5">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="10;0" />
+                                                </path>
+                                                <path stroke-dasharray="6" stroke-dashoffset="6" d="M12 8.5l3.5 3.5M12 8.5l-3.5 3.5">
+                                                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" values="6;0" />
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </x-jet-secondary-button>
+                                @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="my-4">
                                 <x-jet-label for="title" value="Titre" />
                                 <x-jet-input id="title" class="block mt-1 w-full" type="text" name="title" wire:model="title" />
                                 @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
@@ -58,18 +67,25 @@
                                 @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
                             <div class="mb-4">
-                                <x-jet-label for="type" value="Type" />
-                                <select name="type" wire:ignore wire:model.lazy="type" class="block w-full mt-1 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm">
-                                    <option @if (!$this->type) selected="selected" @endif> - </option>
-                                    <option @if ($this->type === 'tiktok') selected="selected" @endif>tiktok</option>
-                                    <option @if ($this->type === 'instagram') selected="selected" @endif>instagram</option>
-                                    <option @if ($this->type === 'twitch') selected="selected" @endif>twitch</option>
-                                </select>
-                            </div>
-                            <div class="mb-4">
-                                <x-jet-label for="bloc" value="Code intégré" />
-                                <x-jet-input id="bloc" class="block mt-1 w-full" type="text" name="bloc" wire:model="bloc" />
-                                @error('bloc') <span class="text-red-500">{{ $message }}</span>@enderror
+                                <x-jet-label for="selected_creators" value="Créateurs" />
+                                <div class="relative">
+                                    <x-jet-input class="block mt-1 w-full placeholder:italic" type="text" wire:model="search" placeholder="Rechercher un créateur..." />
+                                    <div class="bg-white border border-t-0 border-gray-300 h-52 overflow-y-auto">
+                                        <ul class="">
+                                            @foreach($case_creators as $creator)
+                                            <li class="px-3 py-2 hover:bg-gray-50">
+                                                <input type="checkbox" wire:model="selected_creators" value="{{ $creator->id }}" class="form-checkbox" id="creator-{{ $loop->index }}" />
+                                                <label for="option-{{ $loop->index }}" class="pl-2">
+                                                    <span>@</span>{{ $creator->nick_name }}
+                                                    @if($creator->first_name != null)
+                                                        <span class="text-sm text-gray-400">{{ $creator->first_name }} {{ $creator->last_name }}</span>
+                                                    @endif
+                                                </label>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="mb-4" x-data="{ tagManager: false }">
                                 <x-jet-label value="Tags" />

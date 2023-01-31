@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\CaseStudy;
 use App\Models\Tag;
+use App\Models\Creator;
 
 use Livewire\Component;
 use Usernotnull\Toast\Concerns\WireToast;
@@ -16,10 +17,14 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $logo, $title, $bloc, $description, $display, $type, $case_id, $selected_tags = [];
+    public $case_tags, $title, $image, $client, $year, $case_title, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [];
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
+    public $search;
+    protected $queryString = [
+        'search' => ['except' => ''],
+    ];
 
     public function mount()
     {
@@ -34,9 +39,8 @@ class CaseStudies extends Component
     public function render()
     {
         $cases = CaseStudy::all();
-
-
-        return view('admin.cases.index', compact('cases'))->layout('layouts.app');
+        $case_creators = Creator::where('nick_name', 'like', '%'.$this->search.'%')->orWhere('last_name', 'like', '%'.$this->search.'%')->orWhere('first_name', 'like', '%'.$this->search.'%')->orderBy('nick_name')->get();
+        return view('admin.cases.index', compact('cases', 'case_creators'))->layout('layouts.app');
     }
 
     public function create()
@@ -52,45 +56,52 @@ class CaseStudies extends Component
 
     public function closeModal()
     {
+        $this->resetInputFields();
         $this->isOpen = false;
     }
 
     private function resetInputFields()
     {
+        $this->search = '';
         $this->case_id = '';
-        $this->logo = '';
         $this->title = '';
-        $this->bloc = '';
+        $this->image = '';
+        $this->client = '';
+        $this->year = '';
+        $this->case_title = '';
         $this->description = '';
+        $this->bloc_wysiwyg = '';
         $this->display = false;
-        $this->type = '';
         $this->selected_tags = [];
+        $this->selected_creators = [];
     }
 
     public function store()
     {
-        $save_logo = false;
+        $save_image = false;
 
         $dataValid = $this->validate([
-            'logo' => 'nullable',
             'title' => 'required',
-            'bloc' => 'nullable',
+            'image' => 'nullable',
+            'client' => 'nullable',
+            'year' => 'nullable',
+            'case_title' => 'nullable',
             'description' => 'required',
+            'bloc_wysiwyg' => 'nullable',
             'display' => 'required',
-            'type' => 'required',
         ]);
 
         if ($this->case_id != '') {
             $case = CaseStudy::find($this->case_id);
-            if ($this->logo != $case->logo) {
-                $save_logo = true;
+            if ($this->image != $case->image) {
+                $save_image = true;
             }
         } else {
-            $save_logo = true;
+            $save_image = true;
         }
 
-        if ($save_logo) {
-            $dataValid['logo'] = Storage::disk('uploads')->put('/', $this->logo);
+        if ($save_image) {
+            $dataValid['image'] = Storage::disk('uploads')->put('/', $this->image);
         }
 
         if ($this->case_id == '') {
@@ -101,6 +112,7 @@ class CaseStudies extends Component
 
         $caseStudy = CaseStudy::updateOrCreate(['id' => $this->case_id], $dataValid);
         $caseStudy->tags()->sync($this->selected_tags);
+        $caseStudy->creators()->sync($this->selected_creators);
 
         $this->resetInputFields();
         $this->closeModal();
@@ -111,13 +123,16 @@ class CaseStudies extends Component
         $case = CaseStudy::findOrFail($id);
 
         $this->case_id = $id;
-        $this->logo = $case->logo;
         $this->title = $case->title;
-        $this->bloc = $case->bloc;
+        $this->image = $case->image;
+        $this->client = $case->client;
+        $this->year = $case->year;
+        $this->case_title = $case->case_title;
         $this->description = $case->description;
+        $this->bloc_wysiwyg = $case->bloc_wysiwyg;
         $this->display = $case->display;
-        $this->type = $case->type;
         $this->selected_tags = $case->tags->pluck('id')->toArray();
+        $this->selected_creators = $case->creators->pluck('id')->toArray();
 
         $this->openModal();
     }

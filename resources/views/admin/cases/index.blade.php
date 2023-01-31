@@ -19,7 +19,6 @@
                 <thead class="bg-transparent">
                     <tr>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Logo</th>
-                        <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Type</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Titre</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Description</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Tags</th>
@@ -30,20 +29,7 @@
                     @foreach ($cases as $case)
                     <tr wire:click="edit({{ $case->id }})" class="cursor-pointer hover:bg-gray-50 transition-all">
                         <td class="p-4 whitespace-nowrap">
-                            <img class="h-10 object-cover mx-auto" src="{{ Storage::disk('uploads')->url($case->logo) }}" alt="">
-                        </td>
-                        <td class="px-4 whitespace-nowrap text-center py-4 text-sm font-medium text-gray-900">
-                            @switch($case->type)
-                            @case('tiktok')
-                            <span class="bg-gray-900 text-white py-1 px-2 font-extrabold">TikTok</span>
-                            @break
-                            @case('instagram')
-                            <span class="text-white bg-gradient-to-tr from-amber-500 to-pink-500 py-1 px-2 font-extrabold">Réel</span>
-                            @break
-                            @case('twitch')
-                            <span class="bg-indigo-600 text-white py-1 px-2 font-extrabold">Twitch</span>
-                            @break
-                            @endswitch
+                            <img class="h-10 w-10 object-cover mx-auto" src="{{ Storage::disk('uploads')->url($case->image) }}" alt="">
                         </td>
                         <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $case->title }}</td>
                         <td class="px-4 py-4 text-sm font-medium text-gray-900">{{ $case->description }}</td>

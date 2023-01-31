@@ -15,16 +15,23 @@ class CaseStudy extends Model
      * @var array
      */
     protected $fillable = [
-        'logo',
         'title',
-        'bloc',
+        'image',
+        'client',
+        'year',
+        'case_title',
         'description',
+        'bloc_wysiwyg',
         'display',
-        'type',
     ];
 
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function creators()
+    {
+        return $this->belongsToMany(Creator::class);
     }
 }
