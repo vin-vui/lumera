@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\CaseStudies;
 use App\Http\Livewire\Creators;
+use App\Http\Livewire\Marks;
+use App\Http\Livewire\Testimonials;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +34,6 @@ Route::middleware([
     Route::get('dashboard', function () { return view('admin.dashboard'); })->name('dashboard');
     Route::get('cases', CaseStudies::class)->name('cases');
     Route::get('creators', Creators::class)->name('creators');
+    Route::get('marks', Marks::class)->name('marks');
+    Route::get('testimonials', Testimonials::class)->name('testimonials');
 });

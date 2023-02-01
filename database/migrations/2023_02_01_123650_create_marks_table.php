@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('case_studies', function (Blueprint $table) {
+        Schema::create('marks', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
             $table->string('image')->nullable();
-            $table->string('client')->nullable();
-            $table->string('year')->nullable();
-            $table->text('description')->nullable();
-            $table->text('bloc_wysiwyg')->nullable();
-            $table->boolean('display')->nullable();
+            $table->string('label')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('case_studies');
+        Schema::dropIfExists('marks');
     }
 };

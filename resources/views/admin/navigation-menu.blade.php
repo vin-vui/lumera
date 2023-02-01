@@ -13,13 +13,19 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        Dashboard
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('creators') }}" :active="request()->routeIs('creators')">
-                        {{ __('Créateurs') }}
+                        Créateurs
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('cases') }}" :active="request()->routeIs('cases')">
-                        {{ __('Études de cas') }}
+                        Études de cas
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('marks') }}" :active="request()->routeIs('marks')">
+                        Marques partenaires
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('testimonials') }}" :active="request()->routeIs('testimonials')">
+                        Témoignages
                     </x-jet-nav-link>
                 </div>
             </div>
