@@ -20,7 +20,7 @@
                             </h3>
                         </div>
 
-                        <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
+                        <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4 min-h-screen">
                             <div class="">
                                 <x-jet-label value="Visuel" />
                                 @if($this->image != null)
