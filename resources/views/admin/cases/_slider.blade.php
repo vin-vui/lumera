@@ -68,22 +68,34 @@
                             </div>
                             <div class="mb-4">
                                 <x-jet-label for="selected_creators" value="Créateurs" />
-                                <div class="relative">
-                                    <x-jet-input class="block mt-1 w-full placeholder:italic" type="text" wire:model="search" placeholder="Rechercher un créateur..." />
-                                    <div class="bg-white border border-t-0 border-gray-300 h-52 overflow-y-auto">
-                                        <ul class="">
-                                            @foreach($case_creators as $creator)
-                                            <li class="px-3 py-2 hover:bg-gray-50">
-                                                <input type="checkbox" wire:model="selected_creators" value="{{ $creator->id }}" class="form-checkbox" id="creator-{{ $loop->index }}" />
-                                                <label for="option-{{ $loop->index }}" class="pl-2">
-                                                    <span>@</span>{{ $creator->nick_name }}
-                                                    @if($creator->first_name != null)
+                                <div class="flex gap-4">
+                                    <div class="basis-1/2">
+                                        <x-jet-input class="block mt-1 w-full placeholder:italic" type="search" wire:model="search" placeholder="Rechercher un créateur..." />
+                                        <div class="bg-white border border-t-0 border-gray-300 h-52 overflow-y-auto">
+                                            <ul class="">
+                                                @foreach($case_creators as $creator)
+                                                <li class="px-3 py-2 hover:bg-gray-50">
+                                                    <input type="checkbox" wire:model="selected_creators" wire:click="addCreator({{ $creator->id }})" value="{{ $creator->id }}" class="" id="creator-{{ $loop->index }}" />
+                                                    <label for="option-{{ $loop->index }}" class="pl-2">
+                                                        <span>@</span>{{ $creator->nick_name }}
+                                                        @if($creator->first_name != null)
                                                         <span class="text-sm text-gray-400">{{ $creator->first_name }} {{ $creator->last_name }}</span>
-                                                    @endif
-                                                </label>
-                                            </li>
+                                                        @endif
+                                                    </label>
+                                                </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="basis-1/2">
+                                        <x-jet-label class="mt-8" value="Associés" />
+                                        <div class="flex flex-col gap-2 mt-2">
+                                            @foreach ($this->associated_creators as $associated_creator)
+                                            <div class="">
+                                                <span>@</span>{{ $associated_creator }}
+                                            </div>
                                             @endforeach
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
                 'last_name' => $this->faker->lastName(),
                 'nick_name' => $this->faker->word() .'_'. $this->faker->word(),
                 'location' => $this->faker->city(),
-                'image' => $this->faker->imageUrl(1900, 1200, 'animals', true, 'cats'),
+                'image' => 'placeholder.jpg',
                 'description' => $this->faker->paragraph(),
                 'sn_tiktok' => $this->faker->url(),
                 'sn_snapchat' => $this->faker->url(),
@@ -84,7 +84,7 @@ class DatabaseSeeder extends Seeder
         for ($i = 1; $i <= 13; $i++) {
             DB::table('case_studies')->insert([
                 'title' => $this->faker->catchPhrase(),
-                'image' => $this->faker->imageUrl(1900, 1200, 'animals', true, 'cats'),
+                'image' => 'placeholder.jpg',
                 'client' => $this->faker->company(),
                 'year' => $this->faker->year(),
                 'description' => $this->faker->paragraph(14),
@@ -96,6 +96,21 @@ class DatabaseSeeder extends Seeder
         foreach (CaseStudy::all() as $caseStudy) {
             $caseStudy->tags()->sync([$this->faker->numberBetween(1, 26), $this->faker->numberBetween(1, 26), $this->faker->numberBetween(1, 26), $this->faker->numberBetween(1, 26)]);
             $caseStudy->creators()->sync([$this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100)]);
+        }
+
+        for ($i = 1; $i <= 16; $i++) {
+            DB::table('testimonials')->insert([
+                'label' => $this->faker->company(),
+                'text' => $this->faker->paragraph($this->faker->numberBetween(1, 3)),
+                'type' => $this->faker->randomElement(['creator', 'business']),
+            ]);
+        }
+
+        for ($i = 1; $i <= 11; $i++) {
+            DB::table('marks')->insert([
+                'label' => $this->faker->company(),
+                'image' => 'placeholder.jpg',
+            ]);
         }
 
     }

@@ -13,8 +13,8 @@
             </div>
         </div>
     </header>
-    <div class="mx-auto sm:px-6 lg:px-12">
-        <div class="overflow-hidden flex flex-col sm:flex-row flex-wrap items-center sm:my-12 my-6 p-0 gap-4">
+    <div class="mx-auto sm:px-6 lg:px-12 mt-4">
+        <div class="overflow-hidden flex flex-col sm:flex-row flex-wrap items-center gap-4">
             <table class="w-full">
                 <thead class="bg-transparent">
                     <tr>

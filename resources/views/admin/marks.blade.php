@@ -1,31 +1,30 @@
-<div class="pb-24">
-    <header class="bg-white shadow sticky top-16 -mt-1">
-        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-6">
-                <h2 class="font-semibold text-xl text-purple-800 leading-tight">
+<div class="pb-24" x-data="{ open: false }">
+    <header class="bg-transparent">
+        <div class="mx-auto py-4 px-4 sm:px-6 lg:px-12">
+            <div class="flex items-center justify-between h-6 border-l-2 border-white">
+                <h2 class="font-semibold text-xl text-white leading-tight ml-4">
                     Marques partenaires
                 </h2>
                 <div class="">
-                    <button wire:click="create" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    <button wire:click="create" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-4 font-medium shadow-lg text-white bg-indigo-500 hover:bg-indigo-600 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Ajouter une marque
                     </button>
                 </div>
             </div>
         </div>
     </header>
-
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-md sm:rounded-3xl grid grid-cols-4 sm:my-12 my-6 py-8 px-6 gap-4">
+    <div class="mx-auto sm:px-6 lg:px-12 mt-4">
+        <div class="overflow-hidden grid grid-cols-4 gap-4">
             @foreach ($marks as $mark)
             <div class="">
-                <div wire:click="edit({{ $mark->id }})" class="w-full rounded-3xl mx-auto hover:bg-yellow-100 cursor-pointer transition-all p-8">
-                    <img src="{{ Storage::disk('uploads')->image($mark->image) }}" class="mx-auto" alt="">
+                <div wire:click="edit({{ $mark->id }})" class="w-full mx-auto hover:bg-white hover:shadow-md cursor-pointer transition-all p-8">
+                    <img src="{{ Storage::disk('uploads')->url($mark->image) }}" class="mx-auto" alt="">
+                    @if($mark->label)
+                    <div class="mt-2">
+                        <span class="bg-white text-gary-900 py-1 px-3">{{ $mark->label }}</span>
+                    </div>
+                    @endif
                 </div>
-                @if($mark->label)
-                <div class="mt-2 text-center">
-                    <span class="bg-yellow-400 text-purple-900 rounded-full py-1 px-3">{{ $mark->label }}</span>
-                </div>
-                @endif
             </div>
             @endforeach
         </div>
@@ -41,10 +40,10 @@
 
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>
 
-            <div class="inline-block w-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="inline-block w-full overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
-                <div class="px-4 py-5 bg-yellow-100 sm:px-6">
-                    <h3 class="text-lg font-medium leading-6 text-purple-900">
+                <div class="px-4 py-5 bg-gradient-to-r from-indigo-300 via-rose-200 to-orange-300 sm:px-6">
+                    <h3 class="text-lg font-medium leading-6 text-white">
                         @if ($this->mark_id == '')
                         Ajouter une marque
                         @else
@@ -56,11 +55,13 @@
                 <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                     <div class="">
                         <div class="">
-                            <x-jet-label value="Image" />
-                            @if (!is_string($this->image) && $this->image != null)
-                            <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 rounded-2xl border-2 border-purple-50">
-                            @else
-                            <img src="{{ Storage::disk('uploads')->image($this->image) }}" alt="" class="mt-2 h-64 rounded-2xl border-2 border-purple-50">
+                            <x-jet-label value="Visuel" />
+                            @if($this->image != null)
+                                @if (!is_string($this->image))
+                                <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                @else
+                                <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                @endif
                             @endif
                         </div>
                         <div x-data="{photoName: null, photoPreview: null}">
@@ -96,25 +97,25 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between px-4 py-4 sm:py-4 sm:px-6 bg-purple-50">
+                <div class="flex items-center justify-between px-4 py-4 sm:py-4 sm:px-6 bg-gray-50 sticky bottom-0 z-20">
                     <div class="">
                         @if($this->mark_id != '')
                         @if($confirming === $this->mark_id)
-                        <button wire:click="delete({{ $this->mark_id }})" class="text-red-600">
+                        <button wire:click="delete({{ $this->mark_id }})" class="px-4 py-2 text-sm font-medium border border-red-600 bg-red-600 text-white">
                             Etes-vous sûr ?
                         </button>
                         @else
-                        <button wire:click="confirmDelete({{ $this->mark_id }})" class="text-red-600">
+                        <button wire:click="confirmDelete({{ $this->mark_id }})" class="px-4 py-2 text-sm font-medium border bg-white border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all">
                             Supprimer
                         </button>
                         @endif
                         @endif
                     </div>
                     <div class="flex gap-2">
-                        <button wire:click="closeModal" type="button" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-1 transition-all">
+                        <button wire:click="closeModal" type="button" class="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-200 bg-white hover:bg-gray-100 focus:outline-none focus:ring-1 transition-all">
                             Annuler
                         </button>
-                        <button wire:click.prevent="store" type="button" class="inline-flex justify-center px-8 py-2 font-medium text-white bg-green-600 border border-transparent rounded-full shadow-sm transition-all hover:bg-green-700 focus:outline-none focus:ring-1">
+                        <button wire:click.prevent="store" type="button" class="inline-flex justify-center px-8 py-2 font-extrabold text-white bg-green-600 border border-transparent shadow-sm transition-all hover:bg-green-700 focus:outline-none focus:ring-1">
                             Valider
                         </button>
                     </div>

@@ -11,13 +11,14 @@ use Usernotnull\Toast\Concerns\WireToast;
 use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 use Carbon\Carbon;
+use Illuminate\Support\Arr;
 
 class CaseStudies extends Component
 {
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $title, $image, $client, $year, $case_title, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [];
+    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators;
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
@@ -68,12 +69,12 @@ class CaseStudies extends Component
         $this->image = '';
         $this->client = '';
         $this->year = '';
-        $this->case_title = '';
         $this->description = '';
         $this->bloc_wysiwyg = '';
         $this->display = false;
         $this->selected_tags = [];
         $this->selected_creators = [];
+        $this->associated_creators = [];
     }
 
     public function store()
@@ -85,7 +86,6 @@ class CaseStudies extends Component
             'image' => 'nullable',
             'client' => 'nullable',
             'year' => 'nullable',
-            'case_title' => 'nullable',
             'description' => 'required',
             'bloc_wysiwyg' => 'nullable',
             'display' => 'required',
@@ -127,14 +127,28 @@ class CaseStudies extends Component
         $this->image = $case->image;
         $this->client = $case->client;
         $this->year = $case->year;
-        $this->case_title = $case->case_title;
         $this->description = $case->description;
         $this->bloc_wysiwyg = $case->bloc_wysiwyg;
         $this->display = $case->display;
         $this->selected_tags = $case->tags->pluck('id')->toArray();
         $this->selected_creators = $case->creators->pluck('id')->toArray();
+        foreach ($case->creators as $creator) {
+            $this->associated_creators[] = $creator->nick_name;
+        }
 
         $this->openModal();
+    }
+
+    public function addCreator($id)
+    {
+        $creator = Creator::find($id);
+        if (in_array($creator->nick_name, $this->associated_creators)) {
+            if (($key = array_search($creator->nick_name, $this->associated_creators)) !== false) {
+                unset($this->associated_creators[$key]);
+            }
+        } else {
+            $this->associated_creators[] = $creator->nick_name;
+        }
     }
 
     public function confirmDelete($id)

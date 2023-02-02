@@ -1,25 +1,33 @@
-<div class="pb-24">
-    <header class="bg-white shadow sticky top-16 -mt-1">
-        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-6">
-                <h2 class="font-semibold text-xl text-purple-800 leading-tight">
+<div class="pb-24" x-data="{ open: false }">
+    <header class="bg-transparent">
+        <div class="mx-auto py-4 px-4 sm:px-6 lg:px-12">
+            <div class="flex items-center justify-between h-6 border-l-2 border-white">
+                <h2 class="font-semibold text-xl text-white leading-tight ml-4">
                     Témoignages
                 </h2>
                 <div class="">
-                    <button wire:click="create" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    <button wire:click="create" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-4 font-medium shadow-lg text-white bg-indigo-500 hover:bg-indigo-600 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Ajouter un témoignage
                     </button>
                 </div>
             </div>
         </div>
     </header>
-
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-md sm:rounded-3xl grid grid-cols-4 sm:my-12 my-6 py-8 px-6 gap-4">
+    <div class="mx-auto sm:px-6 lg:px-12 mt-4">
+        <div class="overflow-hidden grid grid-cols-4 gap-4">
             @foreach ($testimonials as $testimonial)
-            <div class="">
-                <div class="mt-2 text-center">
-                    <span class="bg-yellow-400 text-purple-900 rounded-full py-1 px-3">{{ $testimonial->label }}</span>
+            <div wire:click="edit({{ $testimonial->id }})" class="flex flex-col bg-white shadow-md hover:bg-gray-50 cursor-pointer p-4">
+                <div class="font-bold text-xl">{{ $testimonial->label }}</div>
+                <div class="my-4 grow">{{ $testimonial->text }}</div>
+                <div class="">
+                    @switch($testimonial->type)
+                        @case('creator')
+                            <span class="py-1 px-2 bg-orange-300 text-white">Créateur</span>
+                            @break
+                        @case('business')
+                            <span class="py-1 px-2 bg-purple-400 text-white">Entreprise</span>
+                            @break
+                    @endswitch
                 </div>
             </div>
             @endforeach
