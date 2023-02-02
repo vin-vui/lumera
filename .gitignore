@@ -16,6 +16,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/public/uploads
-!/public/uploads/placeholder.jpg
+# /public/uploads
 .DS_Store
