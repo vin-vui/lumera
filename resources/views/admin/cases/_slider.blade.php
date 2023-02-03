@@ -61,10 +61,26 @@
                                 <x-jet-input id="title" class="block mt-1 w-full" type="text" name="title" wire:model="title" />
                                 @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
+                            <div class="my-4">
+                                <x-jet-label for="year" value="Année" />
+                                <x-jet-input id="year" class="block mt-1 w-full" type="number" min="1900" name="year" wire:model="year" />
+                                @error('year') <span class="text-red-500">{{ $message }}</span>@enderror
+                            </div>
                             <div class="mb-4">
                                 <x-jet-label for="description" value="Description" />
                                 <textarea rows="5" id="description" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm" type="text" name="description" wire:model="description"></textarea>
                                 @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="mb-4 trix" wire:ignore>
+                                <x-jet-label for="description" value="Contenu" class="mb-1" />
+                                <input id="{{ $this->trixId }}" type="hidden" name="content" value="{{ $this->bloc_wysiwyg }}">
+                                <trix-editor  input="{{ $this->trixId }}"></trix-editor>
+                                <script>
+                                    var trixEditor = document.getElementById("{{ $this->trixId }}")
+                                    addEventListener("trix-blur", function(event) {
+                                        @this.set('bloc_wysiwyg', trixEditor.getAttribute('value'))
+                                    })
+                                </script>
                             </div>
                             <div class="mb-4">
                                 <x-jet-label for="selected_creators" value="Créateurs" />

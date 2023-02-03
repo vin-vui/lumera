@@ -18,6 +18,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.4/dist/trix.css">
     </head>
     <body class="font-sans antialiased">
 
@@ -33,6 +34,6 @@
         @stack('modals')
 
         @livewireScripts
-        
+
     </body>
 </html>

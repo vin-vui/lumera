@@ -18,7 +18,7 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators;
+    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators, $trixId;
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
@@ -29,6 +29,7 @@ class CaseStudies extends Component
 
     public function mount()
     {
+        $this->trixId = 'trix-' . uniqid();
         $this->case_tags = Tag::all();
     }
 

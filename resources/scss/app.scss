@@ -4,3 +4,55 @@
 
 // See Alpine.js: https://alpinejs.dev/directives/cloak
 [x-cloak] { display: none !important; }
+
+.trix {
+    @apply w-full;
+}
+
+.trix h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.25rem !important;
+    @apply leading-5 font-semibold mb-4;
+}
+
+.trix a:not(.no-underline) {
+    @apply underline;
+}
+
+.trix a:visited {
+    color: green;
+}
+
+.trix ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+.trix ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+}
+
+.trix pre {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #eee;
+    overflow-x: auto;
+}
+
+.trix blockquote {
+    border: 0 solid #ccc;
+    border-left-width: 0px;
+    border-left-width: 0.3em;
+    margin-left: 0.3em;
+    padding-left: 0.6em;
+}
+
+.trix-button-group--file-tools {
+    display: none!important;
+}

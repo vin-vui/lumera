@@ -58,44 +58,101 @@
 @endforeach
 ```
 
-### logo
+### Visuel
 ```html
-<img class="" src="{{ Storage::disk('uploads')->url($case->logo) }}" alt="">
+<img class="" src="{{ Storage::disk('uploads')->url($case->image) }}" alt="">
 ```
     
-### type
-```html
-@switch($case->type)
-    @case('tiktok')
-        // tiktok
-        @break
-    @case('instagram')
-        // réel
-        @break
-    @case('twitch')
-        // twitch
-        @break
-@endswitch
-```
-    
-### titre
+### Titre
 ```html
 {{ $case->title }}
 ```
     
-### description
+### Année
+```html
+{{ $case->year }}
+```
+    
+### Description
 ```html
 {{ $case->description }}
 ```
 
-### bloc tiktok/insta
+### Bloc WYSIWYG
 ```html
-{!! $case->bloc !!}
+<div class="trix">
+    {!! $case->bloc_wysiwyg !!}
+</div>
 ```
 
-### tags
+Exemple de CSS pour Trix
+```css
+.trix {
+    @apply w-full;
+}
+
+.trix h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.25rem !important;
+    @apply leading-5 font-semibold mb-4;
+}
+
+.trix a:not(.no-underline) {
+    @apply underline;
+}
+
+.trix a:visited {
+    color: green;
+}
+
+.trix ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+.trix ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+}
+
+.trix pre {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding: 0.5em;
+    white-space: pre;
+    background-color: #eee;
+    overflow-x: auto;
+}
+
+.trix blockquote {
+    border: 0 solid #ccc;
+    border-left-width: 0px;
+    border-left-width: 0.3em;
+    margin-left: 0.3em;
+    padding-left: 0.6em;
+}
+
+.trix-button-group--file-tools {
+    display: none!important;
+}
+```
+
+### Tags
 ```html
 @foreach ($case->tags as $tag)
     {{ $tag->label }}
+@endforeach
+```
+
+### Créateurs
+```html
+@foreach ($case->creators as $creator)
+    {{ $creator->first_name }}
+    {{ $creator->last_name }}
+    {{ $creator->nick_name }}
+    ...
 @endforeach
 ```

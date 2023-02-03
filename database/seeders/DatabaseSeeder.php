@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
                 'client' => $this->faker->company(),
                 'year' => $this->faker->year(),
                 'description' => $this->faker->paragraph(14),
-                'bloc_wysiwyg' => null,
+                'bloc_wysiwyg' => '<h1>TITRE</h1><div><br><em>italic<br></em><del>barré<br><br></del><a href="https://vinvui.com">lien</a><br><br></div><blockquote>quote</blockquote><div><br></div><pre>code</pre><div><br>liste</div><ul><li>1</li><li>2</li><li>3</li></ul><div><br>liste num</div><ol><li>1</li><li>2</li><li>3</li></ol>',
                 'display' => $this->faker->boolean(),
             ]);
         }

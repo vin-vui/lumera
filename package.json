@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
-        "locomotive-scroll": "^4.1.4"
+        "locomotive-scroll": "^4.1.4",
+        "trix": "^2.0.4"
     }
 }
