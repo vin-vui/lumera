@@ -12,6 +12,7 @@
 
         <!-- Scripts -->
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
+        <script defer data-domain="lumera.vinvui.com" src="https://plausible.io/js/script.js"></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
