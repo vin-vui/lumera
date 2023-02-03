@@ -102,7 +102,7 @@ class DatabaseSeeder extends Seeder
             DB::table('testimonials')->insert([
                 'label' => $this->faker->company(),
                 'text' => $this->faker->paragraph($this->faker->numberBetween(1, 3)),
-                'type' => $this->faker->randomElement(['creator', 'business']),
+                'type' => $this->faker->randomElement(['Créateur', 'Entreprise']),
             ]);
         }
 

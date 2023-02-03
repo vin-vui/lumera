@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label')->nullable();
             $table->text('text')->nullable();
-            $table->enum('type', ['creator', 'business'])->nullable();
+            $table->enum('type', ['Créateur', 'Entreprise'])->nullable();
             $table->timestamps();
         });
     }
