@@ -1,5 +1,5 @@
 html {
-  color: clr(black);
+  color: clr(cblack);
   font-weight: normal;
   font-size: 62.5%;
   font-family: $font-regular;
@@ -29,7 +29,7 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  background-color: clr(white);
+  background-color: clr(cwhite);
 }
 
 img {
@@ -46,7 +46,7 @@ hr {
   width: 100%;
   margin: 2rem auto;
   border: 0;
-  border-bottom: 1px solid clr(primary);
+  border-bottom: 1px solid clr(cblack);
 }
 
 main {
@@ -74,13 +74,8 @@ main {
 }
 
 ::selection  {
-  background: rgba(clr(primary), .8);
-  color: clr(black);
-}
-
-::selection  {
-  background: rgba(clr(primary), .8);
-  color: clr(black);
+  background-color: rgba(0, 0, 0, 70%);
+  color: white;
 }
 
 input,

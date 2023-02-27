@@ -1,9 +1,17 @@
-// @include font-face(
-//   "Moderat",
-//   "assets/fonts/moderat/Moderat-Regular",
-//   ("woff2", "woff")
-// ) {
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: Athletics;
+  src: url("/public/fonts/Athletics-Regular.woff2") format("woff2"),
+    url("/public/fonts/Athletics-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: Athletics;
+  src: url("/public/fonts/Athletics-Bold.woff2") format("woff2"),
+    url("/public/fonts/Athletics-Bold.woff") format("woff");
+  font-display: swap;
+}

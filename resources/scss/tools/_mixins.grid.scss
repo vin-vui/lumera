@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /*
 * calculate col percent
 *
@@ -20,4 +22,18 @@
 */
 @function subcol($col, $container) {
   @return (100% * ($col / $container));
+}
+
+@function gridcol($cols, $parent: $total-columns) {
+  $colw: math.div(1, $parent) * 100;
+  $colr: math.div($row-width + $column-gutter, $row-width);
+  $width: $colw * $cols * $colr * 1%;
+  @return calc($width - $column-gutter);
+}
+
+@function gridpd($cols) {
+  $colw: math.div(1, $total-columns) * 100;
+  $colr: math.div($row-width + $column-gutter, $row-width);
+  $width: $colw * $cols * $colr * 1%;
+  @return $width;
 }

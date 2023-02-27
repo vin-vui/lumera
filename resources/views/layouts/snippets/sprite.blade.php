@@ -1,0 +1,1 @@
+<svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute"><symbol viewBox="0 0 15 15" id="icon-add" xmlns="http://www.w3.org/2000/svg"><path d="M7 8v7h1V8h7V7H8V0H7v7H0v1z" fill="currentColor" fill-rule="evenodd"/></symbol></svg>

@@ -5,9 +5,16 @@ $font-size-base: 16;
 $grid-container: true;
 $row-width: 144rem;
 $container-width: 100%;
-$total-columns: 22;
-$column-gutter: 0rem;
-$column-width: 6rem;
+$total-columns: 12;
+$column-gutter: 2rem;
+$column-width: 10rem;
+
+//  Debgrid
+//  ───────────────────────────────────
+$colorcolumnodd: rgba(0, 0, 0, 10%);
+$colorcolumneven: rgba(0, 0, 0, 5%);
+$colorgutter: rgba(0, 0, 0, 5%);
+$debgrid: false;
 
 //  Vertical rythme
 //  ───────────────────────────────────
@@ -15,8 +22,8 @@ $vr: 3rem;
 
 //  Fonts
 //  ───────────────────────────────────
-$font-title: "Helvetica", "Arial", sans-serif;
-$font-regular: "Helvetica", "Arial", sans-serif;
+$font-title: "Athletics", "Helvetica", "Arial", sans-serif;
+$font-regular: "Athletics", "Helvetica", "Arial", sans-serif;
 
 //  Animations
 //  ───────────────────────────────────

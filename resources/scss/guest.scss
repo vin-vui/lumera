@@ -6,10 +6,11 @@
 
 @import 'config/*';
 
-@import 'utils/helpers';
 @import 'utils/print';
 
 @import 'global/*';
+
+@import 'utils/debgrid';
 
 @import 'atoms/*';
 
@@ -18,3 +19,5 @@
 @import 'organisms/*';
 
 @import 'templates/*';
+
+@import 'utils/helpers';

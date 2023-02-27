@@ -37,6 +37,17 @@
   }
 }
 
+@for $i from 1 through 3 {
+  .mgb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+
+  .pgy-#{$i} {
+    padding-top: #{$i}rem;
+    padding-bottom: #{$i}rem;
+  }
+}
+
 .order-1 {
   order: 1;
 }

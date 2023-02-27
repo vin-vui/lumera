@@ -19,7 +19,7 @@ export default defineConfig({
                 'app/Http/Livewire/**',
             ],
         }),
-        sassGlobImports()
+        sassGlobImports(),
     ],
     css: {
       preprocessorOptions: {

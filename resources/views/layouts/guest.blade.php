@@ -8,15 +8,16 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="preload" href="/fonts/Athletics-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"> -->
 
         <!-- Scripts -->
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
         <script defer data-domain="lumera.vinvui.com" src="https://plausible.io/js/script.js"></script>
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
+        @include('layouts.snippets.sprite')
+
+        {{ $slot }}
     </body>
 </html>

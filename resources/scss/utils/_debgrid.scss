@@ -1,0 +1,36 @@
+@if $debgrid {
+    body {
+        position: relative;
+    }
+
+    body::before {
+        $debgridGutterPercent: calc(($column-gutter * 100 / $row-width  * 1%) / 2);
+        $debgridColumnPercent: calc((($row-width - ($column-gutter * $total-columns)) / $total-columns) * 100 / $row-width * 1%);
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 800;
+
+        display: block;
+        width: $container-width;
+        max-width: $row-width;
+
+        content: "";
+
+        pointer-events: none;
+        background: repeating-linear-gradient(
+        to right,
+        $colorgutter,
+        $colorgutter $debgridGutterPercent,
+        $colorcolumnodd $debgridGutterPercent,
+        $colorcolumnodd $debgridColumnPercent + $debgridGutterPercent,
+        $colorgutter $debgridColumnPercent + $debgridGutterPercent,
+        $colorgutter $debgridColumnPercent + ($debgridGutterPercent * 2)
+        );
+        background-size: (100% + 0) 100%;
+        pointer-events: none;
+        transform: translate(-50%, 0);
+    }
+}
