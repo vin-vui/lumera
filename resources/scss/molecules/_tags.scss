@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+.m-tags {
+  display: flex;
+  gap: 1rem;
+  margin-top: math.div($vr, 2);
+
+  &__item {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}

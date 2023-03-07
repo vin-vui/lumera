@@ -37,9 +37,13 @@
   }
 }
 
-@for $i from 1 through 3 {
+@for $i from 1 through 6 {
   .mgb-#{$i} {
     margin-bottom: #{$i}rem;
+  }
+
+  .mgt-#{$i} {
+    margin-top: #{$i}rem;
   }
 
   .pgy-#{$i} {

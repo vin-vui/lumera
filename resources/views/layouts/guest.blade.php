@@ -17,7 +17,8 @@
     </head>
     <body>
         @include('layouts.snippets.sprite')
-
+        @include('layouts.snippets.header')
         {{ $slot }}
+        @include('layouts.snippets.footer')
     </body>
 </html>

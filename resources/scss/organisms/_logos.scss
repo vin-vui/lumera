@@ -1,0 +1,15 @@
+.o-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem $column-gutter;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    min-width: 20%;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}

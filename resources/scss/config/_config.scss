@@ -11,14 +11,15 @@ $column-width: 10rem;
 
 //  Debgrid
 //  ───────────────────────────────────
-$colorcolumnodd: rgba(0, 0, 0, 10%);
-$colorcolumneven: rgba(0, 0, 0, 5%);
-$colorgutter: rgba(0, 0, 0, 5%);
 $debgrid: false;
+$colorcolumnodd: rgba(black, .2);
+$colorcolumneven: rgba(black, .12);
+$colorgutter: rgba(black, .05);
 
 //  Vertical rythme
 //  ───────────────────────────────────
 $vr: 3rem;
+$radius: 30px;
 
 //  Fonts
 //  ───────────────────────────────────

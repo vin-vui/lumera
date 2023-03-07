@@ -8,14 +8,16 @@ p,
   line-height: 1.25;
   text-transform: none;
 
+  &.-medium {
+    font-size: 2.2rem;
+  }
+
   &.-big {
     font-size: 2.6rem;
   }
 
   &.-small {
-    &, p {
-      font-size: 1.4rem;
-    }
+    font-size: 1.4rem;
   }
 }
 
@@ -81,8 +83,8 @@ h4,
 
 h5,
 .a-h5 {
-  color: var(--primary);
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.2rem;
   font-family: $font-title;
   line-height: 1.20;
   text-transform: uppercase;
@@ -113,19 +115,10 @@ h6,
 //  ───────────────────────────────────
 
 ol, ul {
-  margin-bottom: $vr;
   list-style-position: outside;
   font-size: 1.6rem;
   font-family: $font-regular;
   line-height: 1.25;
-
-  li {
-    margin-bottom: 1.5rem;
-  }
-
-  ul, ol {
-    margin-top: 1.5rem;
-  }
 
   &:not(.no-bullet) {
     padding-left: 1.5rem;

@@ -1,0 +1,29 @@
+.o-testimonies {
+  position: relative;
+  display: flex;
+  gap: $column-gutter;
+  padding-top: 4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: subcol(7, 8);
+    height: 50%;
+    border-radius: 0 $radius;
+    background-color: var(--primary-light);
+  }
+
+  .a-blockquote {
+    position: relative;
+    z-index: 1;
+    width: subcol(7, 8);
+  }
+
+  &__arrows {
+    z-index: 1;
+    width: subcol(1, 8);
+  }
+}

@@ -1,0 +1,23 @@
+.o-creators {
+  position: relative;
+  padding-bottom: 8rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: col(11);
+    height: calc(100% - 10rem);
+    border-radius: 0 $radius;
+    background-color: clr(cgray);
+  }
+
+  &__list {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $column-gutter;
+  }
+}

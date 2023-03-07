@@ -20,6 +20,8 @@
         content: "";
 
         pointer-events: none;
+        transform: translate(-50%, 0);
+
         background: repeating-linear-gradient(
         to right,
         $colorgutter,
@@ -29,8 +31,5 @@
         $colorgutter $debgridColumnPercent + $debgridGutterPercent,
         $colorgutter $debgridColumnPercent + ($debgridGutterPercent * 2)
         );
-        background-size: (100% + 0) 100%;
-        pointer-events: none;
-        transform: translate(-50%, 0);
     }
 }

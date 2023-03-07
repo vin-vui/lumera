@@ -1,3 +1,5 @@
 :root {
-  --primary: #{clr(corange)};
+  --base-primary: 27;
+  --primary: hsl(var(--base-primary), 88%, 61%);
+  --primary-light: hsl(var(--base-primary), 100%, 83%);
 }
