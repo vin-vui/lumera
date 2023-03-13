@@ -1,0 +1,18 @@
+.m-cardLink {
+  position: relative;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: clr(cwhite);
+  text-decoration: none;
+
+  .icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--primary);
+  }
+
+  + .m-cardLink {
+    margin-top: 2rem;
+  }
+}

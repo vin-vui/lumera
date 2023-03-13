@@ -1,0 +1,11 @@
+.t-cases {
+  &__page {
+    padding: 6rem 0;
+    background-color: clr(cgray);
+  }
+
+  &__list {
+    display: grid;
+    gap: $column-gutter;
+  }
+}

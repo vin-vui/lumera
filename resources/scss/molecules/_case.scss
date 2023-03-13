@@ -5,16 +5,40 @@
   text-decoration: none;
 
   &__thumb {
-    flex: 0 0 11rem;
-    width: 11rem;
+    flex: 0 0 subcol(2, 9);
+    width: subcol(2, 9);
+  }
+
+  &.-small & {
+    &__thumb {
+      flex: 0 0 11rem;
+      width: 11rem;
+    }
+
+    &__content {
+      flex: 0 0 calc(100% - 11rem);
+      width: calc(100% - 11rem);
+    }
+  }
+
+  ul {
+    li:not(:last-of-type) {
+      margin-bottom: .5rem;
+    }
   }
 
   &__content {
     position: relative;
-    flex: 0 0 calc(100% - 11rem);
-    width: calc(100% - 11rem);
+    flex: 0 0 calc(100% - #{subcol(2, 9)});
+    width: calc(100% - #{subcol(2, 9)});
     padding: 2.8rem 2.6rem;
     background-color: clr(cwhite);
+
+    &--cols {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: $column-gutter;
+    }
   }
 
   &__arrow {
@@ -22,5 +46,9 @@
     top: 2rem;
     right: 2rem;
     color: var(--primary);
+  }
+
+  &:hover, &:focus {
+    color: clr(cblack);
   }
 }

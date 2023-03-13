@@ -1,3 +1,21 @@
 .o-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  padding: 6rem 0;
 
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }

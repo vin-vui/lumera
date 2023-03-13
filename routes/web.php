@@ -26,6 +26,22 @@ Route::get('/styleguide', function () {
     return view('styleguide');
 });
 
+Route::get('/createurs', function () {
+    return view('creators');
+});
+
+Route::get('/createur', function () {
+    return view('creator');
+});
+
+Route::get('/campagnes', function () {
+    return view('cases');
+});
+
+Route::get('/campagne', function () {
+    return view('case');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

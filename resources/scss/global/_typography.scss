@@ -151,6 +151,18 @@ a,
     text-decoration: none;
   }
 
+  &.-primary {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      color: clr(cblack);
+    }
+  }
+
   &.-icon {
     display: inline-flex;
     align-items: center;

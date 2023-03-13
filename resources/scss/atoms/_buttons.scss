@@ -42,6 +42,18 @@
     }
   }
 
+  &.-tertiary {
+    background-color: clr(cwhite);
+    color: var(--primary);
+
+    @media (hover: hover) and (any-pointer: fine) {
+      &:hover, &:focus {
+        background-color: var(--primary);
+        color: clr(cwhite);
+      }
+    }
+  }
+
   &.-round {
     position: relative;
     display: flex;

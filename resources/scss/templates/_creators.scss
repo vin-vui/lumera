@@ -1,0 +1,12 @@
+.t-creators {
+  &__page {
+    padding: 10rem 0;
+    background-color: clr(cgray);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $column-gutter;
+  }
+}
