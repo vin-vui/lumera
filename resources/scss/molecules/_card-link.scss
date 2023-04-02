@@ -15,4 +15,22 @@
   + .m-cardLink {
     margin-top: 2rem;
   }
+
+  &.-primary {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--primary);
+
+    p {
+      flex: 0 0 calc(100% - 4.8rem);
+      width: calc(100% - 4.8rem);
+    }
+
+    .icon {
+      position: initial;
+      width: 3.8rem;
+      height: 3.8rem;
+      color: clr(cwhite);
+    }
+  }
 }

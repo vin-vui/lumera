@@ -1,0 +1,82 @@
+.o-hero {
+  position: relative;
+  margin-bottom: 12%;
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    right: 5rem;
+    padding-bottom: $vr;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: $column-gutter / 2;
+      bottom: 0;
+      z-index: 0;
+      width: calc(100% - $column-gutter);
+      height: calc(100% - 10rem);
+      border-radius: 0 $radius 0 $radius;
+      background-color: var(--primary-light);
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+
+    .a-bigTitle {
+      span {
+        display: block;
+        padding-left: 8rem;
+      }
+    }
+
+    .-fake {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+    }
+  }
+
+  &__arrows {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: $vr;
+  }
+
+  .m-slider {
+    display: flex;
+    gap: 2.6rem;
+
+    &__nav {
+      display: flex;
+      flex: 0 0 calc(subcol(1, 5) - 2.6rem);
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(subcol(1, 5) - 2.6rem);
+      padding-top: 7rem;
+    }
+
+    &__viewport {
+      flex: 0 0 calc(100% - subcol(1, 5) - 2.5rem);
+      overflow: hidden;
+      width: calc(100% - subcol(1, 5) - 2.5rem);
+    }
+
+    &__slide {
+      padding: 0 1.5rem;
+    }
+
+    .a-ratio::before {
+      padding-bottom: 116.75%;
+    }
+  }
+
+}

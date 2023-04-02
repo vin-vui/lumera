@@ -1,9 +1,42 @@
 <x-guest-layout>
     <main class="t-home">
         <section class="g-section">
-            <div class="g-row">
-                <div class="sm-column-12 lg-column-8">
-                    <h1>Mettre <span>en lumière</span> votre talent</h1>
+            <div class="g-row o-hero">
+                <div class="sm-column-12 lg-column-10">
+                    <div class="o-hero__title">
+                        <h1 class="a-bigTitle">Mettre <span>en lumière</span> votre talent</h1>
+                        <span aria-hidden="true" focusable="false" class="-fake a-bigTitle">Mettre <span>en lumière</span> votre talent</span>
+                    </div>
+                </div>
+                <div class="sm-column-12 lg-column-5 o-hero__slider">
+                    <div class="m-slider" data-module-slider data-controls="true" data-pagination="true">
+                        <div class="m-slider__nav">
+                            <p class="m-slider__pagination"><span data-slider="pagination">1</span>&nbsp;—&nbsp;12</p>
+                            <div class="o-hero__arrows">
+                                <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                    →
+                                    {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg> --}}
+                                </button>
+                                <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                    ←
+                                    {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg> --}}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="m-slider__viewport" data-slider="viewport">
+                            <div class="m-slider__container">
+                                <div class="m-slider__slide">
+                                    @include('molecules.creator')
+                                </div>
+                                <div class="m-slider__slide">
+                                    @include('molecules.creator')
+                                </div>
+                                <div class="m-slider__slide">
+                                    @include('molecules.creator')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="sm-column-12 lg-column-6 lg-offset-1">
                     <p class="-big">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
@@ -11,10 +44,10 @@
             </div>
         </section>
         <section class="g-section">
-            <div class="g-row">
-                <div class="sm-column-12 lg-column-5">
+            <div class="g-row align-start-start">
+                <div class="sm-column-12 lg-column-5 t-home__about">
                     <div class="a-ratio" data-ratio="9/10">
-                        <img src="" alt="">
+                        <img src="{{asset('assets/img/about.jpg')}}" srcset="{{asset('assets/img/about.jpg')}} 1x, {{asset('assets/img/about@2x.jpg')}} 2x" alt="">
                     </div>
                     <a href="#" class="a-button -round"><span>Pourquoi Lumera ?</span></a>
                 </div>
@@ -134,17 +167,45 @@
             </div>
             <div class="g-row align-center-start">
                 <div class="sm-column-12 lg-column-8">
-                    {{-- TODO SLIDER --}}
-                    <div class="o-testimonies">
+                    <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
                         <div class="o-testimonies__arrows">
-                            <button>icon</button>
+                            <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
+                            </button>
+                            <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
+                            </button>
                         </div>
-                        <figure class="a-blockquote">
-                            <blockquote>
-                                <p>Un commentaire d’une marque expliquant que Lumera les a accompagné dans la création de leur campagne et qu’aujourd’hui encore ils font appel à leurs créateurs de contenus</p>
-                            </blockquote>
-                            <figcaption>Odoo</figcaption>
-                        </figure>
+                        <div class="o-testimonies__slider">
+                            <div class="m-slider__viewport" data-slider="viewport">
+                                <div class="m-slider__container">
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Un commentaire d’une marque expliquant que Lumera les a accompagné dans la création de leur campagne et qu’aujourd’hui encore ils font appel à leurs créateurs de contenus</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, iure maxime! Magni, esse praesentium!</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Excepturi, iure maxime! Magni, esse praesentium!</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

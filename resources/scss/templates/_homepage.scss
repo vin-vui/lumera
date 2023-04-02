@@ -31,4 +31,20 @@
       }
     }
   }
+
+  &__about {
+    position: relative;
+
+    .a-ratio {
+      overflow: hidden;
+      border-radius: $radius;
+    }
+
+    .a-button {
+      position: absolute;
+      top: 50%;
+      right: -3rem;
+      transform: translateY(-50%);
+    }
+  }
 }

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   gap: $column-gutter;
-  padding-top: 4rem;
+  padding-top: 1rem;
 
   &::before {
     content: "";
@@ -19,11 +19,62 @@
   .a-blockquote {
     position: relative;
     z-index: 1;
-    width: subcol(7, 8);
+
+    // width: subcol(7, 8);
+    height: 100%;
   }
 
   &__arrows {
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
     width: subcol(1, 8);
+    padding-top: 1.5rem;
+  }
+
+  &__slider {
+    overflow: hidden;
+    width: 100%;
+    padding : 3.2rem 0;
+  }
+
+  .m-slider {
+    &__container {
+      position: relative;
+      transform: none !important;
+    }
+
+    &__slide {
+      top: 50%;
+      right: 0 !important; /* override Embla */
+      left: 0 !important; /* override Embla */
+      height: 30rem;
+      opacity: .5;
+      pointer-events: none;
+      transform: translateY(-50%);
+
+      // transition: opacity $anim;
+
+      .a-blockquote {
+        transition: transform $anim;
+        transform: rotate(5deg);
+      }
+
+      &.is-selected {
+        z-index: 1;
+        opacity: 1;
+        pointer-events: all;
+
+        .a-blockquote {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  .is-ready .m-slider__slide {
+    position: absolute;
   }
 }

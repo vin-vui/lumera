@@ -1,8 +1,7 @@
 <header class="o-header">
     <div class="g-row align-start-center">
-        <div class="sm-column-12 lg-column-2">
-            {{-- TODO LOGO --}}
-            <a href="{!! url('/') !!}">LUMERA</a>
+        <div class="sm-column-12 lg-column-2 o-header__logo">
+            <a href="{!! url('/') !!}"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo" /></svg></a>
         </div>
         <div class="sm-column-12 lg-column-6">
             {{-- TODO LINKS --}}

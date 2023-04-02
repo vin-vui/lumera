@@ -32,13 +32,32 @@
                 </div>
             </div>
             <div class="g-row">
-                <ul>
-                    {{-- TODO LIMIT NBR ?? --}}
-                    {{-- TODO SLIDER --}}
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
-                </ul>
+                <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
+                    <div class="m-slider__viewport" data-slider="viewport">
+                        <ul class="no-bullet m-slider__container">
+                            {{-- TODO LIMIT NBR ?? --}}
+                            <li class="m-slider__slide">@include('molecules.creator')</li>
+                            <li class="m-slider__slide">@include('molecules.creator')</li>
+                            <li class="m-slider__slide">@include('molecules.creator')</li>
+                            <li class="m-slider__slide">@include('molecules.creator')</li>
+                        </ul>
+                    </div>
+
+                    <div class="m-slider__footer">
+                        <div class="m-slider__arrows">
+                            <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                ←
+                                {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg> --}}
+                            </button>
+                            <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                →
+                                {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg> --}}
+                            </button>
+                        </div>
+
+                        <a href="#" class="a-button -round -small"><span>Voir tous</span></a>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
@@ -49,17 +68,45 @@
             </div>
             <div class="g-row align-center-start">
                 <div class="sm-column-12 lg-column-8">
-                    {{-- TODO SLIDER --}}
-                    <div class="o-testimonies">
+                    <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
                         <div class="o-testimonies__arrows">
-                            <button>icon</button>
+                            <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
+                            </button>
+                            <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
+                            </button>
                         </div>
-                        <figure class="a-blockquote">
-                            <blockquote>
-                                <p>Agence et équipe au top ! J'y suis depuis plusieurs mois et ils sont toujours là en cas de besoin et très sympathiques. Ce que j'adore c'est les appels mensuels d'un spécialiste des réseaux sociaux qui me donne des astuces, de l'aide et de nouveaux objectifs chaque mois qui te donne encore plus envie d'évoluer ! Je ne regrette pas du tout d'avoir signer dans cette agence bien au contraire, c'est un tremplin pour moi</p>
-                            </blockquote>
-                            <figcaption>Anthony RDN</figcaption>
-                        </figure>
+                        <div class="o-testimonies__slider">
+                            <div class="m-slider__viewport" data-slider="viewport">
+                                <div class="m-slider__container">
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Un commentaire d’une marque expliquant que Lumera les a accompagné dans la création de leur campagne et qu’aujourd’hui encore ils font appel à leurs créateurs de contenus</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, iure maxime! Magni, esse praesentium!</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="m-slider__slide">
+                                        <figure class="a-blockquote">
+                                            <blockquote>
+                                                <p>Excepturi, iure maxime! Magni, esse praesentium!</p>
+                                            </blockquote>
+                                            <figcaption>Odoo</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

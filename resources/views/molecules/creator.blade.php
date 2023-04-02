@@ -4,7 +4,7 @@
 {{ $item->nick_name }} --}}
 
 <article class="m-creator">
-    <div class="a-ratio" data-ratio="3/4">
+    <div class="a-ratio" data-ratio>
         <img src="{{asset('uploads/placeholder.jpg')}}" alt="Romain Talon">
     </div>
     <div class="m-creator__content">

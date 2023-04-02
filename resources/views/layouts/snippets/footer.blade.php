@@ -14,7 +14,13 @@
             </a>
             <a href="#" class="m-cardLink">
                 <p class="a-h5 mgb-1">Tu es un créateur ?</p>
-                <p class="text-cgraydark">creator@lumera.social</p>
+                <p class="text-cgraydark">business@lumera.social</p>
+                <svg class="icon" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-add" />
+                </svg>
+            </a>
+            <a href="#" class="m-cardLink -primary">
+                <p class="text-cwhite">Contactez-nous directement via Whatsapp pour une réponse instantanée</p>
                 <svg class="icon" aria-hidden="true" focusable="false">
                     <use xlink:href="#icon-add" />
                 </svg>
@@ -24,8 +30,7 @@
     <div class="g-row lg-align-center-start">
         <div class="sm-column-12 lg-column-10">
             <div class="o-footer__bottom">
-                {{-- TODO LOGO --}}
-                <div>LOGO</div>
+                <div class="o-footer__logo"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
                 {{-- TODO LINKS --}}
                 <div class="o-header__nav">
                     <nav class="o-menu">
