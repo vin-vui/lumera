@@ -27,7 +27,11 @@
     },
     "dependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
+        "embla-carousel": "^7.1.0",
+        "embla-carousel-autoplay": "^7.1.0",
+        "embla-carousel-class-names": "^7.1.0",
         "locomotive-scroll": "^4.1.4",
+        "modujs": "^1.4.2",
         "trix": "^2.0.4"
     }
 }
