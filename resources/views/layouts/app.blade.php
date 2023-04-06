@@ -15,10 +15,10 @@
         <!-- Scripts -->
         @toastScripts
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+        <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
 
         <!-- Styles -->
         @livewireStyles
-        <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.4/dist/trix.css">
     </head>
     <body class="font-sans antialiased">
 

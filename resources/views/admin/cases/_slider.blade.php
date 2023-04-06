@@ -73,13 +73,18 @@
                             </div>
                             <div class="mb-8 trix" wire:ignore>
                                 <x-jet-label for="description" value="Contenu" class="mb-1" />
-                                <input id="{{ $this->trixId }}" type="hidden" name="content" value="{{ $this->bloc_wysiwyg }}">
-                                <trix-editor input="{{ $this->trixId }}"></trix-editor>
+                                <textarea wire:model="bloc_wysiwyg" id="bloc_wysiwyg" name="bloc_wysiwyg"></textarea>
                                 <script>
-                                    var trixEditor = document.getElementById("{{ $this->trixId }}")
-                                    addEventListener("trix-blur", function(event) {
-                                        @this.set('bloc_wysiwyg', trixEditor.getAttribute('value'))
-                                    })
+                                    ClassicEditor
+                                        .create(document.querySelector('#bloc_wysiwyg'))
+                                        .then(editor => {
+                                            editor.model.document.on('change:data', () => {
+                                                @this.set('bloc_wysiwyg', editor.getData());
+                                            })
+                                        })
+                                        .catch(error => {
+                                            console.error(error);
+                                        });
                                 </script>
                             </div>
                             <div class="mb-8">
