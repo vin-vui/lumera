@@ -1,5 +1,5 @@
 <div class="bg-gray-50 p-2">
-    <x-jet-label value="Gérer les tags" />
+    <x-jet-label value="Gérer les plateformes" />
 
     <div class="flex flex-wrap gap-2 my-1">
         @foreach ($this->tags as $tag)
@@ -19,9 +19,9 @@
         <div class="grow">
             <div class="flex flex-col justify-center">
                 @if($this->selected_tag)
-                <x-jet-label for="description" value="Modifier le tag" />
+                <x-jet-label for="description" value="Modifier la plateforme" />
                 @else
-                <x-jet-label for="description" value="Nouveau tag" />
+                <x-jet-label for="description" value="Nouvelle plateforme" />
                 @endif
                 <x-jet-input id="label" class="block mt-1 w-full" type="text" name="label" wire:model="label" />
                 @error('label') <span class="text-sm text-red-600">{{ $message }}</span>@enderror
@@ -44,7 +44,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24">
                 <path fill="currentColor" d="m21.41 11.58l-9-9C12.04 2.21 11.53 2 11 2H4a2 2 0 0 0-2 2v7c0 .53.21 1.04.59 1.41l.41.4c.9-.54 1.94-.81 3-.81a6 6 0 0 1 6 6c0 1.06-.28 2.09-.82 3l.4.4c.37.38.89.6 1.42.6c.53 0 1.04-.21 1.41-.59l7-7c.38-.37.59-.88.59-1.41c0-.53-.21-1.04-.59-1.42M5.5 7A1.5 1.5 0 0 1 4 5.5A1.5 1.5 0 0 1 5.5 4A1.5 1.5 0 0 1 7 5.5A1.5 1.5 0 0 1 5.5 7M10 19H7v3H5v-3H2v-2h3v-3h2v3h3v2Z" />
             </svg>
-            Ajouter un tag
+            Ajouter une plateforme
         </button>
         @if($this->selected_tag)
         <div class="">

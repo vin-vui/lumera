@@ -56,25 +56,25 @@
                                 </x-jet-secondary-button>
                                 @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="my-4">
-                                <x-jet-label for="title" value="Titre" />
+                            <div class="my-8">
+                                <x-jet-label for="title" value="Nom du client" />
                                 <x-jet-input id="title" class="block mt-1 w-full" type="text" name="title" wire:model="title" />
                                 @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="my-4">
+                            <div class="my-8">
                                 <x-jet-label for="year" value="Année" />
                                 <x-jet-input id="year" class="block mt-1 w-full" type="number" min="1900" name="year" wire:model="year" />
                                 @error('year') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-8">
                                 <x-jet-label for="description" value="Description" />
                                 <textarea rows="5" id="description" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm" type="text" name="description" wire:model="description"></textarea>
                                 @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="mb-4 trix" wire:ignore>
+                            <div class="mb-8 trix" wire:ignore>
                                 <x-jet-label for="description" value="Contenu" class="mb-1" />
                                 <input id="{{ $this->trixId }}" type="hidden" name="content" value="{{ $this->bloc_wysiwyg }}">
-                                <trix-editor  input="{{ $this->trixId }}"></trix-editor>
+                                <trix-editor input="{{ $this->trixId }}"></trix-editor>
                                 <script>
                                     var trixEditor = document.getElementById("{{ $this->trixId }}")
                                     addEventListener("trix-blur", function(event) {
@@ -82,7 +82,7 @@
                                     })
                                 </script>
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-8">
                                 <x-jet-label for="selected_creators" value="Créateurs" />
                                 <div class="flex gap-4">
                                     <div class="basis-1/2">
@@ -115,8 +115,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-4" x-data="{ tagManager: false }">
-                                <x-jet-label value="Tags" />
+                            <div class="mb-8" x-data="{ tagManager: false }">
+                                <x-jet-label value="Plateforme(s) Activée(s)" />
                                 <div class="flex flex-wrap gap-2 mt-1">
                                     @foreach($this->case_tags as $tag)
                                     <div class="">
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="flex items-end justify-end mt-4 -mb-4 relative z-20">
                                     <button @click="tagManager= !tagManager" class="flex items-center gap-1 bg-white text-sm text-cyan-400 py-1 px-2 border-cyan-400 border-2 rounded-3xl shadow-sm">
-                                        Gérer les tags
+                                        Gérer les plateformes
                                         <svg width="22" height="22" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="m21.41 11.58l-9-9C12.04 2.21 11.53 2 11 2H4a2 2 0 0 0-2 2v7c0 .53.21 1.04.59 1.41l.41.4c.9-.54 1.94-.81 3-.81a6 6 0 0 1 6 6c0 1.06-.28 2.09-.82 3l.4.4c.37.38.89.6 1.42.6c.53 0 1.04-.21 1.41-.59l7-7c.38-.37.59-.88.59-1.41c0-.53-.21-1.04-.59-1.42M5.5 7A1.5 1.5 0 0 1 4 5.5A1.5 1.5 0 0 1 5.5 4A1.5 1.5 0 0 1 7 5.5A1.5 1.5 0 0 1 5.5 7M10 19H7v3H5v-3H2v-2h3v-3h2v3h3v2Z" />
                                         </svg>

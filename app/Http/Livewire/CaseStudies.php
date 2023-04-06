@@ -18,7 +18,7 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators, $trixId;
+    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators = [], $trixId;
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
