@@ -26,12 +26,12 @@
                     </div>
                 </div>
                 <ul class="no-bullet t-creator__socials">
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Tiktok</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Facebook</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Instagram</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Youtube</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Linkedin</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
-                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Pinterest</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Tiktok</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Facebook</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Instagram</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Youtube</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Linkedin</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                    <li><a href="#" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Pinterest</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
                 </ul>
                 <a href="mailto:" class="a-button -round"><span>Contact</span></a>
             </div>

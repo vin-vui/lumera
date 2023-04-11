@@ -1,11 +1,8 @@
-@use 'sass:math';
-
 .m-tags {
   display: flex;
   gap: 1rem;
   overflow: auto;
-  margin-top: math.div($vr, 2);
-  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 
   &__item {
     display: block;

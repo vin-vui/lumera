@@ -3,6 +3,7 @@
   align-items: stretch;
   overflow: hidden;
   width: 100%;
+  height: 100%;
   border-radius: 1rem;
   text-align: left;
   text-decoration: none;
@@ -27,13 +28,20 @@
     position: relative;
     flex: 0 0 calc(100% - #{subcol(2, 9)});
     width: calc(100% - #{subcol(2, 9)});
-    padding: 2.8rem 2.6rem;
+    padding: 2.8rem 5.6rem 2.8rem 2.6rem;
     background-color: clr(cwhite);
 
     &--cols {
       display: grid;
       grid-template-columns: 60% 40%;
       gap: $column-gutter;
+    }
+
+    @media #{$md} {
+      .a-h3 {
+        margin-bottom: .5rem;
+        font-size: 2.8rem;
+      }
     }
   }
 

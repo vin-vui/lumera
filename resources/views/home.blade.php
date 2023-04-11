@@ -22,13 +22,13 @@
                             </div>
                         </div>
                         <div class="m-slider__viewport" data-slider="viewport">
-                            <div class="m-slider__container">
+                            <ul class="no-bullet m-slider__container">
                                 @foreach (App\Models\Creator::where('display', true)->get() as $creator)
-                                    <div class="m-slider__slide">
-                                        @include('molecules.creator', ['item' => $creator])
-                                    </div>
+                                    <li class="m-slider__slide">
+                                        @include('molecules.creator')
+                                    </li>
                                 @endforeach
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     </div>
                     <button type="button" data-module-popin-button data-popin="about" class="a-button -round"><span>Pourquoi Lumera ?</span></button>
                 </div>
-                <div class="sm-column-12 lg-column-6 lg-offset-1">
+                <div class="sm-column-12 lg-column-6 lg-offset-1 t-home__about--content">
                     <h2>Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
                     <div class="g-grid -c2 mgt-6 o-cards" data-module-cards>
                         <div class="m-card" data-cards="item">
@@ -85,7 +85,11 @@
                 <div class="sm-column-12 lg-column-9">
                     <ul class="no-bullet o-creators__list">
                         {{-- TODO GET 3 CREATORS RANDOM --}}
-                        <li>@include('molecules.creator')</li>
+                        @foreach (App\Models\Creator::where('display', true)->get()->slice(0, 3) as $creator)
+                            <li>
+                                @include('molecules.creator')
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -138,8 +142,8 @@
                 <div class="sm-column-12 lg-column-6 lg-offset-1">
                     <ul class="no-bullet t-home__case--list">
                         {{-- TODO LIMIT NBR ?? --}}
-                        @foreach (App\Models\CaseStudy::all() as $case)
-                            <li>@include('molecules.case', ['item' => $case])</li>
+                        @foreach (App\Models\CaseStudy::all()->slice(0, 4) as $case)
+                            <li>@include('molecules.case')</li>
                         @endforeach
                     </ul>
                 </div>

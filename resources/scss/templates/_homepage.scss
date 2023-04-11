@@ -35,6 +35,14 @@
   &__about {
     position: relative;
 
+    &[class*=column-]:not(.-nest) {
+      padding-right: 0;
+    }
+
+    &--content {
+      margin-top: 10rem;
+    }
+
     .a-ratio {
       overflow: hidden;
       border-radius: $radius;
@@ -43,7 +51,7 @@
     .a-button {
       position: absolute;
       top: 50%;
-      right: -3rem;
+      right: -5rem;
       transform: translateY(-50%);
     }
   }

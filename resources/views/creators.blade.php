@@ -15,9 +15,9 @@
             <div class="g-row">
                 <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list">
                     @foreach (App\Models\Creator::where('display', true)->get() as $creator)
-                        <div class="m-slider__slide">
-                            @include('molecules.creator', ['item' => $creator])
-                        </div>
+                        <li class="m-slider__slide">
+                            @include('molecules.creator')
+                        </li>
                     @endforeach
                 </ul>
                 {{-- TODO PAGINATION --}}
@@ -38,8 +38,8 @@
                         <div class="m-slider__viewport" data-slider="viewport">
                             <ul class="no-bullet m-slider__container">
                                 {{-- TODO LIMIT NBR ?? --}}
-                                @foreach (App\Models\CaseStudy::all() as $case)
-                                    <li class="m-slider__slide">@include('molecules.case', ['item' => $case])</li>
+                                @foreach (App\Models\CaseStudy::all()->slice(0, 4) as $case)
+                                    <li class="m-slider__slide">@include('molecules.case')</li>
                                 @endforeach
                             </ul>
                         </div>

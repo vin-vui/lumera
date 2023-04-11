@@ -14,8 +14,7 @@
             <div class="g-row">
                 <ul class="no-bullet sm-column-12 lg-column-9 no-width t-cases__list">
                     @foreach (App\Models\CaseStudy::all() as $case)
-                        <li>@include('molecules.case', ['item' => $case, 'complete' => true])</li>
-                        <li>@include('molecules.case', ['item' => $case, 'complete' => true])</li>
+                        <li>@include('molecules.case', ['complete' => true])</li>
                     @endforeach
                 </ul>
             </div>
@@ -37,7 +36,7 @@
                                 {{-- TODO LIMIT NBR ?? --}}
                                 @foreach (App\Models\Creator::where('display', true)->get() as $creator)
                                     <li class="m-slider__slide">
-                                        @include('molecules.creator', ['item' => $creator])
+                                        @include('molecules.creator')
                                     </li>
                                 @endforeach
                             </ul>
