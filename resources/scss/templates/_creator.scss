@@ -1,0 +1,22 @@
+.t-creator {
+  max-width: 43rem;
+
+  &__content {
+    padding: 4rem;
+  }
+
+  &__socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 4rem 0;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .m-tags {
+    margin-bottom: 2.5rem;
+  }
+}

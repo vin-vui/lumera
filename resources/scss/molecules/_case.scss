@@ -1,7 +1,10 @@
 .m-case {
   display: flex;
+  align-items: stretch;
   overflow: hidden;
+  width: 100%;
   border-radius: 1rem;
+  text-align: left;
   text-decoration: none;
 
   &__thumb {

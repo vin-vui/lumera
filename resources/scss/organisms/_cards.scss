@@ -1,0 +1,20 @@
+.o-cards {
+  .m-card {
+    transition: opacity $anim;
+
+    .icon {
+      transition: color $anim;
+    }
+  }
+  @media (hover: hover) and (any-pointer: fine) {
+    &:hover, &:focus {
+      .m-card:not(.is-visible) {
+        opacity: .6;
+
+        .icon {
+          color: clr(cblack);
+        }
+      }
+    }
+  }
+}

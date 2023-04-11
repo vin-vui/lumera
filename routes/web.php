@@ -42,6 +42,14 @@ Route::get('/campagne', function () {
     return view('case');
 });
 
+Route::get('/conditions-generales', function () {
+    return view('terms');
+});
+
+Route::get('/404', function () {
+    return view('errors.404');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

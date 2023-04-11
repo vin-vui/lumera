@@ -1,0 +1,12 @@
+.m-caseInfos {
+  display: flex;
+  gap: $column-gutter;
+  justify-content: space-between;
+  padding: 4rem 0;
+
+  ul {
+    li {
+      margin-bottom: .5rem;
+    }
+  }
+}

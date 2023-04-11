@@ -1,0 +1,11 @@
+.t-about{
+  max-width: 65rem;
+
+  &__content {
+    padding: 4rem;
+
+    p + p {
+      margin-top: 2rem;
+    }
+  }
+}

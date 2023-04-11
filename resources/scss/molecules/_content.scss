@@ -1,0 +1,26 @@
+.m-content {
+  h1 {
+    @extend .a-h2;
+  }
+
+  h2 {
+    @extend .a-h3;
+  }
+
+  h3 {
+    @extend .a-h4;
+  }
+
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  p + p {
+    margin-top: 2rem;
+  }
+
+  p + h1,
+  p + h2,
+  p + h3 {
+    margin-top: 6rem;
+  }
+}

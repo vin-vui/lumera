@@ -14,12 +14,11 @@
             {{-- TODO FILTERS --}}
             <div class="g-row">
                 <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list">
-                    {{-- TODO CREATORS --}}
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
-                    <li>@include('molecules.creator')</li>
+                    @foreach (App\Models\Creator::where('display', true)->get() as $creator)
+                        <div class="m-slider__slide">
+                            @include('molecules.creator', ['item' => $creator])
+                        </div>
+                    @endforeach
                 </ul>
                 {{-- TODO PAGINATION --}}
             </div>
@@ -35,14 +34,11 @@
             </div>
             <div class="g-row">
                 <div class="sm-column-12">
-                    <div class="m-slider -bg" data-module-slider data-controls="true">
-                        <div class="m-slider__viewport" data-slider="viewport" data-size="5">
+                    <div class="m-slider -bg" data-module-slider data-controls="true" data-size="5">
+                        <div class="m-slider__viewport" data-slider="viewport">
                             <ul class="no-bullet m-slider__container">
                                 {{-- TODO LIMIT NBR ?? --}}
                                 @foreach (App\Models\CaseStudy::all() as $case)
-                                    <li class="m-slider__slide">@include('molecules.case', ['item' => $case])</li>
-                                    <li class="m-slider__slide">@include('molecules.case', ['item' => $case])</li>
-                                    <li class="m-slider__slide">@include('molecules.case', ['item' => $case])</li>
                                     <li class="m-slider__slide">@include('molecules.case', ['item' => $case])</li>
                                 @endforeach
                             </ul>
@@ -51,16 +47,14 @@
                         <div class="m-slider__footer">
                             <div class="m-slider__arrows">
                                 <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                                    ←
-                                    {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg> --}}
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
                                 </button>
                                 <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                                    →
-                                    {{-- <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg> --}}
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
                                 </button>
                             </div>
 
-                            <a href="#" class="a-button -round -small"><span>Voir tous</span></a>
+                            <a href="/campagnes" class="a-button -round -small"><span>Voir tous</span></a>
                         </div>
                     </div>
                 </div>

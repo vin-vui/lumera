@@ -1,0 +1,87 @@
+.m-popin {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  visibility: hidden;
+  transition: .1s ease-in-out .3s;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(clr(cblack), .7);
+  //   pointer-events: none;
+  // }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(clr(cblack), .7);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - #{$vr});
+    max-width: 500px;
+    height: 100%;
+    margin-left: auto;
+    background-color: clr(cwhite);
+    opacity: 0;
+    cursor: initial;
+    transition: opacity 0s ease-in-out .3s, transform .3s ease-in-out;
+    transform: translateX(calc(100% + 8rem));
+
+    &.t-case {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__content {
+    overflow-y: auto;
+    height: 100%
+  }
+
+  &__close {
+    position: absolute;
+    top: 3rem;
+    left: -8rem;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  &.-active {
+    visibility: visible;
+    transition: .1s ease-in-out;
+
+    .m-popin__overlay {
+      opacity: 1;
+      transition: opacity .3s ease-in-out;
+    }
+
+    .m-popin__container {
+      opacity: 1;
+      transition: opacity 0s ease-in-out 0s, transform .3s ease-in-out;
+
+      // transition: opacity .3s ease-in-out .2s;
+      transform: translateX(0%);
+    }
+  }
+}

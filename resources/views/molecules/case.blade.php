@@ -1,5 +1,5 @@
 <article>
-    <a href="#" class="m-case{{ empty($complete) ? ' -small' : '' }}" title="{{ $item->title }}">
+    <button data-module-popin-button data-popin="case" class="m-case{{ empty($complete) ? ' -small' : '' }}" title="{{ $item->title }}">
         <div class="a-ratio m-case__thumb" data-ratio="1/1">
             <img src="{{asset('uploads/placeholder.jpg')}}" alt="{{ $item->title }}">
         </div>
@@ -22,10 +22,10 @@
             @endif
             <span class="m-case__arrow">
                 <svg class="icon" aria-hidden="true" focusable="false">
-                    <use xlink:href="#icon-add" />
+                    <use xlink:href="#icon-arrow-diag" />
                 </svg>
             </span>
         </div>
-    </a>
+    </button>
 </article>
 

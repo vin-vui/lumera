@@ -1,0 +1,10 @@
+.t-contact {
+  max-width: 48rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+}

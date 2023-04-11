@@ -39,7 +39,7 @@
                         <a href="#" target="_blank" rel="noopener" title="Instagram" class="-primary">IN</a>
                     </li>
                 </ul>
-                <a href="#contact" class="a-button -primary">Nous contacter</a>
+                <button data-module-popin-button data-popin="contact" class="a-button -primary">Nous contacter</button>
             </div>
         </div>
     </div>

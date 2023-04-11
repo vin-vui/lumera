@@ -3,7 +3,7 @@
 {{ $item->last_name }}
 {{ $item->nick_name }} --}}
 
-<article class="m-creator">
+<article class="m-creator" data-module-popin-button data-popin="creator">
     <div class="a-ratio" data-ratio>
         <img src="{{asset('uploads/placeholder.jpg')}}" alt="Romain Talon">
     </div>

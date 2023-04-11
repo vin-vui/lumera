@@ -38,6 +38,12 @@
     }
   }
 
+  &[data-ratio="20/7"] {
+    &::before {
+      padding-bottom: 35%;
+    }
+  }
+
   &[data-ratio="16/9"] {
     &::before {
       padding-bottom: 56.25%;

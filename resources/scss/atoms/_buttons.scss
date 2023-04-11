@@ -14,8 +14,7 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 350ms $anim-easing,
-    color 350ms $anim-easing;
+  transition: background-color $anim, color $anim;
   appearance: none;
 
   &.-primary {
@@ -87,10 +86,20 @@
       z-index: 1;
     }
 
+    &.-center {
+      margin: 0 auto;
+    }
+
     &.-big {
       width: 18rem;
       height: 18rem;
       font-size: 1.6rem;
+    }
+
+    &.-medium {
+      width: 8rem;
+      height: 8rem;
+      font-size: 1.2rem;
     }
 
     &.-small {
@@ -122,6 +131,55 @@
         &::before {
           opacity: .8;
           transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &.-inline {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    text-transform: none;
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &.-small {
+      padding: 1rem;
+      background-color: clr(cwhite);
+      color: clr(cblack);
+      font-size: 1.6rem;
+
+      .icon {
+        transition: color $anim;
+      }
+
+      @media (hover: hover) and (any-pointer: fine) {
+        &:hover, &:focus {
+          background-color: clr(cgray);
+
+          .icon {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+
+    &.-xsmall {
+      padding: 0;
+      border-radius: 0;
+      color: clr(cblack);
+      font-size: 1.4rem;
+      transition: color $anim;
+
+      @media (hover: hover) and (any-pointer: fine) {
+        &:hover, &:focus {
+          color: var(--primary);
         }
       }
     }
