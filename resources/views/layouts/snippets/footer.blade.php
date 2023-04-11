@@ -92,27 +92,22 @@
         </button>
         <div class="m-popin__content">
             <div class="a-ratio" data-ratio="3/4">
-                <img src="{{asset('uploads/placeholder.jpg')}}" alt="Romain Talon">
+                <img src="{{asset('uploads/placeholder.jpg')}}" alt="{{ $item->first_name }} {{ $item->last_name }}">
             </div>
             <div class="t-creator__content">
-                <h2 class="a-h2">Romain Talon</h2>
-                <p class="text-cgraydark -small">@talonnade</p>
+                <h2 class="a-h2">{{ $item->first_name }} {{ $item->last_name }}</h2>
+                <p class="text-cgraydark -small">{{ $item->nick_name }}</p>
                 <ul class="no-bullet m-tags">
-                    <li class="m-tags__item">
-                        <span class="a-tag">Divertissement</span>
-                    </li>
-                    <li class="m-tags__item">
-                        <span class="a-tag">Business</span>
-                    </li>
-                    <li class="m-tags__item">
-                        <span class="a-tag">Conseil</span>
-                    </li>
+                    @if ($item->specialty_id != null && $item->specialty()->exists())
+                        <li class="m-tags__item">
+                            <span class="a-tag">{{ $item->specialty->label }}</span>
+                        </li>
+                    @endif
                 </ul>
                 <div>
                     <p class="a-h5 mgb-1">Résumé de notre créateur</p>
                     <div class="a-text -small text-cgraydark">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit praesentium iste vel voluptatibus sed quas, deserunt, error hic illum ratione, temporibus soluta! Porro soluta nesciunt consectetur ut deleniti sequi doloribus!</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit praesentium iste vel voluptatibus sed quas, deserunt, error hic illum ratione, temporibus soluta! Porro soluta nesciunt consectetur ut deleniti sequi doloribus!</p>
+                        {{ $creator->description }}
                     </div>
                 </div>
                 <ul class="no-bullet t-creator__socials">

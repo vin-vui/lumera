@@ -6,22 +6,15 @@
   border-radius: 1rem;
   text-align: left;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    color: clr(cblack);
+  }
 
   &__thumb {
     flex: 0 0 subcol(2, 9);
     width: subcol(2, 9);
-  }
-
-  &.-small & {
-    &__thumb {
-      flex: 0 0 11rem;
-      width: 11rem;
-    }
-
-    &__content {
-      flex: 0 0 calc(100% - 11rem);
-      width: calc(100% - 11rem);
-    }
   }
 
   ul {
@@ -51,7 +44,15 @@
     color: var(--primary);
   }
 
-  &:hover, &:focus {
-    color: clr(cblack);
+  &.-small & {
+    &__thumb {
+      flex: 0 0 11rem;
+      width: 11rem;
+    }
+
+    &__content {
+      flex: 0 0 calc(100% - 11rem);
+      width: calc(100% - 11rem);
+    }
   }
 }

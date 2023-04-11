@@ -30,29 +30,31 @@
                 </div>
             </div>
             <div class="g-row">
-                <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
-                    <div class="m-slider__viewport" data-slider="viewport">
-                        <ul class="no-bullet m-slider__container">
-                            {{-- TODO LIMIT NBR ?? --}}
-                            @foreach (App\Models\Creator::where('display', true)->get() as $creator)
-                                <li class="m-slider__slide">
-                                    @include('molecules.creator', ['item' => $creator])
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-
-                    <div class="m-slider__footer">
-                        <div class="m-slider__arrows">
-                            <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
-                            </button>
-                            <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
-                            </button>
+                <div class="sm-column-12">
+                    <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
+                        <div class="m-slider__viewport" data-slider="viewport">
+                            <ul class="no-bullet m-slider__container">
+                                {{-- TODO LIMIT NBR ?? --}}
+                                @foreach (App\Models\Creator::where('display', true)->get() as $creator)
+                                    <li class="m-slider__slide">
+                                        @include('molecules.creator', ['item' => $creator])
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <a href="/createurs" class="a-button -round -small"><span>Voir tous</span></a>
+                        <div class="m-slider__footer">
+                            <div class="m-slider__arrows">
+                                <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
+                                </button>
+                                <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
+                                </button>
+                            </div>
+
+                            <a href="/createurs" class="a-button -round -small"><span>Voir tous</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
