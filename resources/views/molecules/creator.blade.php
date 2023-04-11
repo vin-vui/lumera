@@ -1,7 +1,7 @@
 
 <article class="m-creator" data-module-popin-button data-popin="creator">
     <div class="a-ratio" data-ratio>
-        <img src="{{ Storage::disk('uploads')->url($creator->image) }}" alt="{{ $item->first_name }} {{ $item->last_name }}">
+        <img src="{{ Storage::disk('uploads')->url($item->image) }}" alt="{{ $item->first_name }} {{ $item->last_name }}">
     </div>
     <div class="m-creator__content">
         <p class="a-h3">{{ $item->first_name }} {{ $item->last_name }}</p>
