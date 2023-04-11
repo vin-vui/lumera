@@ -1,6 +1,6 @@
 <article data-module-popin-button data-popin="case" class="m-case{{ empty($complete) ? ' -small' : '' }}">
     <div class="a-ratio m-case__thumb" data-ratio="1/1">
-        <img src="{{ Storage::disk('uploads')->url($item->image) }}" alt="{{ $item->title }}">
+        <img src="{{asset('uploads/placeholder.jpg')}}" alt="{{ $item->title }}">
     </div>
     <div class="m-case__content">
         <p class="a-h3">{{ $item->title }}</p>
