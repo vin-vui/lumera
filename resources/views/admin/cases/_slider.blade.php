@@ -57,9 +57,9 @@
                                 @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
                             <div class="my-8">
-                                <x-jet-label for="title" value="Nom du client" />
-                                <x-jet-input id="title" class="block mt-1 w-full" type="text" name="title" wire:model="title" />
-                                @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
+                                <x-jet-label for="client" value="Nom du client" />
+                                <x-jet-input id="client" class="block mt-1 w-full" type="text" name="client" wire:model="client" />
+                                @error('client') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
                             <div class="my-8">
                                 <x-jet-label for="year" value="Année" />
@@ -86,6 +86,16 @@
                                             console.error(error);
                                         });
                                 </script>
+                            </div>
+                            <div class="my-8">
+                                <x-jet-label for="video_1" value="Vidéo 1" />
+                                <x-jet-input id="video_1" class="block mt-1 w-full" type="text" name="video_1" wire:model="video_1" />
+                                @error('video_1') <span class="text-red-500">{{ $message }}</span>@enderror
+                            </div>
+                            <div class="my-8">
+                                <x-jet-label for="video_2" value="Vidéo 2" />
+                                <x-jet-input id="video_2" class="block mt-1 w-full" type="text" name="video_2" wire:model="video_2" />
+                                @error('video_2') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
                             <div class="mb-8">
                                 <x-jet-label for="selected_creators" value="Créateurs" />

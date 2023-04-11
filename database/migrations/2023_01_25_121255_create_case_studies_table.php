@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('case_studies', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->string('client')->nullable();
             $table->string('year')->nullable();
+            $table->text('video_1')->nullable();
+            $table->text('video_2')->nullable();
             $table->text('description')->nullable();
             $table->text('bloc_wysiwyg')->nullable();
             $table->boolean('display')->nullable();

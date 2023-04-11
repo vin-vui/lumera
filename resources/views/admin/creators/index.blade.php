@@ -20,6 +20,8 @@
                 <thead class="bg-transparent ">
                     <tr>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Visuel</th>
+                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Nom</th>
+                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Prénom</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Pseudo</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Domaine</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50 hidden sm:block">Réseaux</th>
@@ -32,6 +34,8 @@
                         <td class="p-4 whitespace-nowrap">
                             <img class="h-10 w-10 object-cover mx-auto" src="{{ Storage::disk('uploads')->url($creator->image) }}" alt="">
                         </td>
+                        <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $creator->last_name }}</td>
+                        <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $creator->first_name }}</td>
                         <td class="px-4 py-4 text-sm font-extrabold text-gray-900"><span>@</span>{{ $creator->nick_name }}</td>
                         <td class="px-4 py-4 text-center text-sm font-extrabold text-gray-900">
                             @if ($creator->specialty_id != null && $creator->specialty()->exists())

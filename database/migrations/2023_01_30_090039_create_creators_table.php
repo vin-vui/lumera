@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('nick_name')->nullable();
-            $table->string('location')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->string('sn_tiktok')->nullable();

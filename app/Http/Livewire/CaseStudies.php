@@ -18,7 +18,7 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $title, $image, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators = [], $trixId;
+    public $case_tags, $image, $video_1, $video_2, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators = [], $trixId;
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
@@ -66,8 +66,9 @@ class CaseStudies extends Component
     {
         $this->search = '';
         $this->case_id = '';
-        $this->title = '';
         $this->image = '';
+        $this->video_1 = '';
+        $this->video_2 = '';
         $this->client = '';
         $this->year = '';
         $this->description = '';
@@ -83,8 +84,9 @@ class CaseStudies extends Component
         $save_image = false;
 
         $dataValid = $this->validate([
-            'title' => 'required',
             'image' => 'nullable',
+            'video_1' => 'nullable',
+            'video_2' => 'nullable',
             'client' => 'nullable',
             'year' => 'nullable',
             'description' => 'required',
@@ -124,8 +126,9 @@ class CaseStudies extends Component
         $case = CaseStudy::findOrFail($id);
 
         $this->case_id = $id;
-        $this->title = $case->title;
         $this->image = $case->image;
+        $this->video_1 = $case->video_1;
+        $this->video_2 = $case->video_2;
         $this->client = $case->client;
         $this->year = $case->year;
         $this->description = $case->description;
