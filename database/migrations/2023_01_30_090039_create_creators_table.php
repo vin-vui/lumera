@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('sn_instagram')->nullable();
             $table->string('sn_youtube')->nullable();
             $table->string('sn_linkedin')->nullable();
-            $table->string('sn_pinterest')->nullable();
+            $table->string('sn_facebook')->nullable();
             $table->string('sn_twitter')->nullable();
             $table->string('sn_twitch')->nullable();
             $table->boolean('display')->nullable();

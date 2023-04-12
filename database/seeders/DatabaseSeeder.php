@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
                 'sn_instagram' => $this->faker->url(),
                 'sn_youtube' => $this->faker->url(),
                 'sn_linkedin' => $this->faker->url(),
-                'sn_pinterest' => $this->faker->url(),
+                'sn_facebook' => $this->faker->url(),
                 'sn_twitter' => $this->faker->url(),
                 'sn_twitch' => $this->faker->url(),
                 'display' => $this->faker->boolean(),
@@ -113,12 +113,12 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        for ($i = 1; $i <= 11; $i++) {
-            DB::table('marks')->insert([
-                'label' => $this->faker->company(),
-                'image' => 'placeholder.jpg',
-            ]);
-        }
+        // for ($i = 1; $i <= 11; $i++) {
+        //     DB::table('marks')->insert([
+        //         'label' => $this->faker->company(),
+        //         'image' => 'placeholder.jpg',
+        //     ]);
+        // }
 
     }
 

@@ -146,8 +146,8 @@
                         @if ($creator->sn_linkedin)
                             <li><a href="{{ $creator->sn_linkedin }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Linkedin</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
                         @endif
-                        @if ($creator->sn_pinterest)
-                            <li><a href="{{ $creator->sn_pinterest }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>Pinterest</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
+                        @if ($creator->sn_facebook)
+                            <li><a href="{{ $creator->sn_facebook }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small"><span>facebook</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-diag" /></svg></a></li>
                         @endif
                     </ul>
                     {{-- TODO EMAIL --}}

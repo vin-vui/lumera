@@ -32,7 +32,7 @@
 {{ $creator->sn_instagram }}
 {{ $creator->sn_youtube }}
 {{ $creator->sn_linkedin }}
-{{ $creator->sn_pinterest }}
+{{ $creator->sn_facebook }}
 {{ $creator->sn_twitter }}
 {{ $creator->sn_twitch }}
 ```

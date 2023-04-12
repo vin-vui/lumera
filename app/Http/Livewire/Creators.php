@@ -28,7 +28,7 @@ class Creators extends Component
     $sn_instagram,
     $sn_youtube,
     $sn_linkedin,
-    $sn_pinterest,
+    $sn_facebook,
     $sn_twitter,
     $sn_twitch,
     $display,
@@ -89,7 +89,7 @@ class Creators extends Component
         $this->sn_instagram = '';
         $this->sn_youtube = '';
         $this->sn_linkedin = '';
-        $this->sn_pinterest = '';
+        $this->sn_facebook = '';
         $this->sn_twitter = '';
         $this->sn_twitch = '';
         $this->display = false;
@@ -111,7 +111,7 @@ class Creators extends Component
             'sn_instagram' => 'nullable',
             'sn_youtube' => 'nullable',
             'sn_linkedin' => 'nullable',
-            'sn_pinterest' => 'nullable',
+            'sn_facebook' => 'nullable',
             'sn_twitter' => 'nullable',
             'sn_twitch' => 'nullable',
             'display' => 'nullable',
@@ -158,7 +158,7 @@ class Creators extends Component
         $this->sn_instagram = $creator->sn_instagram;
         $this->sn_youtube = $creator->sn_youtube;
         $this->sn_linkedin = $creator->sn_linkedin;
-        $this->sn_pinterest = $creator->sn_pinterest;
+        $this->sn_facebook = $creator->sn_facebook;
         $this->sn_twitter = $creator->sn_twitter;
         $this->sn_twitch = $creator->sn_twitch;
         $this->display = $creator->display;
