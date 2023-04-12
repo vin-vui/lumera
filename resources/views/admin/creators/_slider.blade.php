@@ -133,6 +133,28 @@
                                     <x-jet-input id="sn_linkedin" class="block mt-1 w-full" type="url" placeholder="https://www.linkedin.com/in/example" pattern="https://.*" name="sn_linkedin" wire:model="sn_linkedin" />
                                     @error('sn_linkedin') <span class="text-red-500">{{ $message }}</span>@enderror
                                 </div>
+
+                                <div class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" class="w-8 h-8">
+                                        <path fill="#CB1F27" d="M0 128.002c0 52.414 31.518 97.442 76.619 117.239c-.36-8.938-.064-19.668 2.228-29.393c2.461-10.391 16.47-69.748 16.47-69.748s-4.089-8.173-4.089-20.252c0-18.969 10.994-33.136 24.686-33.136c11.643 0 17.268 8.745 17.268 19.217c0 11.704-7.465 29.211-11.304 45.426c-3.207 13.578 6.808 24.653 20.203 24.653c24.252 0 40.586-31.149 40.586-68.055c0-28.054-18.895-49.052-53.262-49.052c-38.828 0-63.017 28.956-63.017 61.3c0 11.152 3.288 19.016 8.438 25.106c2.368 2.797 2.697 3.922 1.84 7.134c-.614 2.355-2.024 8.025-2.608 10.272c-.852 3.242-3.479 4.401-6.409 3.204c-17.884-7.301-26.213-26.886-26.213-48.902c0-36.361 30.666-79.961 91.482-79.961c48.87 0 81.035 35.364 81.035 73.325c0 50.213-27.916 87.726-69.066 87.726c-13.819 0-26.818-7.47-31.271-15.955c0 0-7.431 29.492-9.005 35.187c-2.714 9.869-8.026 19.733-12.883 27.421a127.897 127.897 0 0 0 36.277 5.249c70.684 0 127.996-57.309 127.996-128.005C256.001 57.309 198.689 0 128.005 0C57.314 0 0 57.309 0 128.002Z" />
+                                    </svg>
+                                    <x-jet-input id="sn_pinterest" class="block mt-1 w-full" type="url" placeholder="https://www.pinterest.fr/example" pattern="https://.*" name="sn_pinterest" wire:model="sn_pinterest" />
+                                    @error('sn_pinterest') <span class="text-red-500">{{ $message }}</span>@enderror
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="39.2" height="32" viewBox="0 0 256 209" class="w-8 h-8">
+                                        <path fill="#55acee" d="M256 25.45a105.04 105.04 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435c0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45" />
+                                    </svg>
+                                    <x-jet-input id="sn_twitter" class="block mt-1 w-full" type="url" placeholder="https://twitter.com/example" pattern="https://.*" name="sn_twitter" wire:model="sn_twitter" />
+                                    @error('sn_twitter') <span class="text-red-500">{{ $message }}</span>@enderror
+                                </div>
+                                <div class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30.57" height="32" viewBox="0 0 256 268" class="w-8 h-8">
+                                        <path fill="#5A3E85" d="M17.458 0L0 46.556v186.201h63.983v34.934h34.931l34.898-34.934h52.36L256 162.954V0H17.458Zm23.259 23.263H232.73v128.029l-40.739 40.741H128L93.113 226.92v-34.886H40.717V23.263Zm64.008 116.405H128V69.844h-23.275v69.824Zm63.997 0h23.27V69.844h-23.27v69.824Z" />
+                                    </svg>
+                                    <x-jet-input id="sn_twitch" class="block mt-1 w-full" type="url" placeholder="https://www.twitch.tv/example" pattern="https://.*" name="sn_twitch" wire:model="sn_twitch" />
+                                    @error('sn_twitch') <span class="text-red-500">{{ $message }}</span>@enderror
+                                </div>
                             </div>
                             <div class="mb-8" x-data="{ specialtyManager: false }">
                                 <x-jet-label value="Domaines" />

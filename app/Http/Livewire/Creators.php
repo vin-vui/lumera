@@ -28,6 +28,9 @@ class Creators extends Component
     $sn_instagram,
     $sn_youtube,
     $sn_linkedin,
+    $sn_pinterest,
+    $sn_twitter,
+    $sn_twitch,
     $display,
     $creator_id,
     $selected_specialties = [];
@@ -86,6 +89,9 @@ class Creators extends Component
         $this->sn_instagram = '';
         $this->sn_youtube = '';
         $this->sn_linkedin = '';
+        $this->sn_pinterest = '';
+        $this->sn_twitter = '';
+        $this->sn_twitch = '';
         $this->display = false;
         $this->selected_specialties = [];
     }
@@ -105,6 +111,9 @@ class Creators extends Component
             'sn_instagram' => 'nullable',
             'sn_youtube' => 'nullable',
             'sn_linkedin' => 'nullable',
+            'sn_pinterest' => 'nullable',
+            'sn_twitter' => 'nullable',
+            'sn_twitch' => 'nullable',
             'display' => 'nullable',
         ]);
 
@@ -149,6 +158,9 @@ class Creators extends Component
         $this->sn_instagram = $creator->sn_instagram;
         $this->sn_youtube = $creator->sn_youtube;
         $this->sn_linkedin = $creator->sn_linkedin;
+        $this->sn_pinterest = $creator->sn_pinterest;
+        $this->sn_twitter = $creator->sn_twitter;
+        $this->sn_twitch = $creator->sn_twitch;
         $this->display = $creator->display;
         $this->selected_specialties = $creator->specialties->pluck('id')->toArray();
 

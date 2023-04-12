@@ -76,6 +76,9 @@ class DatabaseSeeder extends Seeder
                 'sn_instagram' => $this->faker->url(),
                 'sn_youtube' => $this->faker->url(),
                 'sn_linkedin' => $this->faker->url(),
+                'sn_pinterest' => $this->faker->url(),
+                'sn_twitter' => $this->faker->url(),
+                'sn_twitch' => $this->faker->url(),
                 'display' => $this->faker->boolean(),
             ]);
         }

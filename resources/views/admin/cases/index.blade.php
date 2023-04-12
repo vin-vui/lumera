@@ -36,7 +36,7 @@
                         <td class="px-4 py-4 text-sm font-medium text-gray-900">
                             <div class="flex gap-2">
                                 @foreach ($case->tags as $tag)
-                                <span class="text-md items-center font-semibold px-2.5 py-0.5 whitespace-nowrap rounded-full bg-orange-400 text-white">
+                                <span class="text-md flex items-center font-semibold px-2.5 pt-1 pb-0.5 whitespace-nowrap rounded-full bg-orange-400 text-white">
                                     {{ $tag->label }}
                                 </span>
                                 @endforeach

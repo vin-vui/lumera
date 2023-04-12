@@ -26,6 +26,9 @@ class Creator extends Model
         'sn_instagram',
         'sn_youtube',
         'sn_linkedin',
+        'sn_pinterest',
+        'sn_twitter',
+        'sn_twitch',
         'display',
     ];
 
