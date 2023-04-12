@@ -25,11 +25,6 @@
 {{ $creator->description }}
 ```
 
-### Localisation
-```html
-{{ $creator->location }}
-```
-
 ### Réseaux Sociaux
 ```html
 {{ $creator->sn_tiktok }}
@@ -37,15 +32,16 @@
 {{ $creator->sn_instagram }}
 {{ $creator->sn_youtube }}
 {{ $creator->sn_linkedin }}
+{{ $creator->sn_pinterest }}
+{{ $creator->sn_twitter }}
+{{ $creator->sn_twitch }}
 ```
 
 ### Domaine
 ```html
-@if ($creator->specialty_id != null && $creator->specialty()->exists())
-    {{ $creator->specialty->label }}
-@else
-    <--- manquant --->
-@endif
+@foreach ($creator->specialties as $specialty)
+    {{ $specialty->label }}
+@endforeach
 ```
 
 
@@ -63,9 +59,9 @@
 <img class="" src="{{ Storage::disk('uploads')->url($case->image) }}" alt="">
 ```
     
-### Titre
+### Client
 ```html
-{{ $case->title }}
+{{ $case->client }}
 ```
     
 ### Année
@@ -85,61 +81,6 @@
 </div>
 ```
 
-Exemple de CSS pour Trix
-```css
-.trix {
-    @apply w-full;
-}
-
-.trix h3 {
-    font-size: 1.25rem !important;
-    line-height: 1.25rem !important;
-    @apply leading-5 font-semibold mb-4;
-}
-
-.trix a:not(.no-underline) {
-    @apply underline;
-}
-
-.trix a:visited {
-    color: green;
-}
-
-.trix ul {
-    list-style-type: disc;
-    padding-left: 1rem;
-}
-
-.trix ol {
-    list-style-type: decimal;
-    padding-left: 1rem;
-}
-
-.trix pre {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-    font-family: monospace;
-    font-size: 1.5em;
-    padding: 0.5em;
-    white-space: pre;
-    background-color: #eee;
-    overflow-x: auto;
-}
-
-.trix blockquote {
-    border: 0 solid #ccc;
-    border-left-width: 0px;
-    border-left-width: 0.3em;
-    margin-left: 0.3em;
-    padding-left: 0.6em;
-}
-
-.trix-button-group--file-tools {
-    display: none!important;
-}
-```
-
 ### Tags
 ```html
 @foreach ($case->tags as $tag)
@@ -147,7 +88,7 @@ Exemple de CSS pour Trix
 @endforeach
 ```
 
-### Créateurs
+### Créateurs de l'étude de cas
 ```html
 @foreach ($case->creators as $creator)
     {{ $creator->first_name }}
@@ -155,4 +96,56 @@ Exemple de CSS pour Trix
     {{ $creator->nick_name }}
     ...
 @endforeach
+```
+
+
+## Marques partenaires
+
+### Loop
+```html
+@foreach (App\Models\Mark::all() as $mark)
+    <--- do the magic --->
+@endforeach
+```
+
+### Visuel
+```html
+<img class="" src="{{ Storage::disk('uploads')->url($mark->image) }}" alt="">
+```
+
+### Label
+```html
+{{ $mark->label }}
+```
+
+
+## Témoignages
+
+### Loop
+```html
+@foreach (App\Models\Testimonial::all() as $testimonial)
+    <--- do the magic --->
+@endforeach
+```
+
+### Visuel
+```html
+<img class="" src="{{ Storage::disk('uploads')->url($testimonial->image) }}" alt="">
+```
+
+### Label
+e.g. nom du créateur ou de l'entreprise
+```html
+{{ $testimonial->label }}
+```
+
+### Texte
+```html
+{{ $testimonial->text }}
+```
+
+### Type
+Créateur ou Entreprise
+```html
+{{ $testimonial->type }}
 ```
