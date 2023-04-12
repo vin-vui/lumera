@@ -1,0 +1,60 @@
+.a-filterTag {
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: block;
+    padding: .8rem 1rem;
+    border-radius: 30px;
+    background-color: clr(cgray);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    transition: padding-right $anim, background-color $anim, color $anim;
+
+    &::after {
+      content: "✕";
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      width: .7rem;
+      height: .7rem;
+      font-size: 1rem;
+      line-height: .8;
+      opacity: 0;
+      transition: opacity $anim;
+      transform: translateY(-50%);
+    }
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+
+    &:checked {
+      + span {
+        padding-right: 2.7rem;
+        background-color: var(--primary);
+        color: clr(cwhite);
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &:hover, &:focus {
+    span {
+      background-color: var(--primary);
+      color: clr(cwhite);
+    }
+  }
+}
