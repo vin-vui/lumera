@@ -21,7 +21,6 @@ class Creators extends Component
     $first_name,
     $last_name,
     $nick_name,
-    $location,
     $image,
     $description,
     $sn_tiktok,
@@ -30,8 +29,8 @@ class Creators extends Component
     $sn_youtube,
     $sn_linkedin,
     $display,
-    $specialty_id,
-    $creator_id;
+    $creator_id,
+    $selected_specialties = [];
 
     public $confirming;
     public $isOpen = false;
@@ -80,7 +79,6 @@ class Creators extends Component
         $this->first_name = '';
         $this->last_name = '';
         $this->nick_name = '';
-        $this->location = '';
         $this->image = '';
         $this->description = '';
         $this->sn_tiktok = '';
@@ -89,7 +87,7 @@ class Creators extends Component
         $this->sn_youtube = '';
         $this->sn_linkedin = '';
         $this->display = false;
-        $this->specialty_id = '';
+        $this->selected_specialties = [];
     }
 
     public function store()
@@ -100,7 +98,6 @@ class Creators extends Component
             'first_name' => 'nullable',
             'last_name' => 'nullable',
             'nick_name' => 'required',
-            'location' => 'nullable',
             'image' => 'nullable',
             'description' => 'nullable',
             'sn_tiktok' => 'nullable',
@@ -109,7 +106,6 @@ class Creators extends Component
             'sn_youtube' => 'nullable',
             'sn_linkedin' => 'nullable',
             'display' => 'nullable',
-            'specialty_id' => 'required',
         ]);
 
         if ($this->creator_id != '') {
@@ -131,7 +127,8 @@ class Creators extends Component
             toast()->success('Créateur modifié')->push();
         }
 
-        Creator::updateOrCreate(['id' => $this->creator_id], $dataValid);
+        $creator = Creator::updateOrCreate(['id' => $this->creator_id], $dataValid);
+        $creator->specialties()->sync($this->selected_specialties);
 
         $this->resetInputFields();
         $this->closeModal();
@@ -145,7 +142,6 @@ class Creators extends Component
         $this->first_name = $creator->first_name;
         $this->last_name = $creator->last_name;
         $this->nick_name = $creator->nick_name;
-        $this->location = $creator->location;
         $this->image = $creator->image;
         $this->description = $creator->description;
         $this->sn_tiktok = $creator->sn_tiktok;
@@ -154,7 +150,7 @@ class Creators extends Component
         $this->sn_youtube = $creator->sn_youtube;
         $this->sn_linkedin = $creator->sn_linkedin;
         $this->display = $creator->display;
-        $this->specialty_id = $creator->specialty_id;
+        $this->selected_specialties = $creator->specialties->pluck('id')->toArray();
 
         $this->openModal();
     }

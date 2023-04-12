@@ -23,7 +23,7 @@
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Nom</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Prénom</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Pseudo</th>
-                        <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Domaine</th>
+                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Domaines</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50 hidden sm:block">Réseaux</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Affiché</th>
                     </tr>
@@ -38,11 +38,13 @@
                         <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $creator->first_name }}</td>
                         <td class="px-4 py-4 text-sm font-extrabold text-gray-900"><span>@</span>{{ $creator->nick_name }}</td>
                         <td class="px-4 py-4 text-center text-sm font-extrabold text-gray-900">
-                            @if ($creator->specialty_id != null && $creator->specialty()->exists())
-                            <span class="inline-flex first-line:justify-center text-md items-center font-extrabold whitespace-nowrap text-gray-900">{{ $creator->specialty->label }}</span>
-                            @else
-                            <span class="inline-flex first-line:justify-center text-md items-center font-extrabold whitespace-nowrap text-red-600">manquant</span>
-                            @endif
+                            <div class="flex gap-2">
+                                @foreach ($creator->specialties as $specialty)
+                                <span class="text-md items-center font-semibold px-2.5 py-0.5 whitespace-nowrap rounded-full bg-orange-400 text-white">
+                                    {{ $specialty->label }}
+                                </span>
+                                @endforeach
+                            </div>
                         </td>
                         <td class="px-4 py-6 items-center justify-center gap-x-2 hidden sm:flex">
                             @if ($creator->sn_tiktok)

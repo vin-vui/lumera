@@ -56,7 +56,7 @@
                                 </x-jet-secondary-button>
                                 @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="my-4">
+                            <div class="mb-4 mt-8">
                                 <x-jet-label for="first_name" value="Prénom" />
                                 <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" wire:model="first_name" />
                                 @error('first_name') <span class="text-red-500">{{ $message }}</span>@enderror
@@ -66,23 +66,17 @@
                                 <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" wire:model="last_name" />
                                 @error('last_name') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-8">
                                 <x-jet-label for="nick_name" value="Pseudo" />
                                 <x-jet-input id="nick_name" class="block mt-1 w-full" type="text" name="nick_name" wire:model="nick_name" />
                                 @error('nick_name') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-8">
                                 <x-jet-label for="description" value="Description" />
                                 <textarea rows="5" id="description" class="block mt-1 w-full border-gray-300 focus:border-orange-300 focus:ring-0" type="text" name="description" wire:model="description"></textarea>
                                 @error('description') <span class="text-red-500">{{ $message }}</span>@enderror
                             </div>
-                            <div class="mb-4">
-                                <x-jet-label for="location" value="Localisation" />
-                                <x-jet-input id="location" class="block mt-1 w-full" type="text" name="location" wire:model="location" />
-                                @error('location') <span class="text-red-500">{{ $message }}</span>@enderror
-                            </div>
-
-                            <div class="mb-4">
+                            <div class="mb-8">
                                 <x-jet-label for="sn_tiktok" value="Réseaux" />
                                 <div class="flex gap-2 items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28.25" height="32" viewBox="0 0 256 290" class="w-8 h-8">
@@ -140,13 +134,12 @@
                                     @error('sn_linkedin') <span class="text-red-500">{{ $message }}</span>@enderror
                                 </div>
                             </div>
-
-                            <div class="mb-4" x-data="{ specialtyManager: false }">
-                                <x-jet-label value="Domaine" />
+                            <div class="mb-8" x-data="{ specialtyManager: false }">
+                                <x-jet-label value="Domaines" />
                                 <div class="flex flex-wrap gap-2 mt-1">
                                     @foreach($this->creator_specialties as $specialty)
                                     <div class="">
-                                        <input type="radio" wire:model='specialty_id' id="selected_specialty_{{ $specialty->id }}" value="{{ $specialty->id }}" class="hidden peer" required="">
+                                        <input type="checkbox" wire:model='selected_specialties' id="selected_specialty_{{ $specialty->id }}" value="{{ $specialty->id }}" class="hidden peer" required="">
                                         <label for="selected_specialty_{{ $specialty->id }}" class="transition duration-200 inline-flex first-line:justify-center text-md items-center font-extrabold px-3 py-2 whitespace-nowrap text-gray-900 cursor-pointer bg-gray-50 peer-checked:bg-blue-900 peer-checked:text-gray-50">
                                             <div class="block">
                                                 <div class="text-sm font-semibold">{{ $specialty->label }}</div>

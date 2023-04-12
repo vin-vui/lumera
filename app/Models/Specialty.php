@@ -20,6 +20,6 @@ class Specialty extends Model
 
     public function creators()
     {
-        return $this->hasMany(Creators::class);
+        return $this->belongsToMany(Creator::class);
     }
 }

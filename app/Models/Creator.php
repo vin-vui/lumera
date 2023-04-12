@@ -27,11 +27,10 @@ class Creator extends Model
         'sn_youtube',
         'sn_linkedin',
         'display',
-        'specialty_id',
     ];
 
-    public function specialty()
+    public function specialties()
     {
-        return $this->belongsTo(Specialty::class);
+        return $this->belongsToMany(Specialty::class);
     }
 }

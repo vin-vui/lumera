@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Faker\Generator;
 use Illuminate\Container\Container;
 use App\Models\CaseStudy;
+use App\Models\Creator;
 
 class DatabaseSeeder extends Seeder
 {
@@ -76,8 +77,11 @@ class DatabaseSeeder extends Seeder
                 'sn_youtube' => $this->faker->url(),
                 'sn_linkedin' => $this->faker->url(),
                 'display' => $this->faker->boolean(),
-                'specialty_id' => $this->faker->randomDigitNotNull(),
             ]);
+        }
+
+        foreach (Creator::all() as $creator) {
+            $creator->specialties()->sync([$this->faker->numberBetween(1, 26), $this->faker->numberBetween(1, 26)]);
         }
 
         for ($i = 1; $i <= 13; $i++) {
