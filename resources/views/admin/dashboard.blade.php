@@ -24,7 +24,7 @@
                         <p class="ml-16 truncate text-sm font-medium text-gray-500">Créateurs <span class="text-orange-300">actifs</span></p>
                     </dt>
                     <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                        <p class="text-2xl font-semibold text-gray-900">{{ App\Models\Creator::all()->count() }}</p>
+                        <p class="text-2xl font-semibold text-gray-900">{{ App\Models\Creator::where('display', true)->count() }}</p>
                         <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                             <div class="text-sm">
                                 <a href="{{ route('creators') }}" class="font-medium text-indigo-600 hover:text-indigo-500">Voir tous</a>
@@ -44,7 +44,7 @@
                         <p class="ml-16 truncate text-sm font-medium text-gray-500">Études de cas <span class="text-orange-300">publiées</span></p>
                     </dt>
                     <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                        <p class="text-2xl font-semibold text-gray-900">{{ App\Models\CaseStudy::all()->count() }}</p>
+                        <p class="text-2xl font-semibold text-gray-900">{{ App\Models\CaseStudy::where('display', true)->count() }}</p>
                         <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                             <div class="text-sm">
                                 <a href="{{ route('cases') }}" class="font-medium text-indigo-600 hover:text-indigo-500">Voir toutes</a>

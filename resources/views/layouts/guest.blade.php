@@ -19,5 +19,8 @@
         @include('layouts.snippets.header')
         {{ $slot }}
         @include('layouts.snippets.footer')
+
+        @livewireScripts
+        
     </body>
 </html>

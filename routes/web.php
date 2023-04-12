@@ -7,6 +7,10 @@ use App\Http\Livewire\Creators;
 use App\Http\Livewire\Marks;
 use App\Http\Livewire\Testimonials;
 
+use App\Http\Livewire\FrontCreators;
+use App\Http\Livewire\FrontCaseStudies;
+use App\Http\Livewire\FrontHome;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,25 +22,28 @@ use App\Http\Livewire\Testimonials;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/', FrontHome::class)->name('front.home');
 
 Route::get('/styleguide', function () {
     return view('styleguide');
 });
 
-Route::get('/createurs', function () {
-    return view('creators');
-});
+// Route::get('/createurs', function () {
+//     return view('creators');
+// });
+Route::get('createurs', FrontCreators::class)->name('front.creators');
 
 Route::get('/createur', function () {
     return view('creator');
 });
 
-Route::get('/campagnes', function () {
-    return view('cases');
-});
+// Route::get('/campagnes', function () {
+//     return view('cases');
+// });
+Route::get('campagnes', FrontCaseStudies::class)->name('front.cases');
 
 Route::get('/campagne', function () {
     return view('case');
