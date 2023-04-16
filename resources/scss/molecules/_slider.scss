@@ -9,6 +9,10 @@
     }
   }
 
+  &__ow {
+    overflow: hidden;
+  }
+
   &__slide {
     position: relative;
     flex: 0 0 100%;

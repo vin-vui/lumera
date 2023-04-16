@@ -17,7 +17,7 @@
                 </div>
             </div>
         @else
-            <p class="text-cgraydark -small">{{ \Illuminate\Support\Str::limit($case->description, 50, $end='...') }}</p>
+            <p class="text-cgraydark -small">{{ substr($case->description, 0, strpos($case->description, '.') + 1 ) }}</p>
         @endif
         <span class="m-case__arrow">
             <svg class="icon -medium" aria-hidden="true" focusable="false">

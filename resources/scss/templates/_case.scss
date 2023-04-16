@@ -1,7 +1,6 @@
 .t-case {
-  max-width: 87.5rem;
+  max-width: calc(87.5rem + 12rem);
   margin: 0 auto;
-  padding-top: 0;
 
   &__inner {
     display: flex;

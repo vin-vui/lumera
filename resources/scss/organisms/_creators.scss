@@ -20,4 +20,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: $column-gutter;
   }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

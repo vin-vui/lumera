@@ -10,15 +10,13 @@
             <div class="sm-column-12 lg-column-5 o-hero__slider">
                 <div class="m-slider" data-module-slider data-controls="true" data-pagination="true">
                     <div class="m-slider__nav">
-                        <p class="m-slider__pagination"><span data-slider="pagination">1</span>&nbsp;—&nbsp;12</p>
+                        <p class="m-slider__pagination"><span data-slider="pagination">1</span>&nbsp;—&nbsp;{{ $creators_header->count() }}</p>
                         <div class="o-hero__arrows">
                             <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use xlink:href="#icon-arrow-right" /></svg>
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
                             </button>
                             <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use xlink:href="#icon-arrow-left" /></svg>
+                                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
                             </button>
                         </div>
                     </div>
@@ -54,16 +52,14 @@
                             <p class="a-h5 mgb-1">Des créateurs accompagné.es</p>
                             <p>Lumera redéfini et valorise le marketing d’influence en proposant un accompagnement personnalisé et complet à nos créateurs de contenus : définition de leur ligne éditoriale, développement de l’audience, mise en relation avec des marques pertinentes… Notre Social Media manager les aide à mettre en place un plan d'action clé en main pour des résultats à la hauteur de leur talent !</p>
                         </div>
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-user" /></svg>
+                        <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-user" /></svg>
                     </div>
                     <div class="m-card" data-cards="item">
                         <div class="mgb-4">
                             <p class="a-h5 mgb-1">Conseils affûtés pour les entreprises</p>
                             <p>Maîtrisant parfaitement le milieu du marketing d’influence et ayant déjà été à la place du client, on sait à quel point il est important d’être bien accompagné dans la mise en place d’une campagne d’influence marketing. C’est pourquoi Lumera vous guide du début à la fin de vos projets et sélectionne pour chacune de vos problématiques les créateurs de contenu qui vous correspondent le mieux.</p>
                         </div>
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-compass" /></svg>
+                        <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-compass" /></svg>
                     </div>
                 </div>
             </div>
@@ -80,20 +76,21 @@
         </div>
         <div class="g-row o-creators">
             <div class="sm-column-12 lg-column-1 lg-offset-1">
-                {{-- TODO LINK PAGE --}}
-                <a href="{{ route('front.creators') }}" class="a-button -round -small"><span>Voir tous</span></a>
-                {{-- RANDOMIZER --}}
-                <button wire:click="randomizer" class="a-button -round -small -white">
-                    <span>
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-random" />
-                        </svg>
-                    </span>
-                </button>
+                <div class="o-creators__buttons">
+                    <a href="{{ route('front.creators') }}" class="a-button -round -small"><span>Voir tous</span></a>
+                    {{-- RANDOMIZER --}}
+                    <button wire:click="randomizer" class="a-button -round -small -white">
+                        <span>
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use xlink:href="#icon-random" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
             </div>
             <div class="sm-column-12 lg-column-9">
                 <ul class="no-bullet o-creators__list">
-                    {{-- GET 6 CREATORS RANDOM --}}
+                    {{-- GET 3 CREATORS RANDOM --}}
                     @foreach ($creators as $creator)
                     <li>
                         @include('molecules.creator')
@@ -124,7 +121,6 @@
                 </h2>
                 <p class="-small">De la compréhension des objectifs de l’entreprise à la fine connaissance de nos créateurs de contenus, Lumera sait très bien comment associer au mieux ses talents et ses clients. Pour chaque projet, nos équipes veillent à ce que le message de la marque, la personnalité des créateurs et les attentes de leurs communautés correspondent parfaitement pour une campagne performante.</p>
                 <div class="t-home__case--cta mgt-4">
-                    {{-- TODO LINK PAGE --}}
                     <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a>
                     {{-- DISPLAY REAL COUNT --}}
                     <p>Plus de {{ $count }} autres clients et projets</p>
@@ -132,7 +128,6 @@
             </div>
             <div class="sm-column-12 lg-column-6 lg-offset-1">
                 <ul class="no-bullet t-home__case--list">
-                    {{-- TODO LIMIT NBR ?? --}}
                     {{-- GET 5 CASES RANDOM --}}
                     @foreach ($cases as $case)
                     <li>@include('molecules.case')</li>
@@ -152,12 +147,10 @@
                 <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
                     <div class="o-testimonies__arrows">
                         <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-right" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
                         </button>
                         <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-left" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
                         </button>
                     </div>
                     <div class="o-testimonies__slider">

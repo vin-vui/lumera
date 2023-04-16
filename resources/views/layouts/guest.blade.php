@@ -7,9 +7,6 @@
 
         <title>{{ config('app.name', 'Lumera') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preload" href="/assets/fonts/Athletics-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
         <!-- Scripts -->
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
         <script defer data-domain="lumera.vinvui.com" src="https://plausible.io/js/script.js"></script>
@@ -21,6 +18,6 @@
         @include('layouts.snippets.footer')
 
         @livewireScripts
-        
+
     </body>
 </html>

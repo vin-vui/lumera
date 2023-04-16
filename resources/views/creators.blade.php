@@ -10,10 +10,55 @@
         </div>
     </section>
     <section class="g-section t-creators__page">
-        {{-- TODO DESIGN FILTERS --}}
-        {{-- search by nick_name, last_name, first_name --}}
-        <input wire:model="search" type="search" placeholder="rechercher un créateur...">
-        {{-- {{ $creators->count() }} --}}
+        <div class="g-row t-creators__filters">
+            <div class="sm-column-12 lg-column-5" data-module-filters>
+                <div class="m-filters">
+                    <button type="button" data-filters="button" class="a-buttonFilter"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-filters" /></svg><span>Filtrer</span></button>
+                    <div class="m-filters__panel" data-filters="panel">
+                        <button type="button" data-filters="button" class="m-filters__close"><span>Fermer les filtres</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-close" /></svg></button>
+                        <div class="m-filters__sort">
+                            <p class="-small">Trier par</p>
+                            <select name="" id="" class="a-select">
+                                <option value="" selected>Ordre alphabétique A-Z</option>
+                                <option value="">Ordre alphabétique Z-A</option>
+                            </select>
+                        </div>
+                        <div class="m-filters__tags">
+                            <p class="-small">Domaines</p>
+                            <ul class="no-bullet">
+                                <li>
+                                    <label for="tag-1" class="a-filterTag">
+                                        <input type="checkbox" name="tags[]" value="1" id="tag-1">
+                                        <span>Tag 1</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="tag-2" class="a-filterTag">
+                                        <input type="checkbox" name="tags[]" value="2" id="tag-2">
+                                        <span>Tag 2</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="tag-3" class="a-filterTag">
+                                        <input type="checkbox" name="tags[]" value="3" id="tag-3">
+                                        <span>Tag 3</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- search by nick_name, last_name, first_name --}}
+            <div class="sm-column-12 lg-column-3 lg-offset-1" data-module-filters>
+                <div class="text-right">
+                    <input wire:model="search" type="search" placeholder="Rechercher un créateur..." class="a-input a-inputSearch">
+                </div>
+            </div>
+            <div class="sm-column-12 mgt-2 mgb-2">
+                <p class="-small">{{ $creators->count() }} Créateur{{ $creators->count() > 1 ? 's' : '' }}</p>
+            </div>
+        </div>
         <div class="g-row">
             <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list">
                 @foreach ($creators as $creator)
@@ -22,10 +67,10 @@
                 </li>
                 @endforeach
             </ul>
-            {{-- TODO PAGINATION (on est en 2003 ?)--}}
+            {{-- TODO PAGINATION (on est en 2003 ?) --}}
         </div>
     </section>
-    <section class="g-section">
+    <section class="g-section m-slider__ow">
         <div class="g-row">
             <div class="sm-column-12 lg-column-5">
                 <h2>Découvrez toutes <strong>nos campagnes</strong></h2>
@@ -41,7 +86,7 @@
                         <ul class="no-bullet m-slider__container">
                             {{-- TODO LIMIT NBR ?? --}}
                             @foreach ($cases as $case)
-                            <li class="m-slider__slide">@include('molecules.case')</li>
+                                <li class="m-slider__slide">@include('molecules.case')</li>
                             @endforeach
                         </ul>
                     </div>

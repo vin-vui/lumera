@@ -1,3 +1,10 @@
 .a-select {
-  // background-image: url('') ;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M0 1.76525L1.06066 0.70459L5.53033 5.17426L10 0.70459L11.0607 1.76525L5.53033 7.29558L0 1.76525Z'/%3E%3C/svg%3E");
+  background-position: center right;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: $font-regular;
 }

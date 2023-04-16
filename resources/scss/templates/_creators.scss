@@ -1,6 +1,6 @@
 .t-creators {
   &__page {
-    padding: 10rem 0;
+    padding: 3rem 0 10rem;
     background-color: clr(cgray);
   }
 
@@ -8,5 +8,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $column-gutter;
+  }
+
+  &__filters {
+    margin-top: -5.5rem;
   }
 }

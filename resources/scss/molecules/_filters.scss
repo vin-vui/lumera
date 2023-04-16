@@ -1,0 +1,63 @@
+.m-filters {
+  position: relative;
+
+  .a-buttonFilter {
+    margin-bottom: 2rem;
+  }
+
+  &__panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 31.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: clr(cwhite);
+
+    &.-active {
+      display: block;
+    }
+  }
+
+  &__sort,
+  &__close {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid clr(cgray);
+  }
+
+  &__sort {
+    padding: 2rem 0;
+  }
+
+  &__close {
+    padding-bottom: 2rem;
+    color: var(--primary);
+    font-size: 1.6rem;
+
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  &__tags {
+    padding: 2rem 0;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      li {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

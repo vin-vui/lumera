@@ -1,0 +1,37 @@
+.m-cursorThumb {
+  position: relative;
+  cursor: none;
+
+  &:hover {
+    .m-cursorThumb__cursor {
+      // transform: scale(1);
+    }
+  }
+
+  &__cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: clr(cwhite);
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+
+    // transform: scale(0);
+    transform-origin: center;
+  }
+
+  .a-ratio {
+    pointer-events: none;
+  }
+}
