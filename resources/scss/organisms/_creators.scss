@@ -16,14 +16,34 @@
 
   &__list {
     z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: $column-gutter;
   }
 
   &__buttons {
     display: flex;
-    flex-direction: column;
     gap: 2rem;
+  }
+
+  @media #{$sm-only} {
+    &__list {
+      overflow: auto;
+
+      > li {
+        flex: 0 0 80%;
+        width: 80%;
+      }
+    }
+  }
+
+  @media #{$md} {
+    &__buttons {
+      flex-direction: column;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

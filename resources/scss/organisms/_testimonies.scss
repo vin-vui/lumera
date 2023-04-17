@@ -50,7 +50,7 @@
       top: 50%;
       right: 0 !important; /* override Embla */
       left: 0 !important; /* override Embla */
-      height: 30rem;
+      height: 35rem;
       opacity: .5;
       pointer-events: none;
       transform: translateY(-50%);
@@ -76,5 +76,13 @@
 
   .is-ready .m-slider__slide {
     position: absolute;
+  }
+
+  @media #{$md} {
+    .m-slider {
+      &__slide {
+        height: 30rem;
+      }
+    }
   }
 }

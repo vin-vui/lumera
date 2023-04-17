@@ -4,15 +4,14 @@
             <a href="{!! url('/') !!}"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo" /></svg></a>
         </div>
         <div class="sm-column-12 lg-column-6">
-            {{-- TODO LINKS --}}
             <div class="o-header__nav">
                 <nav class="o-menu">
                     <ul class="no-bullet">
                         <li>
-                            <a href="{!! url('/createurs'); !!}" class="a-button -secondary">Nos créateurs</a>
+                            <a href="{{ route('front.creators') }}" class="a-button -secondary">Nos créateurs</a>
                         </li>
                         <li>
-                            <a href="{!! url('/campagnes'); !!}" class="a-button -secondary">Nos campagnes</a>
+                            <a href="{{ route('front.cases') }}" class="a-button -secondary">Nos campagnes</a>
                         </li>
                     </ul>
                 </nav>

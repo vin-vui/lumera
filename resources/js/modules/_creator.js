@@ -11,10 +11,17 @@ export default class Creator extends mmodule {
   }
 
   init() {
-    const [media] = this.$('thumb')
-    // Array.prototype.forEach.call(document.querySelectorAll('[data-creator="thumb"]'), function(media) {
+    this.initCursor()
 
-      const [circle] = this.$('circle');
+    window.addEventListener('contentChanged', this.initCursor.bind(this))
+  }
+
+  initCursor() {
+    // const [media] = this.$('thumb')
+    Array.from(document.querySelectorAll('[data-creator="thumb"]')).forEach(media => {
+
+      // const [circle] = this.$('circle');
+      const circle = media.querySelector('[data-creator="circle"]');
 
       anime.set(circle, { opacity: 0 });
 
@@ -39,7 +46,7 @@ export default class Creator extends mmodule {
         anime({ targets: circle, opacity: 1, scale: 1, translateX: relX + 'px', translateY: relY + 'px', duration: 150 });
       }
 
-    // });
+    });
   }
 
 }

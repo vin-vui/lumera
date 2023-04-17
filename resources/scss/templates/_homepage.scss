@@ -35,12 +35,8 @@
   &__about {
     position: relative;
 
-    &[class*=column-]:not(.-nest) {
-      padding-right: 0;
-    }
-
     &--content {
-      margin-top: 10rem;
+      margin-top: 6rem;
     }
 
     .a-ratio {
@@ -50,9 +46,26 @@
 
     .a-button {
       position: absolute;
-      top: 50%;
-      right: -5rem;
-      transform: translateY(-50%);
+      top: calc(100% - 5rem);
+      right: $column-gutter;
+    }
+  }
+
+  @media #{$md} {
+    &__about {
+      &[class*=column-]:not(.-nest) {
+        padding-right: 0;
+      }
+
+      &--content {
+        margin-top: 10rem;
+      }
+
+      .a-button {
+        top: 50%;
+        right: -5rem;
+        transform: translateY(-50%);
+      }
     }
   }
 }

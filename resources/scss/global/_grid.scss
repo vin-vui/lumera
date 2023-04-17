@@ -179,12 +179,3 @@
     @include selector('.dp-none', $value){ display: none; }
   }
 }
-
-.g-grid {
-  display: grid;
-  gap: $column-gutter;
-
-  &.-c2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}

@@ -11,16 +11,15 @@
     <div class="g-row lg-align-center-start">
         <div class="sm-column-12 lg-column-10">
             <div class="o-footer__bottom">
-                <div class="o-footer__logo"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
-                {{-- TODO LINKS --}}
+                <div class="o-footer__logo dp-none lg-dp-block"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
                 <div class="o-header__nav">
                     <nav class="o-menu">
                         <ul class="no-bullet">
                             <li>
-                                <a href="/createurs" class="a-button -secondary">Nos créateurs</a>
+                                <a href="{{ route('front.creators') }}" class="a-button -secondary">Nos créateurs</a>
                             </li>
                             <li>
-                                <a href="/campagnes" class="a-button -secondary">Nos campagnes</a>
+                                <a href="{{ route('front.cases') }}" class="a-button -secondary">Nos campagnes</a>
                             </li>
                         </ul>
                     </nav>
@@ -48,16 +47,16 @@
         </div>
     </div>
     <div class="g-row align-start-center">
-        <div class="sm-column-12 lg-column-7 lg-offset-1">
-            <div class="o-footer__mentions text-cgraydark">
-                <p>© LMR - Lumera {{ now()->year }}</p>
-                {{-- TODO LINK --}}
-                <a href="/conditions-generales" class="-no-underline">Conditions générales</a>
-            </div>
-        </div>
-        <div class="sm-column-12 lg-column-3">
+        <div class="sm-column-12 lg-column-3 lg-order-1">
             <div class="text-right">
                 <a href="#top" class="a-button -tertiary" data-scroll data-scroll-to>Revenir en haut de page</a>
+            </div>
+        </div>
+        <div class="sm-column-12 lg-column-7 lg-offset-1">
+            <div class="o-footer__logo lg-dp-none"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
+            <div class="o-footer__mentions text-cgraydark">
+                <p>© LMR - Lumera {{ now()->year }}</p>
+                <a href="/conditions-generales" class="-no-underline">Conditions générales</a>
             </div>
         </div>
     </div>

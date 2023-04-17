@@ -3,9 +3,12 @@
         <div class="g-row o-hero">
             <div class="sm-column-12 lg-column-10">
                 <div class="o-hero__title">
-                    <h1 class="a-bigTitle">Mettre <span>en lumière</span> votre talent</h1>
-                    <span aria-hidden="true" focusable="false" class="-fake a-bigTitle">Mettre <span>en lumière</span> votre talent</span>
+                    <h1 class="a-bigTitle">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</h1>
+                    <span aria-hidden="true" focusable="false" class="-fake a-bigTitle">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</span>
                 </div>
+            </div>
+            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1">
+                <p class="-big">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
             </div>
             <div class="sm-column-12 lg-column-5 o-hero__slider">
                 <div class="m-slider" data-module-slider data-controls="true" data-pagination="true">
@@ -21,7 +24,7 @@
                         </div>
                     </div>
                     <div class="m-slider__viewport" data-slider="viewport">
-                        <ul class="no-bullet m-slider__container">
+                        <ul class="no-bullet m-slider__container" data-module-creator>
                             @foreach ($creators_header as $creator)
                             <li class="m-slider__slide">
                                 @include('molecules.creator')
@@ -30,9 +33,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1">
-                <p class="-big">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
             </div>
         </div>
     </section>
@@ -45,8 +45,8 @@
                 <button type="button" data-module-popin-button data-popin="about" class="a-button -round"><span>Pourquoi Lumera ?</span></button>
             </div>
             <div class="sm-column-12 lg-column-6 lg-offset-1 t-home__about--content">
-                <h2>Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
-                <div class="g-grid -c2 mgt-6 o-cards" data-module-cards>
+                <h2 class="a-h2">Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
+                <div class="mgt-6 o-cards" data-module-cards>
                     <div class="m-card" data-cards="item">
                         <div class="mgb-4">
                             <p class="a-h5 mgb-1">Des créateurs accompagné.es</p>
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="sm-column-12 lg-column-9">
-                <ul class="no-bullet o-creators__list">
+                <ul class="no-bullet o-creators__list" data-module-creator>
                     {{-- GET 3 CREATORS RANDOM --}}
                     @foreach ($creators as $creator)
                     <li>
@@ -123,7 +123,7 @@
                 <div class="t-home__case--cta mgt-4">
                     <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a>
                     {{-- DISPLAY REAL COUNT --}}
-                    <p>Plus de {{ $count }} autres clients et projets</p>
+                    {{-- <p>Plus de {{ $count }} autres clients et projets</p> --}}
                 </div>
             </div>
             <div class="sm-column-12 lg-column-6 lg-offset-1">

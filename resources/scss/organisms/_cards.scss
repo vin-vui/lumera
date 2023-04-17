@@ -1,4 +1,7 @@
 .o-cards {
+  display: grid;
+  gap: $column-gutter;
+
   .m-card {
     transition: opacity $anim;
 
@@ -16,5 +19,9 @@
         }
       }
     }
+  }
+
+  @media #{$lg} {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

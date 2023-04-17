@@ -51,7 +51,7 @@ hr {
 
 main {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-bottom: 5rem;
 
   &:not(.no-bg) {
@@ -74,10 +74,14 @@ main {
 }
 
 .g-section {
-  margin-bottom: 13rem;
+  margin-bottom: 8rem;
 
-  &.-small {
-    margin-bottom: 5.6rem;
+  @media #{$md} {
+    margin-bottom: 13rem;
+
+    &.-small {
+      margin-bottom: 5.6rem;
+    }
   }
 }
 

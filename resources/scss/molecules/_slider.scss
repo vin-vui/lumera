@@ -29,8 +29,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: clr(cwhite);
     color: var(--primary);
@@ -38,8 +38,8 @@
 
     .icon {
       display: block;
-      width: 2rem;
-      height: 2rem;
+      width: 1.6rem;
+      height: 1.6rem;
     }
 
     &[disabled] {
@@ -141,6 +141,16 @@
   }
 
   @media #{$md} {
+    &__button {
+      width: 6rem;
+      height: 6rem;
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
     &[data-size="5"] .m-slider__slide {
       flex: 0 0 subcol(5, 12);
     }

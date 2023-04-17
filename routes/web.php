@@ -27,22 +27,16 @@ use App\Http\Livewire\FrontHome;
 // });
 Route::get('/', FrontHome::class)->name('front.home');
 
-Route::get('/styleguide', function () {
-    return view('styleguide');
-});
-
-// Route::get('/createurs', function () {
-//     return view('creators');
+// Route::get('/styleguide', function () {
+//     return view('styleguide');
 // });
+
 Route::get('createurs', FrontCreators::class)->name('front.creators');
 
-Route::get('/createur', function () {
-    return view('creator');
-});
-
-// Route::get('/campagnes', function () {
-//     return view('cases');
+// Route::get('/createur', function () {
+//     return view('creator');
 // });
+
 Route::get('campagnes', FrontCaseStudies::class)->name('front.cases');
 
 Route::get('/campagne', function () {

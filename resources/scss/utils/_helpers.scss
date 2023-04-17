@@ -55,3 +55,9 @@
 .order-1 {
   order: 1;
 }
+
+@media #{$lg} {
+  .lg-order-1 {
+    order: 1;
+  }
+}

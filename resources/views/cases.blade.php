@@ -31,7 +31,7 @@
             <div class="sm-column-12">
                 <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
                     <div class="m-slider__viewport" data-slider="viewport">
-                        <ul class="no-bullet m-slider__container">
+                        <ul class="no-bullet m-slider__container" data-module-creator>
                             {{-- TODO LIMIT NBR ?? --}}
                             @foreach ($creators as $creator)
                             <li class="m-slider__slide">

@@ -1,4 +1,4 @@
-<main class="t-creators">
+<main class="t-creators" data-module-website>
     <section class="g-section -small">
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2">
@@ -59,8 +59,8 @@
                 <p class="-small">{{ $creators->count() }} Créateur{{ $creators->count() > 1 ? 's' : '' }}</p>
             </div>
         </div>
-        <div class="g-row">
-            <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list">
+        <div class="g-row js-relaunch-modules">
+            <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list" data-module-creator>
                 @foreach ($creators as $creator)
                 <li class="m-slider__slide">
                     @include('molecules.creator')

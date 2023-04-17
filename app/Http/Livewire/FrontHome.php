@@ -33,5 +33,7 @@ class FrontHome extends Component
     public function randomizer()
     {
         $this->mount();
+
+        $this->dispatchBrowserEvent('contentChanged');
     }
 }

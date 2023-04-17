@@ -42,6 +42,8 @@ export default class Slider extends module {
     this.slider.on('init', this.toggleReady.bind(this))
     this.slider.on('resize', this.toggleReady.bind(this))
     this.slider.on('reInit', this.toggleReady.bind(this))
+
+    window.addEventListener('contentChanged', this.toggleReady.bind(this))
   }
 
   toggleReady(event) {

@@ -20,6 +20,8 @@ class FrontCaseStudies extends Component
 
         $testimonials = Testimonial::all();
 
+        $this->dispatchBrowserEvent('contentChanged');
+
         return view('cases', compact('creators', 'cases', 'testimonials'))->layout('layouts.guest');
     }
 }

@@ -11,6 +11,8 @@ export default class PopinButton extends mmodule {
 
   init() {
     this.getPopin()
+
+    window.addEventListener('contentChanged', this.getPopin.bind(this))
   }
 
   getPopin() {

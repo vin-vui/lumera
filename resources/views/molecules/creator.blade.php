@@ -1,4 +1,4 @@
-<article class="m-creator" data-module-popin-button data-popin="creator-{{ $creator->id }}" data-module-creator>
+<article class="m-creator" data-module-popin-button data-popin="creator-{{ $creator->id }}">
     <div class="m-cursorThumb" data-creator="thumb">
         <div class="a-ratio" data-ratio>
             <img src="{{ Storage::disk('uploads')->url($creator->image) }}" alt="{{ $creator->first_name }} {{ $creator->last_name }}">

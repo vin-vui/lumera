@@ -1,4 +1,9 @@
 .m-socials {
   display: flex;
   gap: 2rem;
+
+  @media #{$sm-only} {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
