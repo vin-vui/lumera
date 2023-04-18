@@ -7,9 +7,11 @@ use App\Http\Livewire\Creators;
 use App\Http\Livewire\Marks;
 use App\Http\Livewire\Testimonials;
 
-use App\Http\Livewire\FrontCreators;
-use App\Http\Livewire\FrontCaseStudies;
 use App\Http\Livewire\FrontHome;
+use App\Http\Livewire\FrontCreators;
+use App\Http\Livewire\FrontCreator;
+use App\Http\Livewire\FrontCaseStudies;
+use App\Http\Livewire\FrontCaseStudy;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,16 +34,14 @@ Route::get('/', FrontHome::class)->name('front.home');
 // });
 
 Route::get('createurs', FrontCreators::class)->name('front.creators');
+Route::get('createur/{creator_id}', FrontCreator::class)->name('front.creator');
 
 // Route::get('/createur', function () {
 //     return view('creator');
 // });
 
 Route::get('campagnes', FrontCaseStudies::class)->name('front.cases');
-
-Route::get('/campagne', function () {
-    return view('case');
-});
+Route::get('campagne/{case_id}', FrontCaseStudy::class)->name('front.case');
 
 Route::get('/conditions-generales', function () {
     return view('terms');

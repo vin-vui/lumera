@@ -44,6 +44,11 @@
 @endforeach
 ```
 
+### PARTAGE
+```html
+{{ route('front.creator', $creator->id) }}
+```
+
 
 ## Études de cas
 
@@ -96,6 +101,11 @@
     {{ $creator->nick_name }}
     ...
 @endforeach
+```
+
+### PARTAGE
+```html
+{{ route('front.case', $case->id) }}
 ```
 
 

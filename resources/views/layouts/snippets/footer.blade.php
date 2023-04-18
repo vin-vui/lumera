@@ -248,7 +248,7 @@
                         </div>
                     </div>
                     <div class="t-case__share">
-                        <a href="#" class="a-button -round -medium"><span>Partager</span></a>
+                        <a href="{{ route('front.case', $case->id) }}" class="a-button -round -medium"><span>Partager</span></a>
                     </div>
                 </div>
             </div>
