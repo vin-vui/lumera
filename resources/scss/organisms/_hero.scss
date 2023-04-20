@@ -31,6 +31,7 @@
   &__slider {
     position: relative;
     padding-top: 3.2rem;
+    padding-bottom: calc($column-gutter / 2);
 
     &::before {
       content: "";
@@ -63,7 +64,7 @@
       flex-direction: column;
       justify-content: space-between;
       width: calc(subcol(3, 12) - 2.6rem);
-      padding-top: 7rem;
+      padding-top: 4rem;
     }
 
     &__viewport {
@@ -110,6 +111,7 @@
       &__nav {
         flex: 0 0 calc(subcol(1, 5) - 2.6rem);
         width: calc(subcol(1, 5) - 2.6rem);
+        padding-top: 7rem;
       }
 
       &__viewport {

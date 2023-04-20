@@ -15,19 +15,6 @@
     }
   }
 
-  &__nav {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  &__contact {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
   @media #{$md} {
     padding: 6rem 0;
   }

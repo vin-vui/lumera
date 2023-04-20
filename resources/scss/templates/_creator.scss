@@ -2,7 +2,7 @@
   max-width: calc(43rem + 12rem);
 
   &__content {
-    padding: 4rem;
+    padding: 2rem;
   }
 
   &__socials {
@@ -18,5 +18,11 @@
 
   .m-tags {
     margin-bottom: 2.5rem;
+  }
+
+  @media #{$md} {
+    &__content {
+      padding: 4rem;
+    }
   }
 }

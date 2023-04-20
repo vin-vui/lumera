@@ -2,7 +2,13 @@
   padding-top: 0;
 
   &__title {
-    font-size: 28rem;
+    font-size: 10rem;
     line-height: 1;
+  }
+
+  @media #{$lg} {
+    &__title {
+      font-size: 28rem;
+    }
   }
 }

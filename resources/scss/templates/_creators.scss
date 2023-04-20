@@ -6,11 +6,16 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: $column-gutter;
   }
 
   &__filters {
     margin-top: -5.5rem;
+  }
+
+  @media #{$md} {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
