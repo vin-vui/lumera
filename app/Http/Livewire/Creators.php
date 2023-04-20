@@ -31,6 +31,15 @@ class Creators extends Component
     $sn_facebook,
     $sn_twitter,
     $sn_twitch,
+    $tn_tiktok,
+    $tn_snapchat,
+    $tn_instagram,
+    $tn_youtube,
+    $tn_linkedin,
+    $tn_facebook,
+    $tn_twitter,
+    $tn_twitch,
+    $email,
     $display,
     $creator_id,
     $selected_specialties = [];
@@ -92,6 +101,15 @@ class Creators extends Component
         $this->sn_facebook = '';
         $this->sn_twitter = '';
         $this->sn_twitch = '';
+        $this->tn_tiktok = '';
+        $this->tn_snapchat = '';
+        $this->tn_instagram = '';
+        $this->tn_youtube = '';
+        $this->tn_linkedin = '';
+        $this->tn_facebook = '';
+        $this->tn_twitter = '';
+        $this->tn_twitch = '';
+        $this->email = '';
         $this->display = false;
         $this->selected_specialties = [];
     }
@@ -114,6 +132,15 @@ class Creators extends Component
             'sn_facebook' => 'nullable',
             'sn_twitter' => 'nullable',
             'sn_twitch' => 'nullable',
+            'tn_tiktok' => 'nullable',
+            'tn_snapchat' => 'nullable',
+            'tn_instagram' => 'nullable',
+            'tn_youtube' => 'nullable',
+            'tn_linkedin' => 'nullable',
+            'tn_facebook' => 'nullable',
+            'tn_twitter' => 'nullable',
+            'tn_twitch' => 'nullable',
+            'email' => 'nullable',
             'display' => 'nullable',
         ]);
 
@@ -161,6 +188,15 @@ class Creators extends Component
         $this->sn_facebook = $creator->sn_facebook;
         $this->sn_twitter = $creator->sn_twitter;
         $this->sn_twitch = $creator->sn_twitch;
+        $this->tn_tiktok = $creator->tn_tiktok;
+        $this->tn_snapchat = $creator->tn_snapchat;
+        $this->tn_instagram = $creator->tn_instagram;
+        $this->tn_youtube = $creator->tn_youtube;
+        $this->tn_linkedin = $creator->tn_linkedin;
+        $this->tn_facebook = $creator->tn_facebook;
+        $this->tn_twitter = $creator->tn_twitter;
+        $this->tn_twitch = $creator->tn_twitch;
+        $this->email = $creator->email;
         $this->display = $creator->display;
         $this->selected_specialties = $creator->specialties->pluck('id')->toArray();
 

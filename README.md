@@ -37,6 +37,23 @@
 {{ $creator->sn_twitch }}
 ```
 
+### Nombre d'abonnés par réseaux
+```html
+{{ $creator->tn_tiktok }}
+{{ $creator->tn_snapchat }}
+{{ $creator->tn_instagram }}
+{{ $creator->tn_youtube }}
+{{ $creator->tn_linkedin }}
+{{ $creator->tn_facebook }}
+{{ $creator->tn_twitter }}
+{{ $creator->tn_twitch }}
+```
+
+### Email
+```html
+{{ $creator->email }}
+```
+
 ### Domaine
 ```html
 @foreach ($creator->specialties as $specialty)
@@ -81,9 +98,7 @@
 
 ### Bloc WYSIWYG
 ```html
-<div class="trix">
-    {!! $case->bloc_wysiwyg !!}
-</div>
+{!! $case->bloc_wysiwyg !!}
 ```
 
 ### Tags

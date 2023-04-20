@@ -28,6 +28,15 @@ return new class extends Migration
             $table->string('sn_facebook')->nullable();
             $table->string('sn_twitter')->nullable();
             $table->string('sn_twitch')->nullable();
+            $table->bigInteger('tn_tiktok')->nullable();
+            $table->bigInteger('tn_snapchat')->nullable();
+            $table->bigInteger('tn_instagram')->nullable();
+            $table->bigInteger('tn_youtube')->nullable();
+            $table->bigInteger('tn_linkedin')->nullable();
+            $table->bigInteger('tn_facebook')->nullable();
+            $table->bigInteger('tn_twitter')->nullable();
+            $table->bigInteger('tn_twitch')->nullable();
+            $table->string('email')->nullable();
             $table->boolean('display')->nullable();
             $table->foreignId('specialty_id')->nullable();
             $table->timestamps();

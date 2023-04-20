@@ -29,6 +29,15 @@ class Creator extends Model
         'sn_facebook',
         'sn_twitter',
         'sn_twitch',
+        'tn_tiktok',
+        'tn_snapchat',
+        'tn_instagram',
+        'tn_youtube',
+        'tn_linkedin',
+        'tn_facebook',
+        'tn_twitter',
+        'tn_twitch',
+        'email',
         'display',
     ];
 
@@ -36,4 +45,5 @@ class Creator extends Model
     {
         return $this->belongsToMany(Specialty::class);
     }
+    
 }

@@ -79,6 +79,15 @@ class DatabaseSeeder extends Seeder
                 'sn_facebook' => $this->faker->url(),
                 'sn_twitter' => $this->faker->url(),
                 'sn_twitch' => $this->faker->url(),
+                'tn_tiktok' => $this->faker->randomNumber(8, false),
+                'tn_snapchat' => $this->faker->randomNumber(8, false),
+                'tn_instagram' => $this->faker->randomNumber(8, false),
+                'tn_youtube' => $this->faker->randomNumber(8, false),
+                'tn_linkedin' => $this->faker->randomNumber(8, false),
+                'tn_facebook' => $this->faker->randomNumber(8, false),
+                'tn_twitter' => $this->faker->randomNumber(8, false),
+                'tn_twitch' => $this->faker->randomNumber(8, false),
+                'email' => $this->faker->email(),
                 'display' => $this->faker->boolean(),
             ]);
         }
