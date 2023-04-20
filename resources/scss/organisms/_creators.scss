@@ -1,6 +1,6 @@
 .o-creators {
   position: relative;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 
   &::before {
     content: "";
@@ -8,8 +8,8 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-    width: col(11);
-    height: calc(100% - 10rem);
+    width: col(12);
+    height: calc(100% - 3rem);
     border-radius: 0 $radius;
     background-color: clr(cgray);
   }
@@ -28,17 +28,33 @@
   @media #{$sm-only} {
     &__list {
       overflow: auto;
+      padding: 0 calc($column-gutter / 2);
 
       > li {
         flex: 0 0 80%;
         width: 80%;
       }
     }
+
+    &__buttons {
+      margin-bottom: 3rem;
+    }
   }
 
   @media #{$md} {
+    padding-bottom: 8rem;
+
+    &::before {
+      width: col(11);
+      height: calc(100% - 10rem);
+    }
+
     &__buttons {
       flex-direction: column;
+
+      button {
+        order: 1;
+      }
     }
 
     &__list {

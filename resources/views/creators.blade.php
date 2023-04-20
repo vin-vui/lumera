@@ -2,7 +2,7 @@
     <section class="g-section -small">
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2">
-                <h1>Lumière sur <br>nos créateurs</h1>
+                <h1>Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
             </div>
             <div class="sm-column-12 lg-column-9">
                 <p class="-big">Finances, nouvelles technologies, développement personnel... nos créateurs de contenu maîtrisent l'art et la manière d'en parler ! Découvrez leurs profils et leurs passions.</p>
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="g-row js-relaunch-modules">
-            <ul class="no-bullet sm-column-12 lg-column-9 no-width t-creators__list" data-module-creator>
+            <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-creator>
                 @foreach ($creators as $creator)
                 <li class="m-slider__slide">
                     @include('molecules.creator')

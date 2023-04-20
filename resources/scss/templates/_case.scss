@@ -2,24 +2,34 @@
   max-width: calc(87.5rem + 12rem);
   margin: 0 auto;
 
-  &__inner {
-    display: flex;
-    align-items: flex-start;
+  &__content {
+    padding: 0 2rem;
   }
 
   &__share {
-    position: sticky;
-    top: 0;
-    width: subcol(2, 8);
-    padding: 4rem;
-
-    .a-button {
-      margin-left: auto;
-    }
+    padding: 2rem;
   }
 
-  &__content {
-    width: subcol(6, 8);
-    padding-left: 4rem;
+  @media #{$md} {
+    &__content {
+      width: subcol(6, 8);
+      padding: 0 0 0 4rem;
+    }
+
+    &__inner {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__share {
+      position: sticky;
+      top: 0;
+      width: subcol(2, 8);
+      padding: 4rem;
+
+      .a-button {
+        margin-left: auto;
+      }
+    }
   }
 }

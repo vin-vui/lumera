@@ -1,7 +1,7 @@
 .o-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem $column-gutter;
+  gap: $column-gutter;
   align-items: center;
   justify-content: space-between;
 
@@ -11,5 +11,9 @@
 
   img {
     margin: 0 auto;
+  }
+
+  @media #{$md} {
+    gap: 4rem $column-gutter;
   }
 }

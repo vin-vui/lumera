@@ -1,37 +1,4 @@
 .t-home {
-  &__case {
-    position: relative;
-    padding: 6rem 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 45.833%;
-      height: 100%;
-      border-bottom-left-radius: $radius;
-      background-color: var(--primary-light);
-    }
-
-    &--list {
-      display: grid;
-      gap: 2rem;
-    }
-
-    &--cta {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-
-      p {
-        color: var(--primary);
-        font-weight: 500;
-        font-size: 1.6rem;
-      }
-    }
-  }
-
   &__about {
     position: relative;
 
@@ -51,6 +18,40 @@
     }
   }
 
+  &__case {
+    position: relative;
+    padding: 6rem 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: col(10);
+      height: 54%;
+      border-bottom-left-radius: $radius;
+      background-color: var(--primary-light);
+    }
+
+    &--list {
+      display: grid;
+      gap: 2rem;
+      margin-top: 6rem;
+    }
+
+    &--cta {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+
+      p {
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
   @media #{$md} {
     &__about {
       &[class*=column-]:not(.-nest) {
@@ -65,6 +66,19 @@
         top: 50%;
         right: -5rem;
         transform: translateY(-50%);
+      }
+    }
+
+    &__case {
+      &::before {
+        top: 0;
+        bottom: auto;
+        width: 45.833%;
+        height: 100%;
+      }
+
+      &--list {
+        margin-top: 0;
       }
     }
   }

@@ -23,7 +23,7 @@ class FrontHome extends Component
         $count = Creator::where('display', true)->count() + CaseStudy::where('display', true)->count();
         $creators = $this->creators;
         $creators_header = Creator::where('display', true)->inRandomOrder()->take(8)->get();
-        $cases = CaseStudy::where('display', true)->inRandomOrder()->take(5)->get();
+        $cases = CaseStudy::where('display', true)->inRandomOrder()->take(4)->get();
         $testimonials = Testimonial::all();
         $marks = Mark::all();
 

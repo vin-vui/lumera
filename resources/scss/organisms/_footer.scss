@@ -6,11 +6,11 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 21rem;
     z-index: 0;
-    width: col(4);
-    height: calc(100% - 15rem);
-    border-radius: 0 $radius;
+    width: col(10);
+    height: calc(100% - 68rem);
+    border-radius: 0 0 0 $radius;
     background-color: var(--primary-light);
   }
 
@@ -28,14 +28,6 @@
     padding: 3.4rem;
     border-radius: 10px;
     background-color: clr(cwhite);
-
-    .o-header__nav {
-      margin-left: auto;
-
-      @media #{$sm-only} {
-        display: none;
-      }
-    }
   }
 
   &__mentions {
@@ -55,9 +47,39 @@
     }
   }
 
+  @media #{$sm-only} {
+    &__contact {
+      margin-top: $vr;
+    }
+
+    &__logo {
+      margin-top: 7.6rem;
+      margin-bottom: 4rem;
+    }
+
+    .a-button.-tertiary {
+      width: 100%;
+    }
+
+    .o-menu__nav {
+      display: none;
+    }
+  }
+
   @media #{$md} {
+    &::after {
+      bottom: 0;
+      width: col(4);
+      height: calc(100% - 15rem);
+      border-radius: 0 $radius;
+    }
+
     &__bottom {
       padding: 3.5rem 3.5rem 3.5rem 0;
+    }
+
+    .o-menu__nav {
+      margin-left: auto;
     }
   }
 }

@@ -77,7 +77,6 @@
         <div class="g-row o-creators">
             <div class="sm-column-12 lg-column-1 lg-offset-1">
                 <div class="o-creators__buttons">
-                    <a href="{{ route('front.creators') }}" class="a-button -round -small"><span>Voir tous</span></a>
                     {{-- RANDOMIZER --}}
                     <button wire:click="randomizer" class="a-button -round -small -white">
                         <span>
@@ -86,9 +85,10 @@
                             </svg>
                         </span>
                     </button>
+                    <a href="{{ route('front.creators') }}" class="a-button -round -small"><span>Voir tous</span></a>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-9">
+            <div class="sm-column-12 lg-column-9 smo-nest">
                 <ul class="no-bullet o-creators__list" data-module-creator>
                     {{-- GET 3 CREATORS RANDOM --}}
                     @foreach ($creators as $creator)
@@ -102,7 +102,7 @@
     </section>
     <section class="g-section">
         <div class="g-row align-center-start">
-            <div class="sm-column-10">
+            <div class="sm-column-12 md-column-10">
                 <ul class="no-bullet o-logos">
                     @foreach ($marks as $mark)
                     <li>

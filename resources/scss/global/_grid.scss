@@ -40,6 +40,13 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  @media #{$sm-only} {
+    &.smo-nest {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }
 
 // Create selectors for each media query

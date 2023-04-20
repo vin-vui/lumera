@@ -1,12 +1,17 @@
 .m-caseInfos {
   display: flex;
+  flex-wrap: wrap;
   gap: $column-gutter;
   justify-content: space-between;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   ul {
     li {
       margin-bottom: .5rem;
     }
+  }
+
+  @media #{$md} {
+    padding: 4rem 0;
   }
 }

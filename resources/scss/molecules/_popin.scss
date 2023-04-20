@@ -47,7 +47,6 @@
     max-width: calc(50rem + 12rem);
     height: 100%;
     margin-left: auto;
-    padding: 6rem;
     opacity: 0;
     cursor: initial;
     transition: opacity 0s ease-in-out .3s, transform .3s ease-in-out;
@@ -61,14 +60,20 @@
   &__content {
     overflow-y: auto;
     height: 100%;
+  }
+
+  &__inner {
+    overflow: hidden;
+    margin: 2.5rem 2.5rem 2.5rem 0;
     border-radius: 12px;
     background-color: clr(cwhite);
   }
 
   &__close {
     position: absolute;
-    top: 6rem;
-    left: -6rem;
+    top: 2.5rem;
+    left: -2rem;
+    z-index: 5;
     margin: 0;
     background-color: transparent;
   }
@@ -88,6 +93,17 @@
 
       // transition: opacity .3s ease-in-out .2s;
       transform: translateX(0%);
+    }
+  }
+
+  @media #{$md} {
+    &__inner {
+      margin: 4.5rem 4.5rem 4.5rem 0;
+    }
+
+    &__close {
+      top: 4.5rem;
+      left: -9rem;
     }
   }
 }
