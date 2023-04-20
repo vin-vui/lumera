@@ -1,8 +1,11 @@
 import { module as module } from 'modujs'
 
-export default class Filters extends module {
+export default class Accordion extends module {
   constructor(m) {
     super(m)
+
+    this.scroll = this.$('scroll')[0]
+
     this.events = {
       click: {
         button: 'toggle',
@@ -21,11 +24,17 @@ export default class Filters extends module {
 
     this.state = state
 
-    const [button] = this.$('button')
-    const [panel] = this.$('panel')
+    const button = this.$('button')[0]
+
+    let height = 0
 
     button.setAttribute('aria-expanded', this.state)
-    panel.classList[this.state ? 'add' : 'remove']('-active')
+    this.el.classList[this.state ? 'add' : 'remove']('-active')
+
+    if (this.state) {
+      height = this.scroll.scrollHeight
+    }
+
+    this.scroll.style.setProperty('--heightscroll', `${height}px`)
   }
 }
-

@@ -1,126 +1,41 @@
 .m-accordion {
   position: relative;
-  border-bottom: 1px solid clr(cgray);
 
   &__scroll {
     --heightscroll: 0;
-    --atransition: .3s;
 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 5;
     overflow: hidden;
+    width: 100%;
     height: var(--heightscroll);
-    transition: height var(--atransition) ease-in-out;
-  }
-
-  &__content {
-    padding-bottom: $vr;
+    transition: height $anim;
   }
 
   &__title {
-    position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 2rem 0;
-    color: clr(cblack);
-    text-align: left;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: clr(cgray);
+    transition: border-radius $anim $anim-duration;
+  }
 
-    span {
-      display: block;
-      color: currentcolor;
-      font-weight: 500;
-      font-size: 4.2rem;
-      font-family: $font-title;
-      line-height: 1;
-    }
-
-    .icon {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 1.2rem;
-      height: 1.2rem;
-      color: currentcolor;
-      transition: transform $anim;
-      transform: translateY(-50%);
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+    border-radius: 0 0 10px 10px;
+    background-color: clr(cgray);
   }
 
   &.-active & {
     &__title {
-      .icon {
-        transform: translateY(-50%) rotate(180deg);
-      }
+      border-radius: 10px 10px 0 0;
+      transition: border-radius 0ms;
     }
   }
-
-  &.-floating & {
-    &__scroll {
-      position: absolute;
-      top: calc(100% - 1px);
-      right: 0;
-      z-index: 5;
-      width: 100%;
-    }
-
-    &__content {
-      padding: 1rem 2rem;
-      border: 1px solid clr(cgra-dark);
-      border-radius: 4px;
-      background: clr(cwhite);
-    }
-  }
-
-  &.-select {
-    border-bottom: 0;
-
-    .m-accordion__title {
-      padding: 1.3rem 2rem;
-      border: 1px solid clr(cgraydark);
-      border-radius: 4px;
-
-      span {
-        font-weight: 400;
-        font-size: 1rem;
-        font-family: $font-regular;
-        line-height: 1.25;
-        text-transform: uppercase;
-      }
-
-      .icon {
-        right: 2rem;
-      }
-    }
-
-    ul, li {
-      margin-bottom: 0;
-    }
-
-    li {
-      padding: .5rem 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .icon {
-      width: .8rem;
-      height: .8rem;
-    }
-  }
-}
-
-.collapse {
-  display: none;
-
-  &.in {
-    display: block;
-  }
-}
-
-.collapsing {
-  overflow: hidden;
-  height: 0;
-  transition: height $anim;
 }

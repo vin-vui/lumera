@@ -1,4 +1,4 @@
-<main class="t-creators" data-module-website>
+<main class="t-creators">
     <section class="g-section -small">
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2">

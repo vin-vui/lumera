@@ -18,6 +18,19 @@
                                 <a href="{{ route('front.cases') }}" class="a-button -secondary">Nos campagnes</a>
                             </li>
                         </ul>
+                        <div class="m-accordion" data-module-accordion>
+                            <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-colors">
+                                <span class="a-color"></span>
+                            </button>
+                            <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-colors">
+                                <div class="m-accordion__content" data-module-color>
+                                    <span data-color="button" data-id="3.72" class="a-color__wrap"><span class="a-color -red"></span></span>
+                                    <span data-color="button" data-id="216" class="a-color__wrap"><span class="a-color -blue"></span></span>
+                                    <span data-color="button" data-id="237.76" class="a-color__wrap"><span class="a-color -violet"></span></span>
+                                    <span data-color="button" data-id="27" class="a-color__wrap"><span class="a-color -orange"></span></span>
+                                </div>
+                            </div>
+                        </div>
                     </nav>
                     <div class="o-menu__contact">
                         <button data-module-popin-button data-popin="contact" class="a-button -primary">Nous contacter</button>

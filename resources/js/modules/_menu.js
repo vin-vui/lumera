@@ -1,6 +1,6 @@
-import { module as mmodule } from 'modujs'
+import { module as module } from 'modujs'
 
-export default class Menu extends mmodule {
+export default class Menu extends module {
   constructor(m) {
     super(m)
     this.state = false

@@ -82,6 +82,10 @@
     }
 
     &__nav {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+
       ul {
         flex-direction: row;
         gap: 2rem;

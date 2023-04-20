@@ -1,7 +1,7 @@
-import { module as mmodule } from 'modujs'
+import { module as module } from 'modujs'
 import anime from 'animejs'
 
-export default class Creator extends mmodule {
+export default class Creator extends module {
   constructor(m) {
     super(m)
     // this.events = {

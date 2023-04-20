@@ -1,4 +1,4 @@
-import { module as mmodule } from 'modujs'
+import { module as module } from 'modujs'
 
 const FOCUSABLE_ELEMENTS = [
   'a[href]',
@@ -15,7 +15,7 @@ const FOCUSABLE_ELEMENTS = [
   '[tabindex]:not([tabindex^="-"])'
 ]
 
-export default class Popin extends mmodule {
+export default class Popin extends module {
   constructor(m) {
     super(m)
     this.visible = false

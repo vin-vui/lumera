@@ -1,6 +1,6 @@
-import { module as mmodule } from 'modujs'
+import { module as module } from 'modujs'
 
-export default class Cards extends mmodule {
+export default class Cards extends module {
   constructor(m) {
     super(m)
     this.events = {

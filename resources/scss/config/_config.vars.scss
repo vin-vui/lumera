@@ -1,5 +1,13 @@
 :root {
-  --base-primary: 27;
+  --base-primary: 27; // orange
   --primary: hsl(var(--base-primary), 88%, 61%);
   --primary-light: hsl(var(--base-primary), 100%, 83%);
+  --red: hsl(3.72deg, 88%, 61%); // red
+  --red-light: hsl(3.72deg, 100%, 83%);
+  --blue: hsl(216deg, 88%, 61%); // blue
+  --blue-light: hsl(216deg, 100%, 83%);
+  --violet: hsl(237.76deg, 88%, 61%);; // violet
+  --violet-light: hsl(237.76deg, 100%, 83%);
+  --orange: hsl(27deg, 88%, 61%);; // orange
+  --orange-light: hsl(27deg, 100%, 83%);
 }

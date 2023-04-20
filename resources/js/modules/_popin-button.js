@@ -1,6 +1,6 @@
-import { module as mmodule } from 'modujs'
+import { module as module } from 'modujs'
 
-export default class PopinButton extends mmodule {
+export default class PopinButton extends module {
   constructor(m) {
     super(m)
     this.function = this.el.dataset.function || 'open'

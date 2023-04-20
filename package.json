@@ -26,6 +26,7 @@
         "vite-plugin-sass-glob-import": "^2.0.0"
     },
     "dependencies": {
+        "@barba/core": "^2.9.7",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "animejs": "^3.2.1",
         "embla-carousel": "^7.1.0",
