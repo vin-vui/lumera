@@ -24,9 +24,6 @@ use App\Http\Livewire\FrontCaseStudy;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
 Route::get('/', FrontHome::class)->name('front.home');
 
 // Route::get('/styleguide', function () {
@@ -35,11 +32,6 @@ Route::get('/', FrontHome::class)->name('front.home');
 
 Route::get('createurs', FrontCreators::class)->name('front.creators');
 Route::get('createur/{creator_id}', FrontCreator::class)->name('front.creator');
-
-// Route::get('/createur', function () {
-//     return view('creator');
-// });
-
 Route::get('campagnes', FrontCaseStudies::class)->name('front.cases');
 Route::get('campagne/{case_id}', FrontCaseStudy::class)->name('front.case');
 
@@ -47,21 +39,21 @@ Route::get('/conditions-generales', function () {
     return view('terms');
 });
 
-// Route::get('/404', function () {
-//     return view('errors.404');
-// });
+Route::get('/404', function () {
+    return view('errors.404');
+});
 
-// Route::get('/500', function () {
-//     return view('errors.500');
-// });
+Route::get('/500', function () {
+    return view('errors.500');
+});
 
-// Route::get('/503', function () {
-//     return view('errors.503');
-// });
+Route::get('/503', function () {
+    return view('errors.503');
+});
 
-// Route::get('/401', function () {
-//     return view('errors.401');
-// });
+Route::get('/401', function () {
+    return view('errors.401');
+});
 
 Route::middleware([
     'auth:sanctum',
