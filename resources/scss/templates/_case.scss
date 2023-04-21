@@ -1,6 +1,7 @@
 .t-case {
   max-width: calc(87.5rem + 12rem);
   margin: 0 auto;
+  padding-top: 0;
 
   &__content {
     padding: 0 2rem;
@@ -8,6 +9,16 @@
 
   &__share {
     padding: 2rem;
+  }
+
+  &__creators {
+    .a-button {
+      width: 100%;
+
+      &[disabled] {
+        opacity: 1;
+      }
+    }
   }
 
   @media #{$md} {

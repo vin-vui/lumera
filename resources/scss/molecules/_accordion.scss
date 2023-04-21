@@ -38,4 +38,24 @@
       transition: border-radius 0ms;
     }
   }
+
+  &.-creators & {
+    &__title {
+      justify-content: flex-start;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    &__scroll {
+    }
+
+    &__content {
+      padding: 1rem 0;
+      background-color: clr(cwhite);
+    }
+  }
 }

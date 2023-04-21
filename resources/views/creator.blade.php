@@ -5,109 +5,159 @@
         </div>
         <div class="t-creator__content">
             <h2 class="a-h2">{{ $creator->first_name }} {{ $creator->last_name }}</h2>
-            <p class="text-cgraydark -small">{{ '@'.$creator->nick_name }}</p>
-            <ul class="no-bullet m-tags">
-                @foreach ($creator->specialties as $specialty)
-                <li class="m-tags__item">
-                    <span class="a-tag">{{ $specialty->label }}</span>
-                </li>
-                @endforeach
-            </ul>
+            <p class="text-cgraydark -small">&#x40;{{ $creator->nick_name }}</p>
+            @if ($creator->specialties->count())
+                <ul class="no-bullet m-tags">
+                    @foreach ($creator->specialties as $specialty)
+                        <li class="m-tags__item">
+                            <span class="a-tag">{{ $specialty->label }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
             <div>
                 <p class="a-h5 mgb-1">Résumé de notre créateur</p>
                 <div class="a-text -small text-cgraydark">
-                    {{ $creator->description }}
+                    <p>{{ $creator->description }}</p>
                 </div>
             </div>
             <ul class="no-bullet t-creator__socials">
-                @if ($creator->sn_tiktok)
-                    <li>
+                <li>
+                    @if ($creator->sn_tiktok)
                         <a href="{{ $creator->sn_tiktok }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Tiktok</span>
-                            <span>{{ short_number($creator->tn_tiktok) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_tiktok) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
                                 <use xlink:href="#icon-arrow-diag" />
                             </svg>
+                    @if ($creator->sn_tiktok)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_snapchat)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_snapchat)
                         <a href="{{ $creator->sn_snapchat }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Snapchat</span>
-                            <span>{{ short_number($creator->tn_snapchat) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_snapchat) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_snapchat)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_instagram)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_instagram)
                         <a href="{{ $creator->sn_instagram }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Instagram</span>
-                            <span>{{ short_number($creator->tn_instagram) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_instagram) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_instagram)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_youtube)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_youtube)
                         <a href="{{ $creator->sn_youtube }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Youtube</span>
-                            <span>{{ short_number($creator->tn_youtube) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_youtube) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_youtube)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_linkedin)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_linkedin)
                         <a href="{{ $creator->sn_linkedin }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Linkedin</span>
-                            <span>{{ short_number($creator->tn_linkedin) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_linkedin) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_linkedin)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_facebook)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_facebook)
                         <a href="{{ $creator->sn_facebook }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Facebook</span>
-                            <span>{{ short_number($creator->tn_facebook) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_facebook) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_facebook)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_twitter)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_twitter)
                         <a href="{{ $creator->sn_twitter }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Twitter</span>
-                            <span>{{ short_number($creator->tn_twitter) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_twitter) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_twitter)
                         </a>
-                    </li>
-                @endif
-                @if ($creator->sn_twitch)
-                    <li>
+                    @else
+                        </span>
+                    @endif
+                </li>
+                <li>
+                    @if ($creator->sn_twitch)
                         <a href="{{ $creator->sn_twitch }}" target="_blank" rel="noopener nofollow" class="a-button -inline -small">
+                    @else
+                        <span class="a-button -inline -small" disabled>
+                    @endif
                             <span>Twitch</span>
-                            <span>{{ short_number($creator->tn_twitch) }}</span>
+                            <span class="a-number">{{ short_number($creator->tn_twitch) }}</span>
                             <svg class="icon" aria-hidden="true" focusable="false">
-                            <use xlink:href="#icon-arrow-diag" />
-                        </svg>
+                                <use xlink:href="#icon-arrow-diag" />
+                            </svg>
+                    @if ($creator->sn_twitch)
                         </a>
-                    </li>
-                @endif
+                    @else
+                        </span>
+                    @endif
+                </li>
             </ul>
             <a href="mailto:{{ $creator->email }}" class="a-button -round"><span>Contact</span></a>
         </div>

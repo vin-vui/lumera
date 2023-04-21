@@ -1,15 +1,18 @@
 .m-videos {
-  display: flex;
-  gap: 1rem;
   margin-top: 2rem;
 
   .tiktok-embed {
     margin-top: 0;
   }
 
-  .tiktok-embed,
-  .instagram-media {
-    width: calc(50% - .5rem);
-    min-width: calc(50% - .5rem) !important;
+  @media #{$md} {
+    display: flex;
+    gap: 1rem;
+
+    .tiktok-embed,
+    .instagram-media {
+      width: calc(50% - .5rem);
+      min-width: calc(50% - .5rem) !important;
+    }
   }
 }
