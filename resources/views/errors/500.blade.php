@@ -1,4 +1,4 @@
-<x-error-layout>
+<x-guest-layout>
     <main class="t-error no-bg">
         <div class="g-row align-center-start">
             <div class="sm-column-12 text-center">
@@ -6,4 +6,4 @@
             </div>
         </div>
     </main>
-</x-error-layout>
+</x-guest-layout>
