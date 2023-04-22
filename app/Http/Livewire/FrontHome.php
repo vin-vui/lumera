@@ -9,7 +9,6 @@ use App\Models\Mark;
 
 use Livewire\Component;
 use Carbon\Carbon;
-
 class FrontHome extends Component
 {
     public $creators;
@@ -18,12 +17,9 @@ class FrontHome extends Component
 
     public function mount()
     {
-        // $this->creators = Creator::where('display', true)->inRandomOrder()->take(3)->get();
-
         $this->creators = Creator::where('display', true)->inRandomOrder()->take(3)->get();
-        $this->oldCreators = session('oldCreators', []);
-        $this->allCreators = array_merge($this->oldCreators->all(), $this->creators->all());
-
+        $this->creatorsSecondary = Creator::where('display', true)->inRandomOrder()->take(3)->get();
+        $this->allCreators = array_merge($this->creatorsSecondary->all(), $this->creators->all());
     }
 
     public function render()
