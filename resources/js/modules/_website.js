@@ -25,7 +25,7 @@ export default class Website extends module {
     barba.hooks.after(this.after.bind(this))
     barba.hooks.beforeLeave(this.toggleLoad.bind(this, true))
     this.config = {
-      debug: true,
+      debug: false,
       transitions: this.transitions,
       animate: this.el.dataset.animate !== undefined,
     }
@@ -37,7 +37,7 @@ export default class Website extends module {
     this.setModulesFunctions()
     this.updateModules = true
     this.toggleLoad(false)
-    // window.addEventListener('resize', this.debounceResize)
+    window.addEventListener('resize', this.debounceResize)
     if (this.config.animate) {
       this.requestId = window.requestAnimationFrame(this.animate)
     }
@@ -92,7 +92,7 @@ export default class Website extends module {
   afterEnter() {
     this.updateModules = true
     window.livewire.restart()
-    // this.resize(true)
+    this.resize(true)
   }
 
   toggleLoad(state) {

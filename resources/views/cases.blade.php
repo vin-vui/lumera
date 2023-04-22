@@ -9,7 +9,6 @@
             </div>
         </div>
     </section>
-    <iframe src="https://www.tiktok.com/@maniraj_en3d/video/7216354494223830277?is_from_webapp=1&sender_device=pc" frameborder="0"></iframe>
     <section class="g-section t-cases__page">
         <div class="g-row">
             <ul class="no-bullet sm-column-12 lg-column-9 no-width t-cases__list">
@@ -32,7 +31,7 @@
             <div class="sm-column-12">
                 <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
                     <div class="m-slider__viewport" data-slider="viewport">
-                        <ul class="no-bullet m-slider__container" data-module-creator>
+                        <ul class="no-bullet m-slider__container" data-module-cursor>
                             {{-- TODO LIMIT NBR ?? --}}
                             @foreach ($creators as $creator)
                             <li class="m-slider__slide">

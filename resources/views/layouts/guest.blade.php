@@ -13,12 +13,14 @@
     </head>
     <body data-barba="wrapper" data-module-website data-animate>
         @include('layouts.snippets.sprite')
-        @include('layouts.snippets.header')
         <div data-barba="container">
-            {{ $slot }}
-            @include('layouts.snippets.footer')
+            <div data-module-scroll data-scroll-container>
+                @include('layouts.snippets.header')
+                {{ $slot }}
+                @include('layouts.snippets.footer')
+            </div>
+            @include('layouts.snippets.popins')
         </div>
-        @include('layouts.snippets.popins')
 
         @livewireScripts
 

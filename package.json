@@ -32,8 +32,8 @@
         "embla-carousel": "^7.1.0",
         "embla-carousel-autoplay": "^7.1.0",
         "embla-carousel-class-names": "^7.1.0",
-        "locomotive-scroll": "^4.1.4",
         "modujs": "^1.4.2",
+        "split-type": "^0.3.3",
         "trix": "^2.0.4"
     }
 }

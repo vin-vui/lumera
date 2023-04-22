@@ -34,7 +34,6 @@ export default {
   enter() {},
 
   init(parent, config) {
-    console.log(parent);
     this.parent = parent
     this.call = this.parent.call.bind(this.parent)
     this.config = config

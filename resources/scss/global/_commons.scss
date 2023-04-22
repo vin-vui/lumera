@@ -93,14 +93,14 @@ main {
   visibility: hidden;
 }
 
-[data-scroll-container] {
-  display: flex;
-  flex-direction: column;
+// [data-scroll-container] {
+//   display: flex;
+//   flex-direction: column;
 
-  footer {
-    margin-top: auto;
-  }
-}
+//   footer {
+//     margin-top: auto;
+//   }
+// }
 
 ::selection  {
   background-color: rgba(0, 0, 0, 70%);
@@ -131,3 +131,11 @@ a  {
 
 // See Alpine.js: https://alpinejs.dev/directives/cloak
 [x-cloak] { display: none !important; }
+
+.line {
+  overflow: hidden;
+
+  .word {
+    transform: translateY(100%);
+  }
+}

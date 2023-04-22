@@ -1,8 +1,16 @@
 <footer class="o-footer">
     <div class="g-row">
         <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 no-width">
-            <p class="a-h2">Créons des campagnes marquantes <strong>ensemble</strong></p>
-            <p class="lg-size-90 -small">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
+            <div data-module-split="tf1">
+                <div data-scroll data-scroll-call="enter, Split, tf1">
+                    <p class="a-h2 js-split">Créons des campagnes marquantes <strong>ensemble</strong></p>
+                </div>
+            </div>
+            <div data-module-split="cf1" data-delay="250" data-duration="800">
+                <div data-scroll data-scroll-call="enterText, Split, cf1">
+                    <p class="lg-size-90 -small js-split">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
+                </div>
+            </div>
         </div>
         <div class="sm-column-12 md-column-5 lg-column-4 o-footer__contact">
             @include('molecules.contact')

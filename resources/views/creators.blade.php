@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="g-row js-relaunch-modules">
-            <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-creator>
+            <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
                 @foreach ($creators as $creator)
                 <li class="m-slider__slide">
                     @include('molecules.creator')

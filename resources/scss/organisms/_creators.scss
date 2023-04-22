@@ -15,9 +15,28 @@
   }
 
   &__list {
+    position: relative;
     z-index: 1;
     display: flex;
     gap: $column-gutter;
+
+    li:nth-of-type(4),
+    li:nth-of-type(5),
+    li:nth-of-type(6) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: calc(33.333% - 1.3rem);
+    }
+
+    li:nth-of-type(5) {
+      left: calc(33.333% + .7rem);
+    }
+
+    li:nth-of-type(6) {
+      left: calc(66.666% + 1.4rem);
+    }
   }
 
   &__buttons {

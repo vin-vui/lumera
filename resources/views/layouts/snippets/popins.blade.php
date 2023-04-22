@@ -263,8 +263,8 @@
                             <div class="m-caseContent m-content">
                                 {!! $case->bloc_wysiwyg !!}
                                 <div class="m-videos">
-                                    {!! $case->video_1 !!}
-                                    {!! $case->video_2 !!}
+                                    {{-- {!! $case->video_1 !!}
+                                    {!! $case->video_2 !!} --}}
                                 </div>
                             </div>
                             <div class="m-caseInfos">
