@@ -8,6 +8,7 @@
         <title>{{ config('app.name', 'Lumera') }}</title>
 
         <!-- Scripts -->
+        <script src="{{asset('assets/vendor/loconative-min.js')}}"></script>
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
         <script defer data-domain="lumera.vinvui.com" src="https://plausible.io/js/script.js"></script>
     </head>

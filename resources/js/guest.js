@@ -1,5 +1,4 @@
 import './bootstrap';
-import './loconative';
 
 // import Alpine from 'alpinejs';
 // import focus from '@alpinejs/focus';

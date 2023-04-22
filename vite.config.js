@@ -13,7 +13,6 @@ export default defineConfig({
                 'resources/scss/guest.scss',
                 'resources/js/app.js',
                 'resources/js/guest.js',
-                'resources/js/loconative.js',
             ],
             refresh: [
                 ...refreshPaths,
