@@ -20,7 +20,7 @@
         <div class="g-row">
             <ul class="no-bullet sm-column-12 lg-column-9 no-width t-cases__list">
                 @foreach ($cases as $case)
-                <li>@include('molecules.case', ['complete' => true])</li>
+                <li data-scroll>@include('molecules.case', ['complete' => true])</li>
                 @endforeach
             </ul>
         </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="g-row">
             <div class="sm-column-12">
-                <div class="m-slider -bg" data-module-creators="creators-slider" data-module-slider data-controls="true" data-size="3">
+                <div class="m-slider -anime -bg" data-scroll data-module-creators="creators-slider" data-module-slider data-controls="true" data-size="3">
                     <div class="m-slider__viewport" data-slider="viewport" data-scroll data-scroll-offset="10%, 0" data-scroll-call="enter, Creators, creators-slider">
                         <ul class="no-bullet m-slider__container" data-module-cursor>
                             @foreach ($creators as $creator)
@@ -79,15 +79,13 @@
         </div>
         <div class="g-row align-center-start">
             <div class="sm-column-12 lg-column-8">
-                <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
+                <div class="o-testimonies m-slider -vertical" data-scroll data-module-slider data-controls="true" data-axis="y">
                     <div class="o-testimonies__arrows">
                         <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-right" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
                         </button>
                         <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-left" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
                         </button>
                     </div>
                     <div class="o-testimonies__slider">

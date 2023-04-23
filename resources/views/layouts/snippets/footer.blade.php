@@ -1,4 +1,4 @@
-<footer class="o-footer">
+<footer class="o-footer" data-scroll>
     <div class="g-row">
         <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 no-width">
             <div data-module-split="tf1">
@@ -48,10 +48,10 @@
             </div>
         </div>
     </div>
-    <div class="g-row align-start-center">
+    <div class="g-row align-start-center o-footer__down">
         <div class="sm-column-12 lg-column-3 lg-order-1">
             <div class="text-right">
-                <a href="#top" class="a-button -tertiary" data-scroll data-scroll-to>Revenir en haut de page</a>
+                <button type="button" class="a-button -tertiary" data-scroll-to="#top">Revenir en haut de page</button>
             </div>
         </div>
         <div class="sm-column-12 lg-column-7 lg-offset-1">

@@ -14,6 +14,10 @@
     height: 50%;
     border-radius: 0 $radius;
     background-color: var(--primary-light);
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+    transform: scale(.7);
+    transform-origin: center center;
   }
 
   .a-blockquote {
@@ -39,6 +43,10 @@
     overflow: hidden;
     width: 100%;
     padding : 3.2rem 0;
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing 350ms, opacity $anim-duration * 3 $anim-easing 350ms;
+    transform: scale(.9);
+    transform-origin: center center;
   }
 
   .m-slider {
@@ -59,8 +67,8 @@
       // transition: opacity $anim;
 
       .a-blockquote {
-        transition: transform $anim;
-        transform: rotate(5deg);
+        // transition: transform $anim;
+        transition: transform $anim-duration $anim-easing 600ms;
       }
 
       &.is-selected {
@@ -77,6 +85,35 @@
 
   .is-ready .m-slider__slide {
     position: absolute;
+  }
+
+  &.is-inview & {
+    &__slider {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.is-inview {
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .m-slider {
+      &__slide {
+        .a-blockquote {
+          transition: transform $anim-duration $anim-easing;
+          transform: rotate(5deg);
+        }
+
+        &.is-selected {
+          .a-blockquote {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
   }
 
   @media #{$md} {

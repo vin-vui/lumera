@@ -12,6 +12,22 @@
     height: calc(100% - 68rem);
     border-radius: 0 0 0 $radius;
     background-color: var(--primary-light);
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing $anim-duration, opacity $anim-duration * 3 $anim-easing $anim-duration;
+    transform: scale(.7);
+    transform-origin: center center;
+  }
+
+  .m-cardLink {
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition: transform $anim-duration * 3 $anim-easing 600ms * calc($i / 3), opacity $anim-duration * 3 $anim-easing 600ms * calc($i / 3);
+      }
+    }
+
+    opacity: 0;
+    transform: scale(.7);
+    transform-origin: center center;
   }
 
   .g-row {
@@ -28,6 +44,37 @@
     padding: 3.4rem;
     border-radius: 10px;
     background-color: clr(cwhite);
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing 800ms, opacity $anim-duration * 3 $anim-easing 800ms;
+    transform: scale(.7);
+    transform-origin: center center;
+  }
+
+  &__down {
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing 900ms, opacity $anim-duration * 3 $anim-easing 900ms;
+    transform: scale(.7);
+    transform-origin: center center;
+  }
+
+  &.is-inview & {
+    &__down,
+    &__bottom {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.is-inview {
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .m-cardLink {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &__mentions {

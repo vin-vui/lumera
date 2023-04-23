@@ -1,0 +1,84 @@
+.a-logo {
+  position: absolute;
+  top: 15rem;
+  left: -4rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+
+  // transition: transform $anim-duration * 2 cubic-bezier(.66, -.01, .14, 1.49);
+
+  // transform: scale(1);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+  }
+
+  &::before {
+    z-index: 1;
+    width: 3.3rem;
+    height: 3.3rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 100%) 0%, rgba(255, 255, 255, 100%) 4%, rgba(255, 255, 255, 0%) 40%, rgba(255, 255, 255, 0%) 100%);
+    opacity: .3;
+    transition: transform $anim-duration * 2 cubic-bezier(.66, -.01, .14, 1.49);
+  }
+
+  &::after {
+    z-index: 2;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 100%) 0%, rgba(255, 255, 255, 100%) 4%, rgba(255, 255, 255, 0%) 40%, rgba(255, 255, 255, 0%) 100%);
+  }
+
+  .icon {
+    z-index: 3;
+    width: 3.3rem;
+    height: 3.3rem;
+    transform: scale(0);
+
+    // transition: transform $anim-duration * 2 cubic-bezier(.66, -.01, .14, 1.49);
+  }
+
+  &:hover {
+    // transform: scale(2);
+
+    &::before {
+      transform: translate(-50%, -50%) scale(2);
+    }
+
+    &::after {
+      animation: radial $anim-duration * 2 linear;
+    }
+
+    .icon {
+      // transform: scale(.8);
+    }
+  }
+}
+
+@keyframes radial {
+  0% {
+    transform: translate(-50%, -50%) scale(0) ;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2) ;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0) ;
+  }
+}

@@ -18,7 +18,7 @@
   transition: background-color $anim, color $anim;
 
   @media (hover: hover) and (any-pointer: fine) {
-    &:hover, &:focus {
+    &:hover {
       background-color: var(--primary);
       color: clr(cwhite);
     }

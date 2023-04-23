@@ -77,13 +77,10 @@
                 </ul>
             </div>
 
-            <div class="g-row">
-                {{-- TODO PAGINATION --}}
-                {!! $pagination !!}
-            </div>
+            {!! $pagination !!}
         </div>
     </section>
-    <section class="g-section m-slider__ow">
+    <section class="g-section m-slider__ow" wire:ignore>
         <div class="g-row">
             <div class="sm-column-12 lg-column-5" data-module-split="tc3">
                 <div data-scroll data-scroll-call="enter, Split, tc3">
@@ -98,7 +95,7 @@
         </div>
         <div class="g-row">
             <div class="sm-column-12">
-                <div class="m-slider -bg" data-module-slider data-controls="true" data-size="5">
+                <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-size="5">
                     <div class="m-slider__viewport" data-slider="viewport">
                         <ul class="no-bullet m-slider__container">
                             @foreach ($cases as $case)
@@ -125,7 +122,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt2">
                 <div data-scroll data-scroll-call="enter, Split, tt2">
@@ -135,15 +132,13 @@
         </div>
         <div class="g-row align-center-start">
             <div class="sm-column-12 lg-column-8">
-                <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
+                <div class="o-testimonies m-slider -vertical" data-scroll data-module-slider data-controls="true" data-axis="y">
                     <div class="o-testimonies__arrows">
                         <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-right" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
                         </button>
                         <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xlink:href="#icon-arrow-left" /></svg>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg>
                         </button>
                     </div>
                     <div class="o-testimonies__slider">

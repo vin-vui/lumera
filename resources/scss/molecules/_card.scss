@@ -1,12 +1,34 @@
 .m-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem;
-  border-radius: 0 20px;
-  background-color: clr(cgray);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 0 20px;
+    background-color: clr(cgray);
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+    transform: scale(.8);
+    transform-origin: center;
+
+    > div, .icon {
+      opacity: 0;
+      transition: opacity $anim-duration * 3 $anim-easing $anim-duration * 2
+    }
+  }
 
   .icon {
     color: var(--primary);
+  }
+
+  &.is-inview & {
+    &__inner {
+      opacity: 1;
+      transform: scale(1);
+
+      > div, .icon {
+        opacity: 1;
+      }
+    }
   }
 }

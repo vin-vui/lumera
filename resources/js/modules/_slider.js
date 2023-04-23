@@ -55,8 +55,8 @@ export default class Slider extends module {
       this.slider.on('select', this.onAnimeHero.bind(this))
     }
 
-    window.addEventListener('contentChanged', this.toggleReady.bind(this))
-    window.addEventListener('contentChanged', this.onAnimeHero.bind(this))
+    // window.addEventListener('contentChanged', this.toggleReady.bind(this))
+    // window.addEventListener('contentChanged', this.onAnimeHero.bind(this))
   }
 
   toggleReady(event) {

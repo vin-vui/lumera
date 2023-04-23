@@ -32,8 +32,11 @@ export default class Website extends module {
 
     barba.init(this.config)
 
+    this.getScrollTo()
+
     window.addEventListener('contentChanged', () => {
       this.getScrollTo()
+      this.call('update', null, 'Scroll')
 
       const container = document.querySelector('.js-relaunch-modules')
       if (!container) {
@@ -114,7 +117,6 @@ export default class Website extends module {
 
     this.call('update', next.container, 'app');
     this.setModulesFunctions()
-    this.getScrollTo()
   }
 
   afterEnter() {

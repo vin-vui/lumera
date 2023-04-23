@@ -7,5 +7,17 @@
   &__list {
     display: grid;
     gap: $column-gutter;
+
+    li {
+      opacity: 0;
+      transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+      transform: scale(.9);
+      transform-origin: center center;
+
+      &.is-inview {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }

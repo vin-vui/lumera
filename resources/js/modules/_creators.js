@@ -1,6 +1,5 @@
 import { module as module } from 'modujs'
 import anime from 'animejs'
-import SplitType from 'split-type'
 
 export default class Creators extends module {
   constructor(m) {
@@ -13,7 +12,6 @@ export default class Creators extends module {
 
   init() {
     window.addEventListener('contentChanged', this.onAnime.bind(this))
-
   }
 
   enter() {

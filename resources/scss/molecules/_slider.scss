@@ -175,6 +175,35 @@
     }
   }
 
+  &.-anime {
+    &.-bg {
+      &::before {
+        opacity: 0;
+        transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+        transform: translateX(-50%) scale(.7);
+        transform-origin: center center;
+      }
+    }
+
+    .m-slider__viewport {
+      opacity: 0;
+      transition: opacity $anim-duration * 3 $anim-easing $anim-duration * 2;
+    }
+
+    &.is-inview {
+      .m-slider__viewport {
+        opacity: 1;
+      }
+
+      &.-bg {
+        &::before {
+          opacity: 1;
+          transform: translateX(-50%) scale(1);
+        }
+      }
+    }
+  }
+
   @media #{$md} {
     &__button {
       width: 6rem;

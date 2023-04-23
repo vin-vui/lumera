@@ -7,6 +7,15 @@
 
   li {
     min-width: 20%;
+    opacity: 0;
+    transition: transform $anim-duration * 3 $anim-easing $anim-duration * 2, opacity $anim-duration * 3 $anim-easing $anim-duration * 2;
+    transform: scale(.7);
+    transform-origin: center center;
+
+    &.is-inview {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   img {

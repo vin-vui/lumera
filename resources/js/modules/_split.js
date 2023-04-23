@@ -14,7 +14,7 @@ export default class Split extends module {
       targets: this.el.querySelectorAll('.word'),
       translateY: ['100%', 0],
       duration: 600,
-      delay: anime.stagger(75),
+      delay: anime.stagger(75, {"start": this.el.dataset.delay !== undefined ? Number(this.el.dataset.delay) : 0}),
       easing: 'easeInOutSine'
     });
   }

@@ -1,26 +1,27 @@
 <main class="t-home">
-    <section class="g-section">
+    <section class="g-section" wire:ignore>
         <div class="g-row o-hero">
             <div class="sm-column-12 lg-column-10">
-                <div class="o-hero__title">
-                    <div data-module-split="th1">
+                <div class="o-hero__title" data-module-logo="logo-mini">
+                    <span class="a-logo" data-scroll data-scroll-call="enter, Logo, logo-mini" data-logo="logo"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-mini" /></svg></span>
+                    <div data-module-split="th1" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th1">
                             <h1 class="a-bigTitle js-split">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</h1>
                         </div>
                     </div>
-                    <div data-module-split="th2">
+                    <div data-module-split="th2" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th2">
                             <span aria-hidden="true" focusable="false" class="-fake a-bigTitle js-split">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1" data-module-split="ch1" data-delay="250" data-duration="800">
+            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1" data-module-split="ch1" data-delay="650" data-duration="800">
                 <div data-scroll data-scroll-offset="18%, 0" data-scroll-call="enterText, Split, ch1">
                     <p class="-big js-split">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-5 o-hero__slider">
+            <div class="sm-column-12 lg-column-5 o-hero__slider" data-scroll>
                 <div class="m-slider -creators" data-module-slider="slider-hero" data-controls="true" data-creator data-pagination="true" data-scroll data-scroll-offset="50%, 0" data-scroll-call="enterHero, Slider, slider-hero">
                     <div class="m-slider__nav">
                         <p class="m-slider__pagination"><span data-slider="pagination">1</span>&nbsp;—&nbsp;{{ $creators_header->count() }}</p>
@@ -46,9 +47,9 @@
             </div>
         </div>
     </section>
-    <section class="g-section">
+    <section class="g-section" wire:ignore>
         <div class="g-row align-start-start">
-            <div class="sm-column-12 lg-column-5 t-home__about">
+            <div class="sm-column-12 lg-column-5 t-home__about" data-scroll data-scroll-offset="30%, 0">
                 <div class="a-ratio" data-ratio="9/10">
                     <img src="{{asset('assets/img/about.jpg')}}" srcset="{{asset('assets/img/about.jpg')}} 1x, {{asset('assets/img/about@2x.jpg')}} 2x" alt="">
                 </div>
@@ -59,19 +60,23 @@
                     <h2 class="a-h2 js-split">Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
                 </div>
                 <div class="mgt-6 o-cards" data-module-cards>
-                    <div class="m-card" data-cards="item">
-                        <div class="mgb-4">
-                            <p class="a-h5 mgb-1">Des créateurs accompagné.es</p>
-                            <p>Lumera redéfini et valorise le marketing d’influence en proposant un accompagnement personnalisé et complet à nos créateurs de contenus : définition de leur ligne éditoriale, développement de l’audience, mise en relation avec des marques pertinentes… Notre Social Media manager les aide à mettre en place un plan d'action clé en main pour des résultats à la hauteur de leur talent !</p>
+                    <div class="m-card" data-cards="item" data-scroll data-scroll-offset="30%, 0">
+                        <div class="m-card__inner">
+                            <div class="mgb-4">
+                                <p class="a-h5 mgb-1">Des créateurs accompagné.es</p>
+                                <p>Lumera redéfini et valorise le marketing d’influence en proposant un accompagnement personnalisé et complet à nos créateurs de contenus : définition de leur ligne éditoriale, développement de l’audience, mise en relation avec des marques pertinentes… Notre Social Media manager les aide à mettre en place un plan d'action clé en main pour des résultats à la hauteur de leur talent !</p>
+                            </div>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-user" /></svg>
                         </div>
-                        <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-user" /></svg>
                     </div>
-                    <div class="m-card" data-cards="item">
-                        <div class="mgb-4">
-                            <p class="a-h5 mgb-1">Conseils affûtés pour les entreprises</p>
-                            <p>Maîtrisant parfaitement le milieu du marketing d’influence et ayant déjà été à la place du client, on sait à quel point il est important d’être bien accompagné dans la mise en place d’une campagne d’influence marketing. C’est pourquoi Lumera vous guide du début à la fin de vos projets et sélectionne pour chacune de vos problématiques les créateurs de contenu qui vous correspondent le mieux.</p>
+                    <div class="m-card" data-cards="item" data-scroll data-scroll-offset="30%, 0">
+                        <div class="m-card__inner">
+                            <div class="mgb-4">
+                                <p class="a-h5 mgb-1">Conseils affûtés pour les entreprises</p>
+                                <p>Maîtrisant parfaitement le milieu du marketing d’influence et ayant déjà été à la place du client, on sait à quel point il est important d’être bien accompagné dans la mise en place d’une campagne d’influence marketing. C’est pourquoi Lumera vous guide du début à la fin de vos projets et sélectionne pour chacune de vos problématiques les créateurs de contenu qui vous correspondent le mieux.</p>
+                            </div>
+                            <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-compass" /></svg>
                         </div>
-                        <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-compass" /></svg>
                     </div>
                 </div>
             </div>
@@ -90,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="g-row o-creators">
+        <div class="g-row o-creators" data-scroll wire:ignore.self>
             <div class="sm-column-12 lg-column-1 lg-offset-1">
                 <div class="o-creators__buttons">
                     {{-- RANDOMIZER --}}
@@ -116,12 +121,12 @@
             </div>
         </div>
     </section>
-    <section class="g-section">
+    <section class="g-section" wire:ignore>
         <div class="g-row align-center-start">
             <div class="sm-column-12 md-column-10">
                 <ul class="no-bullet o-logos">
                     @foreach ($marks as $mark)
-                    <li>
+                    <li data-scroll data-scroll-offset="30%, 0">
                         <img src="{{ Storage::disk('uploads')->url($mark->image) }}" alt="{{ $mark->label }}">
                     </li>
                     @endforeach
@@ -129,7 +134,7 @@
             </div>
         </div>
     </section>
-    <section class="g-section t-home__case">
+    <section class="g-section t-home__case" data-scroll data-scroll-offset="30%, 0" wire:ignore>
         <div class="g-row">
             <div class="sm-column-12 lg-column-5">
                 <div data-module-split="te1">
@@ -160,7 +165,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt1">
                 <div data-scroll data-scroll-call="enter, Split, tt1">
@@ -170,7 +175,7 @@
         </div>
         <div class="g-row align-center-start">
             <div class="sm-column-12 lg-column-8">
-                <div class="o-testimonies m-slider -vertical" data-module-slider data-controls="true" data-axis="y">
+                <div class="o-testimonies m-slider -vertical" data-scroll data-module-slider data-controls="true" data-axis="y">
                     <div class="o-testimonies__arrows">
                         <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
                             <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>

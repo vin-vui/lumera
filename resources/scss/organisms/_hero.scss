@@ -43,6 +43,17 @@
       height: calc(100% - 10rem);
       border-radius: 0 $radius 0 $radius;
       background-color: var(--primary-light);
+      opacity: 0;
+      transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+      transform: scale(.7);
+      transform-origin: center center;
+    }
+
+    &.is-inview {
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 
