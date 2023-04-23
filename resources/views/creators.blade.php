@@ -4,11 +4,15 @@
 <main class="t-creators">
     <section class="g-section -small">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-9 mgb-2">
-                <h1>Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
+            <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th3">
+                <div data-scroll data-scroll-call="enter, Split, th3">
+                    <h1 class="js-split">Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
+                </div>
             </div>
-            <div class="sm-column-12 lg-column-9">
-                <p class="-big">Finances, nouvelles technologies, développement personnel... nos créateurs de contenu maîtrisent l'art et la manière d'en parler ! Découvrez leurs profils et leurs passions.</p>
+            <div class="sm-column-12 lg-column-9" data-module-split="ch3" data-delay="250" data-duration="600">
+                <div data-scroll data-scroll-call="enterText, Split, ch3">
+                    <p class="-big js-split">Finances, nouvelles technologies, développement personnel... nos créateurs de contenu maîtrisent l'art et la manière d'en parler ! Découvrez leurs profils et leurs passions.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -74,58 +78,22 @@
             </div>
 
             <div class="g-row">
-
-            {{-- {{ $creators->links() }} --}}
+                {{-- TODO PAGINATION --}}
                 {!! $pagination !!}
             </div>
-
-
-            {{-- @php
-                $count = 0;
-                $currentPage = 1;
-                $perPage = 9;
-                $totalItems = $creators->count();
-                $totalPages = ceil($totalItems / $perPage);
-            @endphp
-
-            @foreach($creators as $creator)
-                @if($count % $perPage == 0)
-                    @if($count > 0)
-                        </ul> <!-- Ferme le div ouvert précédemment -->
-                    @endif
-                    <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
-                @endif
-
-                <li class="m-slider__slide">
-                    @include('molecules.creator', ['class' => ' -no-anime'])
-                </li>
-
-
-                @if(($count + 1) % $perPage == 0 || $item == $totalItems)
-                </ul> <!-- Ferme le div courant s'il contient le nombre d'éléments par page ou si c'est la dernière itération de la boucle -->
-                @if($currentPage < $totalPages)
-                    <a href="?page={{ $currentPage + 1 }}">Page suivante</a>
-                @endif
-                @php
-                    $currentPage++;
-                @endphp
-                @endif
-
-                @php
-                    $count++;
-                @endphp
-            @endforeach --}}
-
-            {{-- TODO PAGINATION (on est en 2003 ?) --}}
         </div>
     </section>
     <section class="g-section m-slider__ow">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-5">
-                <h2>Découvrez toutes <strong>nos campagnes</strong></h2>
+            <div class="sm-column-12 lg-column-5" data-module-split="tc3">
+                <div data-scroll data-scroll-call="enter, Split, tc3">
+                    <h2 class="js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
+                </div>
             </div>
-            <div class="sm-column-12 lg-column-5 lg-offset-1">
-                <p>Lumera consolide les relations entre des marques ambitieuses et des créateurs de contenu passionnés pour créer ensemble des campagnes de communication performantes qui s’adressent à des cibles en constante évolution.</p>
+            <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc3" data-delay="250" data-duration="600">
+                <div data-scroll data-scroll-call="enterText, Split, cc3">
+                    <p class="js-split">Lumera consolide les relations entre des marques ambitieuses et des créateurs de contenu passionnés pour créer ensemble des campagnes de communication performantes qui s’adressent à des cibles en constante évolution.</p>
+                </div>
             </div>
         </div>
         <div class="g-row">
@@ -159,8 +127,10 @@
     </section>
     <section>
         <div class="g-row mgb-6">
-            <div class="sm-column-12 lg-column-7 lg-offset-1">
-                <h2 class="a-h2">Les avis des créateurs <br>qui <strong>illuminent</strong></h2>
+            <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt2">
+                <div data-scroll data-scroll-call="enter, Split, tt2">
+                    <h2 class="a-h2 js-split">Les avis des créateurs <br>qui <strong>illuminent</strong></h2>
+                </div>
             </div>
         </div>
         <div class="g-row align-center-start">

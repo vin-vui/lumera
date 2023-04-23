@@ -4,11 +4,15 @@
 <main class="t-cases">
     <section class="g-section -small">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-9 mgb-2">
-                <h1>Des campagnes d’influence qui visent juste</h1>
+            <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th2">
+                <div data-scroll data-scroll-call="enter, Split, th2">
+                    <h1 class="js-split">Des campagnes d’influence qui visent juste</h1>
+                </div>
             </div>
-            <div class="sm-column-12 lg-column-9">
-                <p class="-big">Innovante, créative, percutante, ludique... nous construisons ensemble la communication qui vous ressemble</p>
+            <div class="sm-column-12 lg-column-9" data-module-split="ch2">
+                <div data-scroll data-scroll-call="enterText, Split, ch2">
+                    <p class="-big js-split">Innovante, créative, percutante, ludique... nous construisons ensemble la communication qui vous ressemble</p>
+                </div>
             </div>
         </div>
     </section>
@@ -23,19 +27,22 @@
     </section>
     <section class="g-section">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-5">
-                <h2>Découvrez tous <br><strong>nos créateurs</strong></h2>
+            <div class="sm-column-12 lg-column-5" data-module-split="tc2">
+                <div data-scroll data-scroll-call="enter, Split, tc2">
+                    <h2 class="js-split">Découvrez tous <br><strong>nos créateurs</strong></h2>
+                </div>
             </div>
-            <div class="sm-column-12 lg-column-5 lg-offset-1">
-                <p>Nous sommes très fiers d’accompagner ces créateurs de contenu au quotidien dans leur prise de parole, de leur donner les clés pour se démarquer et devenir les personnalités les plus influentes de leur secteur.</p>
+            <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc2" data-delay="250" data-duration="600">
+                <div data-scroll data-scroll-call="enterText, Split, cc2">
+                    <p class="js-split">Nous sommes très fiers d’accompagner ces créateurs de contenu au quotidien dans leur prise de parole, de leur donner les clés pour se démarquer et devenir les personnalités les plus influentes de leur secteur.</p>
+                </div>
             </div>
         </div>
         <div class="g-row">
             <div class="sm-column-12">
-                <div class="m-slider -bg" data-module-slider data-controls="true" data-size="3">
-                    <div class="m-slider__viewport" data-slider="viewport">
+                <div class="m-slider -bg" data-module-creators="creators-slider" data-module-slider data-controls="true" data-size="3">
+                    <div class="m-slider__viewport" data-slider="viewport" data-scroll data-scroll-offset="10%, 0" data-scroll-call="enter, Creators, creators-slider">
                         <ul class="no-bullet m-slider__container" data-module-cursor>
-                            {{-- TODO LIMIT NBR ?? --}}
                             @foreach ($creators as $creator)
                             <li class="m-slider__slide">
                                 @include('molecules.creator')
@@ -64,8 +71,10 @@
     </section>
     <section>
         <div class="g-row mgb-6">
-            <div class="sm-column-12 lg-column-7 lg-offset-1">
-                <h2 class="a-h2">Ils ont<strong>flashé</strong> sur nous et ils ont eu raison !</h2>
+            <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt2">
+                <div data-scroll data-scroll-call="enter, Split, tt2">
+                    <h2 class="a-h2 js-split">Ils ont <strong>flashé</strong> sur nous et ils ont eu raison !</h2>
+                </div>
             </div>
         </div>
         <div class="g-row align-center-start">

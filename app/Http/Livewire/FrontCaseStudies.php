@@ -14,7 +14,7 @@ class FrontCaseStudies extends Component
 
     public function render()
     {
-        $creators = Creator::where('display', true)->inRandomOrder()->take(5)->get();
+        $creators = Creator::where('display', true)->inRandomOrder()->take(8)->get();
 
         $cases = CaseStudy::where('display', true)->get();
 
