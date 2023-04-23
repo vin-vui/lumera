@@ -31,6 +31,33 @@ export default class Website extends module {
     }
 
     barba.init(this.config)
+
+    window.addEventListener('contentChanged', () => {
+      this.getScrollTo()
+
+      const container = document.querySelector('.js-relaunch-modules')
+      if (!container) {
+        return
+      }
+      this.call('destroy', container, 'app');
+      setTimeout(() => {
+        this.call('update', container, 'app');
+      }, 500);
+    })
+  }
+
+  getScrollTo() {
+    if (!document.querySelectorAll('[data-scroll-to]').length > 0) {
+      return
+    }
+
+    document.querySelectorAll('[data-scroll-to]').forEach(item => {
+      item.addEventListener('click', () => {
+        setTimeout(() => {
+          this.call('scrollTo', item.dataset.scrollTo, 'Scroll')
+        }, 100);
+      })
+    })
   }
 
   once() {
@@ -87,6 +114,7 @@ export default class Website extends module {
 
     this.call('update', next.container, 'app');
     this.setModulesFunctions()
+    this.getScrollTo()
   }
 
   afterEnter() {

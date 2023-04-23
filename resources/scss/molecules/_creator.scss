@@ -29,19 +29,44 @@
   .m-cursorThumb {
     overflow: hidden;
     height: 100%;
-    transform: translate(0, 100%);
-    will-change: transform;
 
     .a-ratio {
       overflow: hidden;
       height: 100%;
-      transform: translate(0, -100%);
+    }
+  }
+
+  &:not(.-no-anime) {
+    .m-cursorThumb {
+      transform: translate(0, 100%);
       will-change: transform;
+
+      .a-ratio {
+        transform: translate(0, -100%);
+        will-change: transform;
+      }
     }
   }
 
   .a-h3 {
+    // margin-top: -1.2rem;
     line-height: .9;
+
+    .line {
+      // padding: 0;
+
+      + .line {
+        margin-top: 0;
+      }
+    }
+
+    // + .line {
+    //   margin-top: -2.4rem;
+    // }
+  }
+
+  .line .word {
+    padding: .6rem 0;
   }
 
   .line, .word {

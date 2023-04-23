@@ -135,7 +135,12 @@ a  {
 .line {
   overflow: hidden;
 
+  + .line {
+    margin-top: -2.4rem;
+  }
+
   .word {
+    padding: 1.2rem 0;
     transform: translateY(100%);
   }
 }

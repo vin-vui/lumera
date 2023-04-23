@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Lumera') }}</title>
+        <title>@yield('title', 'Lumera | Influence marketing')</title>
+        <meta name="description" content="@yield('description', 'Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d\'influence marketing performantes')"></head>
 
         <!-- Scripts -->
         <script src="{{asset('assets/vendor/loconative-min.js')}}"></script>

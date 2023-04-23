@@ -1,3 +1,6 @@
+@section('title', 'Nos créateurs | Lumera')
+@section('description', 'Finances, nouvelles technologies, développement personnel... nos créateurs de contenu maîtrisent l\'art et la manière d\'en parler ! Découvrez leurs profils et leurs passions.')
+
 <main class="t-creators">
     <section class="g-section -small">
         <div class="g-row">
@@ -56,17 +59,63 @@
                 </div>
             </div>
             <div class="sm-column-12 mgt-2 mgb-2">
-                <p class="-small">{{ $creators->count() }} Créateur{{ $creators->count() > 1 ? 's' : '' }}</p>
+                <p class="-small">{{ $countCreators }} Créateur{{ $countCreators > 1 ? 's' : '' }}</p>
             </div>
         </div>
-        <div class="g-row js-relaunch-modules">
-            <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
-                @foreach ($creators as $creator)
+        <div class="js-relaunch-modules" id="list">
+            <div class="g-row">
+                <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
+                    @foreach ($creators as $creator)
+                    <li class="m-slider__slide">
+                        @include('molecules.creator', ['class' => ' -no-anime'])
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            <div class="g-row">
+
+            {{-- {{ $creators->links() }} --}}
+                {!! $pagination !!}
+            </div>
+
+
+            {{-- @php
+                $count = 0;
+                $currentPage = 1;
+                $perPage = 9;
+                $totalItems = $creators->count();
+                $totalPages = ceil($totalItems / $perPage);
+            @endphp
+
+            @foreach($creators as $creator)
+                @if($count % $perPage == 0)
+                    @if($count > 0)
+                        </ul> <!-- Ferme le div ouvert précédemment -->
+                    @endif
+                    <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
+                @endif
+
                 <li class="m-slider__slide">
-                    @include('molecules.creator')
+                    @include('molecules.creator', ['class' => ' -no-anime'])
                 </li>
-                @endforeach
-            </ul>
+
+
+                @if(($count + 1) % $perPage == 0 || $item == $totalItems)
+                </ul> <!-- Ferme le div courant s'il contient le nombre d'éléments par page ou si c'est la dernière itération de la boucle -->
+                @if($currentPage < $totalPages)
+                    <a href="?page={{ $currentPage + 1 }}">Page suivante</a>
+                @endif
+                @php
+                    $currentPage++;
+                @endphp
+                @endif
+
+                @php
+                    $count++;
+                @endphp
+            @endforeach --}}
+
             {{-- TODO PAGINATION (on est en 2003 ?) --}}
         </div>
     </section>
@@ -84,7 +133,6 @@
                 <div class="m-slider -bg" data-module-slider data-controls="true" data-size="5">
                     <div class="m-slider__viewport" data-slider="viewport">
                         <ul class="no-bullet m-slider__container">
-                            {{-- TODO LIMIT NBR ?? --}}
                             @foreach ($cases as $case)
                                 <li class="m-slider__slide">@include('molecules.case')</li>
                             @endforeach

@@ -1,3 +1,6 @@
+@section('title', 'Nos campagnes d’influence | Lumera')
+@section('description', 'Innovante, créative, percutante, ludique... nous construisons ensemble la communication qui vous ressemble')
+
 <main class="t-cases">
     <section class="g-section -small">
         <div class="g-row">

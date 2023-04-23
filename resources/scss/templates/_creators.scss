@@ -7,6 +7,10 @@
   &__list {
     display: grid;
     gap: $column-gutter;
+
+    .word {
+      transform: translateY(0);
+    }
   }
 
   &__filters {

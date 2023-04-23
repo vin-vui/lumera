@@ -46,6 +46,15 @@ export default class extends module {
     // }
   }
 
+  scrollTo(selector) {
+    if(this.scroll) {
+      this.scroll.scrollTo(document.querySelector(selector), {
+        offset: -100,
+        duration: 2
+      });
+    }
+  }
+
   toggle(state) {
     if(this.scroll) {
       const functionName = state ? 'start' : 'stop'
