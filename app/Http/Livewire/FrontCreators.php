@@ -16,45 +16,56 @@ class FrontCreators extends Component
 {
     use WithPagination;
 
-    public $search;
+    public $search, $order = 'asc', $selectedSpecialties = [];
     protected $queryString = [
         'search' => ['except' => ''],
+        'order' => ['except' => 'asc'],
     ];
 
     public function render()
     {
-        $countCreators = Creator::where('display', true)
-        ->where(function($query) {
-            return $query
-                ->where('nick_name', 'like', '%'.$this->search.'%')
-                ->orWhere('last_name', 'like', '%'.$this->search.'%')
-                ->orWhere('first_name', 'like', '%'.$this->search.'%');
-           })
-        ->get()
-        ->count();
+        $cases = CaseStudy::where('display', true)->inRandomOrder()->take(8)->get();
+        $testimonials = Testimonial::all();
+        $specialties = Specialty::all();
 
-        $creators = Creator::where('display', true)
+        $creators = Creator::query();
+
+        if (!empty($this->selectedSpecialties)) {
+            $creators->whereHas('specialties', function ($query) {
+                $query->whereIn('specialties.id', $this->selectedSpecialties);
+            });
+        }
+
+        $creators = $creators->where('display', true)
         ->where(function($query) {
             return $query
                 ->where('nick_name', 'like', '%'.$this->search.'%')
                 ->orWhere('last_name', 'like', '%'.$this->search.'%')
                 ->orWhere('first_name', 'like', '%'.$this->search.'%');
            })
+        ->orderBy('first_name', $this->order)
         ->paginate(12);
 
-        $cases = CaseStudy::where('display', true)->inRandomOrder()->take(8)->get();
-
-        $testimonials = Testimonial::all();
-
         $pagination = $creators->links('molecules.pagination');
+        $countCreators = $creators->total();
 
         $this->dispatchBrowserEvent('contentChanged');
 
-        return view('creators', compact('creators', 'countCreators', 'cases', 'testimonials' , 'pagination'))->layout('layouts.guest');
+        return view('creators', compact('creators', 'countCreators', 'cases', 'testimonials', 'specialties', 'pagination'))->layout('layouts.guest');
     }
 
     public function updatedSearch()
     {
         $this->resetPage();
     }
+
+    // public function updatedOrder()
+    // {
+    //     if ($this->order == 'asc') {
+    //         $this->order = 'desc';
+    //     } else {
+    //         $this->order = 'asc';
+    //     }
+    // }
+
 }

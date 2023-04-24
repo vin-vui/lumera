@@ -25,32 +25,22 @@
                         <button type="button" data-filters="button" class="m-filters__close"><span>Fermer les filtres</span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-close" /></svg></button>
                         <div class="m-filters__sort">
                             <p class="-small">Trier par</p>
-                            <select name="" id="" class="a-select">
-                                <option value="" selected>Ordre alphabétique A-Z</option>
-                                <option value="">Ordre alphabétique Z-A</option>
+                            <select wire:model="order" name="order" id="" class="a-select">
+                                <option value="asc" selected>Ordre alphabétique A-Z</option>
+                                <option value="desc">Ordre alphabétique Z-A</option>
                             </select>
                         </div>
                         <div class="m-filters__tags">
                             <p class="-small">Domaines</p>
                             <ul class="no-bullet">
+                                @foreach ($specialties as $specialty)
                                 <li>
-                                    <label for="tag-1" class="a-filterTag">
-                                        <input type="checkbox" name="tags[]" value="1" id="tag-1">
-                                        <span>Tag 1</span>
+                                    <label for="{{ $specialty->id }}" class="a-filterTag">
+                                        <input type="checkbox" name="tags[]" wire:model="selectedSpecialties" value="{{ $specialty->id }}" id="{{ $specialty->id }}">
+                                        <span>{{ $specialty->label }}</span>
                                     </label>
                                 </li>
-                                <li>
-                                    <label for="tag-2" class="a-filterTag">
-                                        <input type="checkbox" name="tags[]" value="2" id="tag-2">
-                                        <span>Tag 2</span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="tag-3" class="a-filterTag">
-                                        <input type="checkbox" name="tags[]" value="3" id="tag-3">
-                                        <span>Tag 3</span>
-                                    </label>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -76,7 +66,6 @@
                     @endforeach
                 </ul>
             </div>
-
             {!! $pagination !!}
         </div>
     </section>
