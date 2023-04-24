@@ -51,7 +51,7 @@ export default class Slider extends module {
     this.slider.on('reInit', this.toggleReady.bind(this))
 
     if (this.anime.hero) {
-      // viewport[0].style.setProperty('--heightslider', `${this.el.querySelector(`[data-index="0"]`).scrollHeight}px`)
+      container.style.setProperty('--heightslider', `${this.el.querySelector(`[data-index="0"]`).scrollHeight}px`)
       this.slider.on('select', this.onAnimeHero.bind(this))
     }
 

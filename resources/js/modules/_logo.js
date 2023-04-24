@@ -15,21 +15,24 @@ export default class Cursor extends module {
   }
 
   enter() {
-    const tl = anime.timeline({
-      easing: 'easeInOutCubic',
-    })
+    if (!this.initialize) {
+      this.initialize = true;
+      const tl = anime.timeline({
+        easing: 'easeInOutCubic',
+      })
 
-    tl.add({
-      targets: this.el.querySelector(`.a-logo`),
-      scale: [0, 1],
-      duration: 800,
-      delay: 650
-    })
-    .add({
-      targets: this.el.querySelector(`.a-logo .icon`),
-      scale: [0, 1],
-      duration: 800,
-    }, '-=600')
+      tl.add({
+        targets: this.el.querySelector(`.a-logo`),
+        scale: [0, 1],
+        duration: 800,
+        delay: 650
+      })
+      .add({
+        targets: this.el.querySelector(`.a-logo .icon`),
+        scale: [0, 1],
+        duration: 800,
+      }, '-=600')
+    }
   }
 
   mouseEnter() {
@@ -67,12 +70,15 @@ export default class Cursor extends module {
   }
 
   enterMain() {
-    anime({
-      targets: this.el.querySelectorAll('path'),
-      translateY: ['100%', 0],
-      duration: 600,
-      delay: anime.stagger(75),
-      easing: 'easeInOutSine'
-    });
+    if (!this.initialize) {
+      this.initialize = true;
+      anime({
+        targets: this.el.querySelectorAll('path'),
+        translateY: ['100%', 0],
+        duration: 600,
+        delay: anime.stagger(75),
+        easing: 'easeInOutSine'
+      });
+    }
   }
 }

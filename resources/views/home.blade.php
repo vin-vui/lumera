@@ -6,12 +6,12 @@
                     <span class="a-logo" data-scroll data-scroll-call="enter, Logo, logo-mini" data-logo="logo"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-mini" /></svg></span>
                     <div data-module-split="th1" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th1">
-                            <h1 class="a-bigTitle js-split">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</h1>
+                            <h1 class="a-bigTitle js-split">Mettre <br>en lumière votre talent</h1>
                         </div>
                     </div>
                     <div data-module-split="th2" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th2">
-                            <span aria-hidden="true" focusable="false" class="-fake a-bigTitle js-split">Mettre <span class="lg-line"><span>en</span> <span class="sm-line">lumière</span></span> <span class="sm-line">votre</span> talent</span>
+                            <span aria-hidden="true" focusable="false" class="-fake a-bigTitle js-split">Mettre <br>en lumière votre talent</span>
                         </div>
                     </div>
                 </div>

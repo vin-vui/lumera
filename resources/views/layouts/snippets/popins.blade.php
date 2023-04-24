@@ -342,9 +342,6 @@
                             <button data-module-copy data-link="{{ route('front.case', $case->id) }}" class="a-button -round -medium"><span>Partager</span></button>
                         </div>
                     </div>
-                    <div class="t-case__share lg-dp-none">
-                        <button data-module-copy data-link="{{ route('front.case', $case->id) }}" class="a-button -round -medium"><span>Partager</span></button>
-                    </div>
                 </div>
             </div>
         </div>

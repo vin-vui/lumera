@@ -1,7 +1,7 @@
 .a-logo {
   position: absolute;
-  top: 15rem;
-  left: -4rem;
+  top: 8rem;
+  left: -3rem;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -66,6 +66,11 @@
     .icon {
       // transform: scale(.8);
     }
+  }
+
+  @media #{$md} {
+    top: 15rem;
+    left: -4rem;
   }
 }
 
