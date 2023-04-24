@@ -184,3 +184,25 @@ a,
   font-size: 1.2rem;
   opacity: .6;
 }
+
+.a-changeTitle {
+  position: relative !important;
+  overflow: hidden;
+  width: 35rem;
+  height: 5rem;
+
+  strong {
+    position: absolute !important;
+    top: 7px;
+    left: 0;
+    transform: translateY(100%);
+
+    .word {
+      transform: none !important
+    }
+  }
+
+  .word {
+    padding: 0;
+  }
+}

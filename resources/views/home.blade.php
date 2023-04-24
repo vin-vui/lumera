@@ -16,8 +16,8 @@
                     </div>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1" data-module-split="ch1" data-delay="650" data-duration="800">
-                <div data-scroll data-scroll-offset="18%, 0" data-scroll-call="enterText, Split, ch1">
+            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1" data-module-split="ch1" data-delay="850" data-duration="800">
+                <div data-scroll data-scroll-offset="10%, 0" data-scroll-call="enterText, Split, ch1">
                     <p class="-big js-split">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
                 </div>
             </div>
@@ -86,7 +86,7 @@
         <div class="g-row mgb-5">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tc1">
                 <div data-scroll data-scroll-call="enter, Split, tc1">
-                    <h2 class="js-split">Nos créateurs de contenu sont <strong>talentueux</strong></h2>
+                    <h2 class="js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>intelligent</strong></span></h2>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">
