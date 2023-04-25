@@ -28,6 +28,8 @@ export default class Popin extends module {
     const popin = this.el
     // const popin = this.$('popin')[0]
     this.popin = popin
+
+    this.popin.addEventListener('wheel', this.onScroll.bind(this))
   }
 
   scrollBehaviour (state) {
@@ -112,6 +114,10 @@ export default class Popin extends module {
     this.change(!this.state)
   }
 
+  onScroll(e) {
+    e.stopPropagation()
+  }
+
   change(state) {
     if (this.visible === state) {
       return
@@ -121,11 +127,8 @@ export default class Popin extends module {
     this.toggleEvents(this.visible)
     this.popin.setAttribute('aria-hidden', !this.visible)
     this.popin.classList[this.visible ? 'add' : 'remove']('-active')
+    document.body.classList[this.visible ? 'add' : 'remove']('no-overflow')
     this.call('toggle', !this.visible, 'Scroll')
-
-    this.popin.addEventListener('wheel', (e)=> {
-      e.stopPropagation()
-    })
 
     if (this.visible) {
       const content = this.$('content', this.popin)[0]

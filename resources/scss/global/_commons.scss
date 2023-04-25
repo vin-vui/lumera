@@ -68,7 +68,7 @@ main {
 
   @media #{$md} {
     // padding-top: 22rem;
-    padding-top: 11.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 10rem;
   }
 }
@@ -135,12 +135,27 @@ a  {
 .line {
   overflow: hidden;
 
+  .word {
+    transform: translateY(100%);
+  }
+}
+
+.a-bigTitle .line {
   + .line {
-    margin-top: -2.4rem;
+    margin-top: -2rem;
   }
 
   .word {
     padding: 1.3rem 0;
-    transform: translateY(100%);
+  }
+}
+
+.a-h2 .line {
+  + .line {
+    margin-top: -1rem;
+  }
+
+  .word {
+    padding: .8rem 0;
   }
 }

@@ -8,7 +8,7 @@
             </div>
             <div data-module-split="cf1" data-delay="250" data-duration="800">
                 <div data-scroll data-scroll-call="enterText, Split, cf1">
-                    <p class="lg-size-90 -small js-split">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
+                    <p class="lg-size-90 js-split">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
                 </div>
             </div>
         </div>

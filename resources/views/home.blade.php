@@ -83,7 +83,7 @@
         </div>
     </section>
     <section class="g-section">
-        <div class="g-row mgb-5">
+        <div class="g-row mgb-5" wire:ignore>
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tc1">
                 <div data-scroll data-scroll-call="enter, Split, tc1">
                     <h2 class="js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>intelligent</strong></span></h2>
@@ -91,7 +91,7 @@
             </div>
             <div class="sm-column-12 lg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">
                 <div data-scroll data-scroll-call="enterText, Split, cc1">
-                    <p class="-small js-split">Quel que soit leur secteur de prédilection, nos créateurs de contenu ont tout compris du monde dans lequel ils évoluent et de la complexité de communiquer à une cible 100% digitale.</p>
+                    <p class="js-split">Quel que soit leur secteur de prédilection, nos créateurs de contenu ont tout compris du monde dans lequel ils évoluent et de la complexité de communiquer à une cible 100% digitale.</p>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
                 </div>
                 <div data-module-split="ce1" data-delay="250" data-duration="800">
                     <div data-scroll data-scroll-call="enterText, Split, ce1">
-                        <p class="-small js-split">De la compréhension des objectifs de l’entreprise à la fine connaissance de nos créateurs de contenus, Lumera sait très bien comment associer au mieux ses talents et ses clients. Pour chaque projet, nos équipes veillent à ce que le message de la marque, la personnalité des créateurs et les attentes de leurs communautés correspondent parfaitement pour une campagne performante.</p>
+                        <p class="js-split">De la compréhension des objectifs de l’entreprise à la fine connaissance de nos créateurs de contenus, Lumera sait très bien comment associer au mieux ses talents et ses clients. Pour chaque projet, nos équipes veillent à ce que le message de la marque, la personnalité des créateurs et les attentes de leurs communautés correspondent parfaitement pour une campagne performante.</p>
                     </div>
                 </div>
                 <div class="t-home__case--cta mgt-4">

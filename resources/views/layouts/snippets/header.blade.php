@@ -29,7 +29,7 @@
                         </ul>
                         <div class="m-accordion" data-module-accordion>
                             <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-colors">
-                                <span class="a-color"></span>
+                                <span class="a-color -active"></span>
                             </button>
                             <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-colors">
                                 <div class="m-accordion__content" data-module-color>

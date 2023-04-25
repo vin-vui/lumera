@@ -20,8 +20,8 @@
                 @include('layouts.snippets.header')
                 {{ $slot }}
                 @include('layouts.snippets.footer')
+                @include('layouts.snippets.popins')
             </div>
-            @include('layouts.snippets.popins')
         </div>
 
         @livewireScripts

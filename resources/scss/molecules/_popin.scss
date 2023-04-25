@@ -38,6 +38,7 @@
     opacity: 0;
     cursor: pointer;
     transition: opacity .3s ease-in-out;
+    backdrop-filter: blur(10px);
   }
 
   &__container {

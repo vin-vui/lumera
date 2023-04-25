@@ -1,7 +1,14 @@
 .t-case {
-  max-width: calc(87.5rem + 12rem);
-  margin: 0 auto;
   padding-top: 0;
+
+  &.m-popin--container {
+    max-width: calc(87.5rem + 12rem);
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: $radius;
+  }
 
   &__content {
     padding: 0 2rem;
