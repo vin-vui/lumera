@@ -49,11 +49,11 @@
     &::before {
       content: "";
       position: absolute;
+      top: 10rem;
       right: calc($column-gutter / 2);
-      bottom: 0;
       z-index: 0;
-      width: calc(100% - $column-gutter);
-      height: calc(100% - 10rem);
+      width: calc(100% - 2.5rem);
+      height: calc(100% - 10.5rem);
       border-radius: 0 $radius 0 $radius;
       background-color: var(--primary-light);
       opacity: 0;
@@ -126,7 +126,9 @@
       position: absolute;
       top: 0;
       right: 5rem;
-      height: 66vh;
+
+      // height: 66vh;
+      height: calc(100% + 10rem);
       padding-top: 0;
       padding-bottom: $vr;
 
@@ -136,6 +138,12 @@
         &__container {
           height: 100%;
         }
+      }
+    }
+
+    .m-slider {
+      &__slide {
+        padding: 0;
       }
     }
 

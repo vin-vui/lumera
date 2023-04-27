@@ -1,6 +1,5 @@
 .o-menu {
-  opacity: 0;
-  transition: opacity $anim-duration * 3 $anim-easing;
+  // opacity: 0;
 
   &.-active {
     transform: translateX(0);
@@ -46,10 +45,6 @@
     z-index: 5;
     margin: 0;
     background-color: transparent;
-  }
-
-  &.is-inview {
-    opacity: 1;
   }
 
   @media #{$sm-only} {

@@ -6,7 +6,7 @@
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th2">
                 <div data-scroll data-scroll-call="enter, Split, th2">
-                    <h1 class="js-split">Des campagnes d’influence qui visent juste</h1>
+                    <h1 class="a-h1 js-split">Des campagnes d’influence qui visent juste</h1>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-9" data-module-split="ch2">

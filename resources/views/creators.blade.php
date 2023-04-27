@@ -6,7 +6,7 @@
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th3">
                 <div data-scroll data-scroll-call="enter, Split, th3">
-                    <h1 class="js-split">Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
+                    <h1 class="a-h1 js-split">Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-9" data-module-split="ch3" data-delay="250" data-duration="600">

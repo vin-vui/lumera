@@ -37,7 +37,7 @@
   &__bottom {
     display: flex;
     flex-flow: row wrap;
-    gap: col(1);
+    gap: 5rem;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -125,7 +125,7 @@
       padding: 3.5rem 3.5rem 3.5rem 0;
     }
 
-    .o-menu__nav {
+    .m-socials {
       margin-left: auto;
     }
   }

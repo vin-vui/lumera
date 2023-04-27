@@ -73,7 +73,7 @@ export default class Cursor extends module {
     if (!this.initialize) {
       this.initialize = true;
       anime({
-        targets: this.el.querySelectorAll('path'),
+        targets: this.el.querySelectorAll('.js-anime path'),
         translateY: ['100%', 0],
         duration: 600,
         delay: anime.stagger(75),
