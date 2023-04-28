@@ -52,19 +52,19 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
 
-        for ($i = 1; $i <= 9; $i++) {
+        for ($i = 1; $i <= 2; $i++) {
             DB::table('specialties')->insert([
                 'label' => Str::upper($this->faker->word()),
             ]);
         }
 
-        for ($i = 1; $i <= 26; $i++) {
+        for ($i = 1; $i <= 2; $i++) {
             DB::table('tags')->insert([
                 'label' => $this->faker->word(),
             ]);
         }
 
-        for ($i = 1; $i <= 100; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             DB::table('creators')->insert([
                 'first_name' => $this->faker->firstName(),
                 'last_name' => $this->faker->lastName(),
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
             $creator->specialties()->sync([$this->faker->numberBetween(1, 26), $this->faker->numberBetween(1, 26)]);
         }
 
-        for ($i = 1; $i <= 13; $i++) {
+        for ($i = 1; $i <= 2; $i++) {
             DB::table('case_studies')->insert([
                 'image' => 'placeholder.jpg',
                 'client' => $this->faker->company(),
@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
             $caseStudy->creators()->sync([$this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100), $this->faker->numberBetween(1, 100)]);
         }
 
-        for ($i = 1; $i <= 16; $i++) {
+        for ($i = 1; $i <= 2; $i++) {
             DB::table('testimonials')->insert([
                 'label' => $this->faker->company(),
                 'text' => $this->faker->paragraph($this->faker->numberBetween(1, 3)),
@@ -122,12 +122,12 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // for ($i = 1; $i <= 11; $i++) {
-        //     DB::table('marks')->insert([
-        //         'label' => $this->faker->company(),
-        //         'image' => 'placeholder.jpg',
-        //     ]);
-        // }
+        for ($i = 1; $i <= 2; $i++) {
+            DB::table('marks')->insert([
+                'label' => $this->faker->company(),
+                'image' => 'placeholder.jpg',
+            ]);
+        }
 
     }
 
