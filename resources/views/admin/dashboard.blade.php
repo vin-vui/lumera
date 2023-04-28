@@ -9,11 +9,8 @@
                 </div>
             </div>
         </header>
-
         <div class="mx-auto sm:px-6 lg:px-12 mt-4">
-
             <div class="overflow-hidden grid grid-cols-4 gap-4">
-
                 <div class="relative overflow-hidden bg-white px-4 pt-5 pb-12 sm:px-6 sm:pt-6 w-full">
                     <dt>
                         <div class="absolute bg-indigo-400 p-3">
@@ -32,7 +29,6 @@
                         </div>
                     </dd>
                 </div>
-
                 <div class="relative overflow-hidden bg-white px-4 pt-5 pb-12 sm:px-6 sm:pt-6 w-full">
                     <dt>
                         <div class="absolute bg-indigo-400 p-3">
@@ -52,7 +48,6 @@
                         </div>
                     </dd>
                 </div>
-
                 <div class="relative overflow-hidden bg-white px-4 pt-5 pb-12 sm:px-6 sm:pt-6 w-full">
                     <dt>
                         <div class="absolute bg-indigo-400 p-3">
@@ -71,7 +66,6 @@
                         </div>
                     </dd>
                 </div>
-
                 <div class="relative overflow-hidden bg-white px-4 pt-5 pb-12 sm:px-6 sm:pt-6 w-full">
                     <dt>
                         <div class="absolute bg-indigo-400 p-3">
@@ -90,13 +84,7 @@
                         </div>
                     </dd>
                 </div>
-
             </div>
-
-            <iframe plausible-embed src="https://plausible.io/share/lumera.vinvui.com?auth=-TbWTpYHCXXZ0eH59paqs&embed=true&theme=light&background=transparent" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1600px;"></iframe>
-            <div style="font-size: 14px; padding-bottom: 14px;">Stats powered by <a target="_blank" style="color: #4F46E5; text-decoration: underline;" href="https://plausible.io">Plausible Analytics</a></div>
-            <script async src="https://plausible.io/js/embed.host.js"></script>
-
         </div>
     </div>
 </x-app-layout>
