@@ -19,8 +19,8 @@
                 <thead class="bg-transparent">
                     <tr>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Logo</th>
-                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Titre</th>
-                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Description</th>
+                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Client</th>
+                        <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Année</th>
                         <th scope="col" class="px-4 py-3.5 text-left text-md font-semibold text-gray-50">Tags</th>
                         <th scope="col" class="px-4 py-3.5 text-center text-md font-semibold text-gray-50">Publié</th>
                     </tr>
@@ -31,8 +31,8 @@
                         <td class="p-4 whitespace-nowrap">
                             <img class="h-10 w-10 object-cover mx-auto" src="{{ Storage::disk('uploads')->url($case->image) }}" alt="">
                         </td>
-                        <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $case->title }}</td>
-                        <td class="px-4 py-4 text-sm font-medium text-gray-900">{{ $case->description }}</td>
+                        <td class="px-4 py-4 text-sm font-extrabold text-gray-900">{{ $case->client }}</td>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-900">{{ $case->year }}</td>
                         <td class="px-4 py-4 text-sm font-medium text-gray-900">
                             <div class="flex gap-2">
                                 @foreach ($case->tags as $tag)
