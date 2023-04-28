@@ -59,13 +59,4 @@ class FrontCreators extends Component
         $this->resetPage();
     }
 
-    // public function updatedOrder()
-    // {
-    //     if ($this->order == 'asc') {
-    //         $this->order = 'desc';
-    //     } else {
-    //         $this->order = 'asc';
-    //     }
-    // }
-
 }
