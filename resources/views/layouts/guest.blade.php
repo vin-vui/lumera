@@ -11,18 +11,17 @@
         <!-- Scripts -->
         <script src="{{asset('assets/vendor/loconative-min.js')}}"></script>
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
-        <script defer data-domain="lumera.vinvui.com" src="https://plausible.io/js/script.js"></script>
     </head>
     <body data-barba="wrapper" data-module-website data-animate>
         @include('layouts.snippets.sprite')
-        <div data-barba="container" data-barba-namespace="{{ request()->route()->url == '/' ? 'home' : 'page' }}">
+        {{-- <div data-barba="container" data-barba-namespace="{{ request()->route()->uri == '/' ? 'home' : 'page' }}"> --}}
             <div data-module-scroll data-scroll-container>
                 @include('layouts.snippets.header')
                 {{ $slot }}
                 @include('layouts.snippets.footer')
                 @include('layouts.snippets.popins')
             </div>
-        </div>
+        {{-- </div> --}}
 
         @livewireScripts
 
