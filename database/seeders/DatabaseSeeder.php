@@ -48,8 +48,8 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'admin',
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('password'),
+            'email' => 'admin@vinvui.com',
+            'password' => Hash::make('Loustiket039*'),
         ]);
 
         for ($i = 1; $i <= 2; $i++) {
