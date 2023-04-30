@@ -58,6 +58,7 @@
   &__buttons {
     display: flex;
     gap: 2rem;
+    margin-bottom: 3rem;
   }
 
   @media #{$sm-only} {
@@ -74,25 +75,21 @@
         left: calc($column-gutter / 2);
       }
     }
-
-    &__buttons {
-      margin-bottom: 3rem;
-    }
   }
 
   @media #{$md} {
     padding-bottom: 8rem;
 
     &::before {
-      width: col(11);
+      right: 5rem;
+      width: calc(col(11  ) - 10rem);
       height: calc(100% - 10rem);
     }
 
     &__buttons {
-      flex-direction: column;
-
-      button {
-        order: 1;
+      .icon {
+        width: 2.5rem;
+        height: 2.5rem;
       }
     }
 
@@ -112,6 +109,17 @@
 
       li:nth-of-type(6) {
         left: calc(66.666% + 1.4rem);
+      }
+    }
+  }
+
+  @media #{$lg} {
+    &__buttons {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      button {
+        order: 1;
       }
     }
   }

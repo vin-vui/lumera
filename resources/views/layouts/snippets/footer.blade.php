@@ -3,12 +3,12 @@
         <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 no-width">
             <div data-module-split="tf1">
                 <div data-scroll data-scroll-call="enter, Split, tf1">
-                    <p class="a-h2 js-split">Créons des campagnes marquantes <strong>ensemble</strong></p>
+                    <p class="a-h2 mgb-3 js-split">Créons des campagnes marquantes <strong>ensemble</strong></p>
                 </div>
             </div>
             <div data-module-split="cf1" data-delay="250" data-duration="800">
                 <div data-scroll data-scroll-call="enterText, Split, cf1">
-                    <p class="lg-size-90 js-split">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
+                    <p class="lg-size-90 js-split">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation afin de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
                 </div>
             </div>
         </div>
@@ -29,19 +29,7 @@
                             <a href="{{ route('front.cases') }}" class="a-button -secondary">Nos campagnes</a>
                         </li>
                     </ul>
-                    <div class="m-accordion" data-module-accordion>
-                        <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-colors">
-                            <span class="a-color -active"></span>
-                        </button>
-                        <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-colors">
-                            <div class="m-accordion__content" data-module-color>
-                                <span data-color="button" data-id="3.72" class="a-color__wrap"><span class="a-color -red"></span></span>
-                                <span data-color="button" data-id="216" class="a-color__wrap"><span class="a-color -blue"></span></span>
-                                <span data-color="button" data-id="237.76" class="a-color__wrap"><span class="a-color -violet"></span></span>
-                                <span data-color="button" data-id="27" class="a-color__wrap"><span class="a-color -orange"></span></span>
-                            </div>
-                        </div>
-                    </div>
+                    @include('molecules.colors', ['el' => 'footer'])
                 </nav>
                 {{-- TODO SOCIALS --}}
                 <ul class="no-bullet m-socials">

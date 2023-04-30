@@ -31,7 +31,7 @@
 
   &__case {
     position: relative;
-    padding: 6rem 0;
+    padding: 0 0 6rem;
 
     &::before {
       content: "";
@@ -100,7 +100,22 @@
       &--content {
         margin-top: 10rem;
       }
+    }
 
+    &__case {
+      padding: 6rem 0;
+
+      &::before {
+        top: 0;
+        bottom: auto;
+        width: 45.833%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media #{$lg} {
+    &__about {
       .a-button {
         top: 50%;
         right: -5rem;
@@ -109,13 +124,6 @@
     }
 
     &__case {
-      &::before {
-        top: 0;
-        bottom: auto;
-        width: 45.833%;
-        height: 100%;
-      }
-
       &--list {
         margin-top: 0;
       }

@@ -47,6 +47,16 @@ export default class Website extends module {
         this.call('update', container, 'app');
       }, 500);
     })
+
+    this.root = document.documentElement
+    const colors = [
+      "3.72",
+      "216",
+      "237.76",
+      "27"
+    ]
+    const colorRandom = Math.floor(Math.random() * colors.length)
+    this.root.style.setProperty('--base-primary', `${colors[colorRandom]}`)
   }
 
   getScrollTo() {

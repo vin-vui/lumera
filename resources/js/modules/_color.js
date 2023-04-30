@@ -19,6 +19,6 @@ export default class Color extends module {
 
   change(e, state) {
     this.root.style.setProperty('--base-primary', `${e.target.dataset.id}`)
-    this.call('toggle', false, 'Accordion')
+    this.call('toggle', false, 'Accordion', this.el.dataset.colorAccordion)
   }
 }

@@ -23,7 +23,7 @@
         }
       }
 
-      @media #{$lg} {
+      @media #{$md} {
         .lg-line {
           display: block;
           padding-left: 8rem;
@@ -53,7 +53,7 @@
       right: calc($column-gutter / 2);
       z-index: 0;
       width: calc(100% - 2.5rem);
-      height: calc(100% - 10.5rem);
+      height: calc(100% - 9.5rem);
       border-radius: 0 $radius 0 $radius;
       background-color: var(--primary-light);
       opacity: 0;
@@ -107,7 +107,7 @@
     }
   }
 
-  @media #{$lg} {
+  @media #{$md} {
     &__title {
       margin-bottom: 4.5rem;
 
@@ -125,12 +125,16 @@
     &__slider {
       position: absolute;
       top: 0;
-      right: 5rem;
+      right: 0;
 
       // height: 66vh;
       height: calc(100% + 10rem);
       padding-top: 0;
       padding-bottom: $vr;
+
+      &::before {
+        height: calc(100% - 10.5rem);
+      }
 
       .m-slider {
         height: 100%;
@@ -139,6 +143,10 @@
           height: 100%;
         }
       }
+    }
+
+    .m-creator__content {
+      min-height: 15.5rem;
     }
 
     .m-slider {
@@ -165,4 +173,9 @@
     }
   }
 
+  @media #{$lg} {
+    &__slider {
+      right: 5rem;
+    }
+  }
 }

@@ -18,7 +18,7 @@ export default class Cursor extends module {
     if (!this.initialize) {
       this.initialize = true;
       const tl = anime.timeline({
-        easing: 'easeInOutCubic',
+        easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
       })
 
       tl.add({
@@ -77,7 +77,7 @@ export default class Cursor extends module {
         translateY: ['100%', 0],
         duration: 600,
         delay: anime.stagger(75),
-        easing: 'easeInOutSine'
+        easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)'
       });
     }
   }

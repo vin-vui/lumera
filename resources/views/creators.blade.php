@@ -6,7 +6,7 @@
         <div class="g-row">
             <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th3">
                 <div data-scroll data-scroll-call="enter, Split, th3">
-                    <h1 class="a-h1 js-split">Lumière sur <span class="lg-dp-block">nos créateurs</span></h1>
+                    <h1 class="a-h1 js-split">Lumière sur <br>nos créateurs</h1>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-9" data-module-split="ch3" data-delay="250" data-duration="600">
@@ -18,7 +18,7 @@
     </section>
     <section class="g-section t-creators__page">
         <div class="g-row t-creators__filters">
-            <div class="sm-column-12 lg-column-5" data-module-filters>
+            <div class="sm-column-5 lg-column-5" data-module-filters>
                 <div class="m-filters">
                     <button type="button" data-filters="button" class="a-buttonFilter"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-filters" /></svg><span>Filtrer</span></button>
                     <div class="m-filters__panel" data-filters="panel">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             {{-- search by nick_name, last_name, first_name --}}
-            <div class="sm-column-12 lg-column-3 lg-offset-1" data-module-filters>
+            <div class="sm-column-7 lg-column-3 lg-offset-1" data-module-filters>
                 <div class="text-right">
                     <input wire:model="search" type="search" placeholder="Rechercher un créateur..." class="a-input a-inputSearch">
                 </div>
@@ -71,7 +71,7 @@
     </section>
     <section class="g-section m-slider__ow" wire:ignore>
         <div class="g-row">
-            <div class="sm-column-12 lg-column-5" data-module-split="tc3">
+            <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">
                 <div data-scroll data-scroll-call="enter, Split, tc3">
                     <h2 class="js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
                 </div>
@@ -84,7 +84,7 @@
         </div>
         <div class="g-row">
             <div class="sm-column-12">
-                <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-size="5">
+                <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-draggable="true" data-size="5">
                     <div class="m-slider__viewport" data-slider="viewport">
                         <ul class="no-bullet m-slider__container">
                             @foreach ($cases as $case)

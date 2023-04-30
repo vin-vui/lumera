@@ -34,13 +34,13 @@
             </div>
             <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc2" data-delay="250" data-duration="600">
                 <div data-scroll data-scroll-call="enterText, Split, cc2">
-                    <p class="js-split">Nous sommes très fiers d’accompagner ces créateurs de contenu au quotidien dans leur prise de parole, de leur donner les clés pour se démarquer et devenir les personnalités les plus influentes de leur secteur.</p>
+                    <p class="js-split">Nous sommes très fiers d’accompagner ces créateurs de contenu au quotidien dans leur prise de parole, de leur donner les clés pour se démarquer et devenir les personnalités les plus influentes dans leur domaine.</p>
                 </div>
             </div>
         </div>
         <div class="g-row">
             <div class="sm-column-12">
-                <div class="m-slider -anime -bg" data-scroll data-module-creators="creators-slider" data-module-slider data-controls="true" data-size="3">
+                <div class="m-slider -anime -bg" data-scroll data-module-creators="creators-slider" data-module-slider data-controls="true" data-draggable="true" data-size="3">
                     <div class="m-slider__viewport" data-slider="viewport" data-scroll data-scroll-offset="10%, 0" data-scroll-call="enter, Creators, creators-slider">
                         <ul class="no-bullet m-slider__container" data-module-cursor>
                             @foreach ($creators as $creator)

@@ -1,30 +1,30 @@
 <main class="t-home">
     <section class="g-section" wire:ignore>
         <div class="g-row o-hero">
-            <div class="sm-column-12 lg-column-10">
+            <div class="sm-column-12 md-column-11 lg-column-10">
                 <div class="o-hero__title" data-module-logo="logo-mini">
                     <span class="a-logo" data-scroll data-scroll-call="enter, Logo, logo-mini" data-logo="logo"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-mini" /></svg></span>
                     <div data-module-split="th1" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th1">
-                            <h1 class="a-bigTitle js-split">Mettre <br>en lumière votre talent</h1>
+                            <h1 class="a-bigTitle js-split">Mettre <br>en lumière <br>votre talent</h1>
                         </div>
                     </div>
                     <div data-module-split="th2" data-delay="500">
                         <div data-scroll data-scroll-call="enter, Split, th2">
-                            <span aria-hidden="true" focusable="false" class="-fake a-bigTitle js-split">Mettre <br>en lumière votre talent</span>
+                            <span aria-hidden="true" focusable="false" class="-fake a-bigTitle js-split">Mettre <br>en lumière <br>votre talent</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1 lg-order-1" data-module-split="ch1" data-delay="850" data-duration="800">
+            <div class="sm-column-12 md-column-6 lg-offset-1 md-order-1" data-module-split="ch1" data-delay="850" data-duration="800">
                 <div data-scroll data-scroll-offset="10%, 0" data-scroll-call="enterText, Split, ch1">
                     <p class="-big js-split">Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d'influence marketing performantes</p>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-5 o-hero__slider" data-scroll>
-                <div class="m-slider -creators" data-module-slider="slider-hero" data-controls="true" data-creator data-pagination="true" data-scroll data-scroll-offset="50%, 0" data-scroll-call="enterHero, Slider, slider-hero">
+            <div class="sm-column-12 md-column-6 lg-column-5 o-hero__slider" data-scroll>
+                <div class="m-slider -creators" data-module-slider="slider-hero" data-controls="true" data-pagination="true" data-scroll data-scroll-offset="50%, 0" data-scroll-call="enterHero, Slider, slider-hero" data-creator>
                     <div class="m-slider__nav">
-                        <p class="m-slider__pagination"><span data-slider="pagination">1</span>&nbsp;—&nbsp;{{ $creators_header->count() }}</p>
+                        <p class="m-slider__pagination"><span data-slider="pagination">1</span><span>&nbsp;—&nbsp;{{ $creators_header->count() }}</span></p>
                         <div class="o-hero__arrows">
                             <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
                                 <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-right" /></svg>
@@ -49,13 +49,13 @@
     </section>
     <section class="g-section" wire:ignore>
         <div class="g-row align-start-start">
-            <div class="sm-column-12 lg-column-5 t-home__about" data-scroll data-scroll-offset="30%, 0">
+            <div class="sm-column-12 md-column-5 t-home__about" data-scroll data-scroll-offset="30%, 0">
                 <div class="a-ratio" data-ratio="9/10">
                     <img src="{{asset('assets/img/about.jpg')}}" srcset="{{asset('assets/img/about.jpg')}} 1x, {{asset('assets/img/about@2x.jpg')}} 2x" alt="">
                 </div>
                 <button type="button" data-module-popin-button data-popin="about" class="a-button -round"><span>Pourquoi Lumera ?</span></button>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1 t-home__about--content" data-module-split="ta1">
+            <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 t-home__about--content" data-module-split="ta1">
                 <div data-scroll data-scroll-offset="30%, 0" data-scroll-call="enter, Split, ta1">
                     <h2 class="a-h2 js-split">Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
                 </div>
@@ -86,7 +86,7 @@
         <div class="g-row mgb-5" wire:ignore>
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tc1">
                 <div data-scroll data-scroll-call="enter, Split, tc1">
-                    <h2 class="js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>intelligent</strong></span></h2>
+                    <h2 class="js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>cultivés</strong><strong>brillants</strong><strong>passionnés</strong><strong>drôles</strong><strong>autodidactes</strong><strong>pédagogues</strong></span></h2>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">

@@ -17,33 +17,19 @@ export default class Split extends module {
         translateY: ['100%', 0],
         duration: 600,
         delay: anime.stagger(75, {"start": this.el.dataset.delay !== undefined ? Number(this.el.dataset.delay) : 0}),
-        easing: 'easeInOutSine'
+        easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)'
       });
 
-
-      const tl = anime.timeline({
-        easing: 'easeOutExpo',
-        loop: true,
-      })
-
-      this.el.querySelectorAll('.js-change strong').forEach(el => {
-        tl.add({
-          targets: el,
-          translateY: ['100%', 0],
-          duration: 500,
-        })
-        .add({
-          targets: el,
-          translateY: '-100%',
-          delay: 2000,
-          duration: 500
-        })
-        .add({
-          targets: el,
-          translateY: '100%',
-          delay: 500,
-          duration: 0
-        })
+      anime({
+        targets: '.js-change strong',
+        keyframes: [
+          {translateY: '100%', duration:0},
+          {translateY: 0, duration:500},
+          {translateY: '-100%', delay: 2000, duration: 500},
+        ],
+        easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
+        delay: anime.stagger(2500, {start: 0}),
+        loop: true
       });
     }
   }
@@ -56,7 +42,7 @@ export default class Split extends module {
         translateY: ['100%', 0],
         duration: this.el.dataset.duration !== undefined ? this.el.dataset.duration : 600,
         delay: this.el.dataset.delay !== undefined ? this.el.dataset.delay : 0,
-        easing: 'easeInOutSine'
+        easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)'
       });
     }
   }

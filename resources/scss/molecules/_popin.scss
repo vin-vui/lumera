@@ -54,6 +54,7 @@
     transform: translateX(calc(100% + 8rem));
 
     &.t-case {
+      max-width: 87.5rem;
       margin: 0 0 0 auto;
     }
   }
@@ -97,7 +98,7 @@
     }
   }
 
-  @media #{$md} {
+  @media #{$lg} {
     &__inner {
       margin: 4.5rem 4.5rem 4.5rem 0;
     }

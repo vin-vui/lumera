@@ -56,6 +56,12 @@
   order: 1;
 }
 
+@media #{$sm-only} {
+  .smo-mgb-2 {
+    margin-bottom: 2rem;
+  }
+}
+
 @media #{$lg} {
   .lg-order-1 {
     order: 1;

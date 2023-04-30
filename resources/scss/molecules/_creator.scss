@@ -8,14 +8,18 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    height: 70%;
+
+    // height: 70%;
   }
 
   &__content {
     display: flex;
+
+    // height: 30%;
+    flex-grow: 1;
     flex-direction: column;
-    height: 30%;
-    min-height: 15rem;
+
+    // min-height: 15rem;
     padding: 2rem;
     background-color: clr(cwhite);
     transform-origin: top left;

@@ -18,6 +18,7 @@ export default class Slider extends module {
       dots: this.el.dataset.dots !== undefined,
       pagination: this.el.dataset.pagination !== undefined,
       progress: this.el.dataset.progress !== undefined,
+      draggable: this.el.dataset.draggable !== undefined,
       autoplay: this.el.dataset.autoplay,
       skipSnaps: false,
       containScroll: 'keepSnaps',
@@ -122,7 +123,23 @@ export default class Slider extends module {
   }
 
   onPaginate() {
-    this.$('pagination')[0].innerHTML = Number(this.slider.selectedScrollSnap()) + 1
+    const tl = anime.timeline({
+      easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
+    })
+
+    tl.add({
+      targets: this.$('pagination')[0],
+      translateY: [0, '-100%'],
+      duration: 800,
+      complete: () => {
+        this.$('pagination')[0].innerHTML = Number(this.slider.selectedScrollSnap()) + 1
+      }
+    })
+    tl.add({
+      targets: this.$('pagination')[0],
+      translateY: ['100%', 0],
+      duration: 800,
+    })
   }
 
   // setProgress(options) {
@@ -192,7 +209,7 @@ export default class Slider extends module {
 
   onRevealHero() {
     const tl = anime.timeline({
-      easing: 'easeInOutCubic',
+      easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
     })
 
     tl.add({
@@ -233,7 +250,7 @@ export default class Slider extends module {
     const current = this.slider.selectedScrollSnap()
 
     const tl = anime.timeline({
-      easing: 'easeInOutCubic',
+      easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
       complete: () => {
         this.isAnimating = false
       }

@@ -23,7 +23,7 @@ export default class Creators extends module {
 
   onReveal() {
     const tl = anime.timeline({
-      easing: 'easeInOutCubic',
+      easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
     })
 
     tl.add({
@@ -79,7 +79,7 @@ export default class Creators extends module {
     })
 
     const tl = anime.timeline({
-      easing: 'easeInOutCubic',
+      easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
       complete: () => {
         this.isAnimating = false
       }

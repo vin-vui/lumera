@@ -14,8 +14,7 @@
     </head>
     <body data-barba="wrapper" data-module-website data-animate>
         @include('layouts.snippets.sprite')
-        <div data-barba="container" data-barba-namespace="{{ request()->route()->uri == '/' ? 'home' : 'page' }}">
-        {{-- <div data-barba="container" data-barba-namespace="page"> --}}
+        <div data-barba="container" data-barba-namespace="{{ request()->route() && request()->route()->uri == '/' ? 'home' : 'page' }}">
             <div data-module-scroll data-scroll-container>
                 @include('layouts.snippets.header')
                 {{ $slot }}

@@ -7,7 +7,7 @@
             <div class="m-popin__inner t-contact__content">
                 <div>
                     <p class="a-h2 mgb-1">Créons des campagnes marquantes <strong>ensemble</strong></p>
-                    <p class="lg-size-90 -small">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation et de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
+                    <p class="lg-size-90 -small">Et si vous nous faisiez part de vos projets ? L’équipe de Lumera se fera un plaisir de vous accompagner dans leur réalisation afin de co-construire des campagnes de communication qui se démarquent et qui vous ressemblent.</p>
                 </div>
                 <div>
                     @include('molecules.contact')

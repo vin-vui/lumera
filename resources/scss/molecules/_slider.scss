@@ -47,7 +47,7 @@
     }
 
     @media (hover: hover) and (any-pointer: fine) {
-      &:hover, &:focus {
+      &:hover {
         background-color: var(--primary);
         color: clr(cwhite);
       }
@@ -55,7 +55,17 @@
   }
 
   &__pagination {
+    display: flex;
+    overflow: hidden;
     color: var(--primary);
+
+    span {
+      display: block;
+
+      &:first-of-type {
+        width: 1rem;
+      }
+    }
   }
 
   &__dots {
@@ -210,8 +220,8 @@
       height: 6rem;
 
       .icon {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
       }
     }
 
