@@ -57,6 +57,8 @@ export default class Website extends module {
     ]
     const colorRandom = Math.floor(Math.random() * colors.length)
     this.root.style.setProperty('--base-primary', `${colors[colorRandom]}`)
+    const link = document.querySelector("link[rel~='icon']");
+    link.href = `./assets/favicon/${colors[colorRandom]}.ico`;
   }
 
   getScrollTo() {

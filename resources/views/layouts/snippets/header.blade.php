@@ -41,19 +41,18 @@
                         @include('molecules.colors', ['el' => 'header'])
                     </nav>
                     <div class="o-menu__contact">
-                        {{-- TODO SOCIALS --}}
                         <ul class="no-bullet m-socials">
                             <li>
-                                <a href="#" target="_blank" rel="noopener" title="Twitter" class="-primary">TW</a>
+                                <a href="https://www.tiktok.com/@lumera_social" target="TikTok" rel="noopener nofollow" title="Twitch" class="-primary">TK</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" rel="noopener" title="Facebook" class="-primary">FB</a>
+                                <a href="https://www.facebook.com/profile.php?id=100088318867735" target="_blank" rel="noopener nofollow" title="Facebook" class="-primary">FB</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" rel="noopener" title="Linkedin" class="-primary">LI</a>
+                                <a href="https://www.linkedin.com/company/lumerasocial/" target="_blank" rel="noopener nofollow" title="Linkedin" class="-primary">LI</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" rel="noopener" title="Instagram" class="-primary">IN</a>
+                                <a href="https://www.instagram.com/lumera.social/?hl=fr" target="_blank" rel="noopener nofollow" title="Instagram" class="-primary">IN</a>
                             </li>
                         </ul>
                         <button data-module-popin-button data-popin="contact" class="a-button -primary">Nous contacter</button>

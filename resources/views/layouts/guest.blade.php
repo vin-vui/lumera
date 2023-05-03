@@ -6,10 +6,19 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('title', 'Lumera | Influence marketing')</title>
-        <meta name="description" content="@yield('description', 'Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d\'influence marketing performantes')"></head>
+        <meta name="description" content="@yield('description', 'Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d\'influence marketing performantes')">
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('asset/favicon/safari-pinned-tab.svg') }}" color="#F4F4F4">
+        <meta name="msapplication-TileColor" content="#F4F4F4">
+        <meta name="theme-color" content="#F4F4F4">
 
         <!-- Scripts -->
-        <script src="{{asset('assets/vendor/loconative-min.js')}}"></script>
+        <script src="{{ asset('assets/vendor/loconative-min.js') }}"></script>
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
     </head>
     <body data-barba="wrapper" data-module-website data-animate>

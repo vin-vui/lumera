@@ -12,8 +12,7 @@
         <use xlink:href="#icon-arrow-diag" />
     </svg>
 </a>
-{{-- TODO PHONE --}}
-<a href="https://wa.me/6XXXXXX" class="m-cardLink -primary">
+<a href="https://wa.me/602098910" class="m-cardLink -primary">
     <p class="text-cwhite">Contactez-nous directement via Whatsapp pour une réponse instantanée</p>
     <svg class="icon" aria-hidden="true" focusable="false">
         <use xlink:href="#icon-whatsapp" />
