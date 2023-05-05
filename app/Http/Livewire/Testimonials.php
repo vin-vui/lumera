@@ -44,7 +44,7 @@ class Testimonials extends Component
         $this->testimonial_id = '';
         $this->text = '';
         $this->label = '';
-        $this->type = '';
+        $this->type = 'Créateur';
     }
 
     public function store()
