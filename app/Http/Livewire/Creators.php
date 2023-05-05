@@ -144,6 +144,34 @@ class Creators extends Component
             'display' => 'nullable',
         ]);
 
+        if ($dataValid['tn_tiktok'] == '') {
+            $dataValid['tn_tiktok'] = 0;
+        }
+        if ($dataValid['tn_snapchat'] == '') {
+            $dataValid['tn_snapchat'] = 0;
+        }
+        if ($dataValid['tn_snapchat'] == '') {
+            $dataValid['tn_snapchat'] = 0;
+        }
+        if ($dataValid['tn_instagram'] == '') {
+            $dataValid['tn_instagram'] = 0;
+        }
+        if ($dataValid['tn_youtube'] == '') {
+            $dataValid['tn_youtube'] = 0;
+        }
+        if ($dataValid['tn_linkedin'] == '') {
+            $dataValid['tn_linkedin'] = 0;
+        }
+        if ($dataValid['tn_facebook'] == '') {
+            $dataValid['tn_facebook'] = 0;
+        }
+        if ($dataValid['tn_twitter'] == '') {
+            $dataValid['tn_twitter'] = 0;
+        }
+        if ($dataValid['tn_twitch'] == '') {
+            $dataValid['tn_twitch'] = 0;
+        }
+
         if ($this->creator_id != '') {
             $creator = Creator::find($this->creator_id);
             if ($this->image != $creator->image) {
