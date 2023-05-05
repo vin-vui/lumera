@@ -33,25 +33,11 @@
     position: relative;
     padding: 0 0 6rem;
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: col(10);
-      height: 54%;
-      border-bottom-left-radius: $radius;
-      background-color: var(--primary-light);
-      opacity: 0;
-      transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
-      transform: scale(.7);
-      transform-origin: center center;
-    }
-
     &--list {
       display: grid;
       gap: 2rem;
-      margin-top: 6rem;
+      margin-top: 4rem;
+      padding: 4rem 0;
     }
 
     &--cta {
@@ -84,9 +70,37 @@
         transform: scale(1);
       }
 
+      .t-home__case--list {
+        &::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
       li {
         opacity: 1;
         transform: scale(1);
+      }
+    }
+  }
+
+  @media #{$sm-only} {
+    &__case {
+      &--list {
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: col(10);
+          height: calc(100% - 4rem);
+          border-bottom-left-radius: $radius;
+          background-color: var(--primary-light);
+          opacity: 0;
+          transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+          transform: scale(.7);
+          transform-origin: center center;
+        }
       }
     }
   }
@@ -106,10 +120,18 @@
       padding: 6rem 0;
 
       &::before {
+        content: "";
+        position: absolute;
         top: 0;
-        bottom: auto;
+        right: 0;
         width: 45.833%;
         height: 100%;
+        border-bottom-left-radius: $radius;
+        background-color: var(--primary-light);
+        opacity: 0;
+        transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
+        transform: scale(.7);
+        transform-origin: center center;
       }
     }
   }
@@ -126,6 +148,7 @@
     &__case {
       &--list {
         margin-top: 0;
+        padding: 0;
       }
     }
   }

@@ -38,7 +38,7 @@ export default {
       }, "-=400")
     }
 
-    // document.body.classList.remove('no-overflow')
+    document.body.classList.remove('no-overflow')
     document.body.classList.remove('is-loading')
 
     return tl.finished
@@ -90,8 +90,6 @@ export default {
       easing: 'easeInOutCubic',
       duration: 1200,
     })
-
-    // console.log(data.next.namespace);
 
     // tl.add({
     //   targets: document.querySelectorAll('[data-transition]'),

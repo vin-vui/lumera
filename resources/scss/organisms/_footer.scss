@@ -1,6 +1,6 @@
 .o-footer {
   position: relative;
-  padding: 12rem 0 8rem;
+  padding: 8rem 0 4rem;
 
   &::after {
     content: "";
@@ -118,6 +118,8 @@
   }
 
   @media #{$lg} {
+    padding: 12rem 0 8rem;
+
     &::after {
       bottom: 0;
       width: col(4);

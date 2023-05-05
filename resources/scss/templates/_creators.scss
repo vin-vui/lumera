@@ -17,6 +17,14 @@
     margin-top: -5.5rem;
   }
 
+  @media #{$sm-only} {
+    .m-creator__content {
+      .a-h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
   @media #{$md} {
     &__list {
       grid-template-columns: repeat(3, 1fr);

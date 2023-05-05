@@ -16,8 +16,33 @@
 
 .a-inputSearch {
   padding-right: 4rem;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cpath fill-rule='evenodd' clip-rul='evenodd' d='M18.5 9C18.5 12.5899 15.5899 15.5 12 15.5C8.41015 15.5 5.5 12.5899 5.5 9C5.5 5.41015 8.41015 2.5 12 2.5C15.5899 2.5 18.5 5.41015 18.5 9ZM21 9C21 13.9706 16.9706 18 12 18C9.96553 18 8.08872 17.3249 6.58135 16.1866L1.88398 20.884L0.116211 19.1162L4.81355 14.4189C3.67512 12.9115 3 11.0346 3 9C3 4.02944 7.02944 0 12 0C16.9706 0 21 4.02944 21 9Z'/%3E%3C/svg%3E");
-  background-position: center right 2rem;
-  background-size: 2rem;
-  background-repeat: no-repeat;
+
+  &__wrap {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 8rem;
+      height: 100%;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%, rgba(255, 255, 255, 100%) 50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 4rem;
+      height: 100%;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cpath fill-rule='evenodd' clip-rul='evenodd' d='M18.5 9C18.5 12.5899 15.5899 15.5 12 15.5C8.41015 15.5 5.5 12.5899 5.5 9C5.5 5.41015 8.41015 2.5 12 2.5C15.5899 2.5 18.5 5.41015 18.5 9ZM21 9C21 13.9706 16.9706 18 12 18C9.96553 18 8.08872 17.3249 6.58135 16.1866L1.88398 20.884L0.116211 19.1162L4.81355 14.4189C3.67512 12.9115 3 11.0346 3 9C3 4.02944 7.02944 0 12 0C16.9706 0 21 4.02944 21 9Z'/%3E%3C/svg%3E");
+      background-position: center;
+      background-size: 2rem;
+      background-repeat: no-repeat;
+    }
+  }
 }

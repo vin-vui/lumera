@@ -42,7 +42,7 @@
   &__slider {
     overflow: hidden;
     width: 100%;
-    padding : 3.2rem 0;
+    padding : 5.2rem 0;
     opacity: 0;
     transition: transform $anim-duration * 3 $anim-easing 350ms, opacity $anim-duration * 3 $anim-easing 350ms;
     transform: scale(.9);
@@ -128,6 +128,10 @@
   @media #{$md} {
     gap: $column-gutter;
 
+    &__slider {
+      padding : 3.2rem 0;
+    }
+
     .m-slider {
       &__slide {
         height: 30rem;
@@ -135,7 +139,7 @@
     }
 
     &__arrows {
-      padding-left: 0;
+      padding-left: 2rem;
     }
   }
 }

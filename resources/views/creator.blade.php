@@ -16,7 +16,7 @@
                 </ul>
             @endif
             <div>
-                <p class="a-h5 mgb-1">Résumé de notre créateur</p>
+                <p class="a-h5 mgb-1">Présentation de notre créateur</p>
                 <div class="a-text -small text-cgraydark">
                     <p>{{ $creator->description }}</p>
                 </div>

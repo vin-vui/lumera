@@ -1,4 +1,4 @@
-<div id="contact" role="dialog" aria-modal="true" aria-hidden="true" class="m-popin" data-module-popin>
+<div id="contact" role="dialog" aria-modal="true" aria-hidden="true" class="m-popin -up" data-module-popin>
     <div class="m-popin__container t-contact" data-popin="container">
         <button class="m-popin__close" type="button" data-popin="close">
             <span class="a-button -round -small -white"><span><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-arrow-left" /></svg></span></span>

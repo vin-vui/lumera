@@ -128,7 +128,7 @@ export default class Popin extends module {
     this.popin.setAttribute('aria-hidden', !this.visible)
     this.popin.classList[this.visible ? 'add' : 'remove']('-active')
     document.body.classList[this.visible ? 'add' : 'remove']('no-overflow')
-    this.call('toggle', !this.visible, 'Scroll')
+    // this.call('toggle', !this.visible, 'Scroll')
 
     if (this.visible) {
       const content = this.$('content', this.popin)[0]

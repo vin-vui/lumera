@@ -29,7 +29,7 @@
         <div class="g-row">
             <div class="sm-column-12 lg-column-5" data-module-split="tc2">
                 <div data-scroll data-scroll-call="enter, Split, tc2">
-                    <h2 class="js-split">Découvrez tous <br><strong>nos créateurs</strong></h2>
+                    <h2 class="a-h2 js-split">Découvrez tous <br><strong>nos créateurs</strong></h2>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc2" data-delay="250" data-duration="600">
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="g-row">
-            <div class="sm-column-12">
+            <div class="sm-column-12 smo-nest">
                 <div class="m-slider -anime -bg" data-scroll data-module-creators="creators-slider" data-module-slider data-controls="true" data-draggable="true" data-size="3">
                     <div class="m-slider__viewport" data-slider="viewport" data-scroll data-scroll-offset="10%, 0" data-scroll-call="enter, Creators, creators-slider">
                         <ul class="no-bullet m-slider__container" data-module-cursor>

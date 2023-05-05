@@ -9,7 +9,6 @@ export default class Copy extends module {
   }
 
   onClick() {
-    console.log('click');
     navigator.clipboard.writeText(this.el.dataset.link);
     this.el.innerHTML = `<span>Lien copié !</span>`
   }

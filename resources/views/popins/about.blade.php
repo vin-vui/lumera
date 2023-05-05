@@ -12,7 +12,8 @@
                     <h2 class="mgb-3">L'agence qui vous fait <strong>briller</strong></h2>
                     <p>Lumera est une <strong>agence de créateurs de contenu et d’influence marketing</strong> basée à Montpellier et spécialisée dans le <strong>contenu à but Éducatif et Divertissant.</strong><p>
                     <p>En 2022 nous avons décidé de créer l’agence avec l’ambition d’être <strong>la première agence d’influence marketing spécialisée dans les domaines du Business, de la Tech et de l'Éducation</strong>. Chez nous on parle Entreprenariat, Langues, Finances personnelles, Astuces, Innovations… tout autant de sujets passionnants que nos créateurs de contenu maîtrisent à la perfection et partagent à leur communauté sur les réseaux sociaux.</p>
-                    <p>Aujourd’hui, on accompagne <strong>plus de 40 créateurs de contenu</strong> dans la mise en place de leur stratégie de communication digitale et le développement de leur communauté. En parallèle, nous accompagnons les marques dans la <strong>création de leurs campagnes d’influence marketing</strong> et les mettons en relation avec nos créateurs de contenu pour créer des campagnes innovantes et performantes.</p>
+                    <p>Aujourd’hui, on accompagne <strong>plus de 40 créateurs de contenu</strong> dans la mise en place de leur stratégie de communication digitale et le développement de leur communauté.</p>
+                    <p>En parallèle, nous accompagnons les marques dans la <strong>création de leurs campagnes d’influence marketing</strong> et les mettons en relation avec nos créateurs de contenu pour créer des campagnes innovantes et performantes.</p>
                 </div>
             </div>
         </div>

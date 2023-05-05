@@ -8,7 +8,7 @@
     display: grid;
     gap: $column-gutter;
 
-    li {
+    li[data-scroll] {
       opacity: 0;
       transition: transform $anim-duration * 3 $anim-easing, opacity $anim-duration * 3 $anim-easing;
       transform: scale(.9);

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title', 'Lumera | Influence marketing')</title>
+        <title>@yield('title', 'Lumera | Agence de créateurs')</title>
         <meta name="description" content="@yield('description', 'Chez Lumera, nous accompagnons les créateurs de contenu et les entreprises dans la création de campagnes d\'influence marketing performantes')">
 
 

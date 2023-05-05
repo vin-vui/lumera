@@ -48,7 +48,7 @@
             </div>
             {{-- search by nick_name, last_name, first_name --}}
             <div class="sm-column-7 lg-column-3 lg-offset-1" data-module-filters>
-                <div class="text-right">
+                <div class="text-right a-inputSearch__wrap">
                     <input wire:model="search" type="search" placeholder="Rechercher un créateur..." class="a-input a-inputSearch">
                 </div>
             </div>
@@ -73,7 +73,7 @@
         <div class="g-row">
             <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">
                 <div data-scroll data-scroll-call="enter, Split, tc3">
-                    <h2 class="js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
+                    <h2 class="a-h2 js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc3" data-delay="250" data-duration="600">
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="g-row">
-            <div class="sm-column-12">
+            <div class="sm-column-12 smo-nest">
                 <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-draggable="true" data-size="5">
                     <div class="m-slider__viewport" data-slider="viewport">
                         <ul class="no-bullet m-slider__container">

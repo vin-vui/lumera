@@ -1,13 +1,13 @@
-<a href="mailto:creator@lumera.social" class="m-cardLink">
+<a href="mailto:clement@lumera.social" class="m-cardLink">
     <p class="a-h5 mgb-1">Tu es un créateur ?</p>
-    <p class="text-cgraydark">creator@lumera.social</p>
+    <p class="text-cgraydark">clement@lumera.social</p>
     <svg class="icon -medium" aria-hidden="true" focusable="false">
         <use xlink:href="#icon-arrow-diag" />
     </svg>
 </a>
-<a href="mailto:business@lumera.social" class="m-cardLink">
+<a href="mailto:partenariats@lumera.social" class="m-cardLink">
     <p class="a-h5 mgb-1">Vous êtes une entreprise ?</p>
-    <p class="text-cgraydark">business@lumera.social</p>
+    <p class="text-cgraydark">partenariats@lumera.social</p>
     <svg class="icon -medium" aria-hidden="true" focusable="false">
         <use xlink:href="#icon-arrow-diag" />
     </svg>

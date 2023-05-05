@@ -57,7 +57,7 @@
             </div>
             <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 t-home__about--content" data-module-split="ta1">
                 <div data-scroll data-scroll-offset="30%, 0" data-scroll-call="enter, Split, ta1">
-                    <h2 class="a-h2 js-split">Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les faire rayonner</strong></h2>
+                    <h2 class="a-h2 js-split">Raviver la flamme entre les créateurs de contenu et les marques pour <strong>les</strong> <strong>faire</strong> <strong>rayonner</strong></h2>
                 </div>
                 <div class="mgt-6 o-cards" data-module-cards>
                     <div class="m-card" data-cards="item" data-scroll data-scroll-offset="30%, 0">
@@ -86,7 +86,7 @@
         <div class="g-row mgb-5" wire:ignore>
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tc1">
                 <div data-scroll data-scroll-call="enter, Split, tc1">
-                    <h2 class="js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>cultivés</strong><strong>brillants</strong><strong>passionnés</strong><strong>drôles</strong><strong>autodidactes</strong><strong>pédagogues</strong></span></h2>
+                    <h2 class="a-h2 js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>cultivés</strong><strong>brillants</strong><strong>passionnés</strong><strong>drôles</strong><strong>autodidactes</strong><strong>pédagogues</strong></span></h2>
                 </div>
             </div>
             <div class="sm-column-12 lg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">
@@ -155,7 +155,7 @@
                     {{-- <p>Plus de {{ $count }} autres clients et projets</p> --}}
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1">
+            <div class="sm-column-12 lg-column-6 lg-offset-1 smo-relative">
                 <ul class="no-bullet t-home__case--list">
                     {{-- GET 4 CASES RANDOM --}}
                     @foreach ($cases as $case)
