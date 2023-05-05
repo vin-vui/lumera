@@ -52,6 +52,12 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Loustiket039*'),
         ]);
 
+        DB::table('users')->insert([
+            'name' => 'Clément',
+            'email' => 'clement@lumera.social',
+            'password' => Hash::make('frenchouse34'),
+        ]);
+
         for ($i = 1; $i <= 2; $i++) {
             DB::table('specialties')->insert([
                 'label' => Str::upper($this->faker->word()),
