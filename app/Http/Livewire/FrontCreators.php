@@ -25,7 +25,7 @@ class FrontCreators extends Component
     public function render()
     {
         $cases = CaseStudy::where('display', true)->inRandomOrder()->take(8)->get();
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::where('type', 'Créateur')->get();
         $specialties = Specialty::all();
 
         $creators = Creator::query();

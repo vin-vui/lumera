@@ -18,7 +18,7 @@ class FrontCaseStudies extends Component
 
         $cases = CaseStudy::where('display', true)->get();
 
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::where('type', 'Entreprise');
 
         $this->dispatchBrowserEvent('contentChanged');
 
