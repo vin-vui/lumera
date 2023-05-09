@@ -15,7 +15,7 @@
                         <li class="text-cgraydark">Le Directeur de la publication est : Clément Petit</li>
                         <li class="text-cgraydark">Numéro de TVA intracommunautaire : FR85877648717</li>
                     </ul>
-                    <p>L'hébergeur du site https://lumera.social/ est la société OVH, dont le siège social est situé au 2 rue Kellermann - 59100 Roubaix - France, avec le numéro de téléphone : _______________.</p>
+                    <p>L'hébergeur du site https://lumera.social/ est la société Digital Ocean, dont le siège social est situé au 101 6th Ave, New York</p>
 
                     <h2 class="a-h3">ARTICLE 2 : Accès au site</h2>
                     <p>Le site https://lumera.social/ permet à l'Utilisateur un accès gratuit aux services suivants :</p>
