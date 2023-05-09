@@ -55,11 +55,15 @@
       transform: none !important;
     }
 
+    &__viewport {
+      // min-height: ;
+    }
+
     &__slide {
       top: 50%;
       right: 0 !important; /* override Embla */
       left: 0 !important; /* override Embla */
-      height: 35rem;
+      height: 100%;
       opacity: .5;
       pointer-events: none;
       transform: translateY(-50%);
@@ -130,12 +134,6 @@
 
     &__slider {
       padding : 3.2rem 0;
-    }
-
-    .m-slider {
-      &__slide {
-        height: 30rem;
-      }
     }
 
     &__arrows {

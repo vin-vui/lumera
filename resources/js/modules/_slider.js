@@ -56,6 +56,14 @@ export default class Slider extends module {
       this.slider.on('select', this.onAnimeHero.bind(this))
     }
 
+    if (this.el.dataset.axis !== undefined) {
+      let sizes = []
+      this.el.querySelectorAll(`.m-slider__slide`).forEach(slide => {
+        sizes.push(slide.scrollHeight)
+      });
+      this.el.querySelector('.m-slider__container').style.setProperty('--heightslider', `${Math.max( ...sizes ) + 10}px`)
+    }
+
     // window.addEventListener('contentChanged', this.toggleReady.bind(this))
     // window.addEventListener('contentChanged', this.onAnimeHero.bind(this))
   }

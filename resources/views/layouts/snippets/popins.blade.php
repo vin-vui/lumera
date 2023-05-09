@@ -38,11 +38,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Tiktok</span>
+                                @if ($creator->sn_tiktok)
                                         <span class="a-number">{{ short_number($creator->tn_tiktok) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_tiktok)
                                     </a>
                                 @else
                                     </span>
@@ -55,11 +55,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Snapchat</span>
+                                @if ($creator->sn_snapchat)
                                         <span class="a-number">{{ short_number($creator->tn_snapchat) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_snapchat)
                                     </a>
                                 @else
                                     </span>
@@ -72,11 +72,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Instagram</span>
+                                @if ($creator->sn_instagram)
                                         <span class="a-number">{{ short_number($creator->tn_instagram) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_instagram)
                                     </a>
                                 @else
                                     </span>
@@ -89,11 +89,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Youtube</span>
+                                @if ($creator->sn_youtube)
                                         <span class="a-number">{{ short_number($creator->tn_youtube) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_youtube)
                                     </a>
                                 @else
                                     </span>
@@ -106,11 +106,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Linkedin</span>
+                                @if ($creator->sn_linkedin)
                                         <span class="a-number">{{ short_number($creator->tn_linkedin) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_linkedin)
                                     </a>
                                 @else
                                     </span>
@@ -123,11 +123,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Facebook</span>
+                                @if ($creator->sn_facebook)
                                         <span class="a-number">{{ short_number($creator->tn_facebook) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_facebook)
                                     </a>
                                 @else
                                     </span>
@@ -140,11 +140,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Twitter</span>
+                                @if ($creator->sn_twitter)
                                         <span class="a-number">{{ short_number($creator->tn_twitter) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_twitter)
                                     </a>
                                 @else
                                     </span>
@@ -157,11 +157,11 @@
                                     <span class="a-button -inline -small" disabled>
                                 @endif
                                         <span>Twitch</span>
+                                @if ($creator->sn_twitch)
                                         <span class="a-number">{{ short_number($creator->tn_twitch) }}</span>
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use xlink:href="#icon-arrow-diag" />
                                         </svg>
-                                @if ($creator->sn_twitch)
                                     </a>
                                 @else
                                     </span>

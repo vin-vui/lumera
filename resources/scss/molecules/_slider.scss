@@ -20,8 +20,14 @@
 
   &.-vertical & {
     &__container {
+      --heightslider : 30rem;
+
       flex-direction: column;
-      height: 30rem;
+      height: var(--heightslider);
+
+      // height: var(--heightslider);
+
+      // min-height: 30rem;
     }
   }
 
