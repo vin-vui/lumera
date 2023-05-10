@@ -6,7 +6,7 @@
         <div class="m-popin__content">
             <div class="m-popin__inner">
                 <div class="a-ratio" data-ratio="4/3">
-                    <img src="{{asset('uploads/placeholder.jpg')}}" alt="Lumera">
+                    <img src="{{asset('assets/img/team.jpg')}}" srcset="{{asset('assets/img/team.jpg')}} 1x, {{asset('assets/img/team@2x.jpg')}} 2x" alt="Équipe de Lumera">
                 </div>
                 <div class="t-about__content">
                     <h2 class="mgb-3">L'agence qui vous fait <strong>briller</strong></h2>

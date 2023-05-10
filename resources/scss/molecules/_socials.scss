@@ -6,4 +6,7 @@
     justify-content: space-between;
     width: 100%;
   }
+  @media #{$lg} {
+    gap: 3rem;
+  }
 }

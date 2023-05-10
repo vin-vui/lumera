@@ -33,16 +33,16 @@
                 </nav>
                 <ul class="no-bullet m-socials">
                     <li>
-                        <a href="https://www.tiktok.com/@lumera_social" target="TikTok" rel="noopener" title="Twitch" class="-primary">TK</a>
+                        <a href="https://www.tiktok.com/@lumera_social" target="_blank" rel="noopener nofollow" title="TikTok" class="-primary"><svg class="icon -medium" aria-hidden="true" focusable="false"><use xlink:href="#icon-tiktok" /></svg></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/profile.php?id=100088318867735" target="_blank" rel="noopener" title="Facebook" class="-primary">FB</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088318867735" target="_blank" rel="noopener nofollow" title="Facebook" class="-primary"><svg class="icon -medium" aria-hidden="true" focusable="false"><use xlink:href="#icon-facebook" /></svg></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/lumerasocial/" target="_blank" rel="noopener" title="Linkedin" class="-primary">LI</a>
+                        <a href="https://www.linkedin.com/company/lumerasocial/" target="_blank" rel="noopener nofollow" title="Linkedin" class="-primary"><svg class="icon -medium" aria-hidden="true" focusable="false"><use xlink:href="#icon-linkedin" /></svg></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/lumera.social/?hl=fr" target="_blank" rel="noopener" title="Instagram" class="-primary">IN</a>
+                        <a href="https://www.instagram.com/lumera.social/?hl=fr" target="_blank" rel="noopener nofollow" title="Instagram" class="-primary"><svg class="icon -medium" aria-hidden="true" focusable="false"><use xlink:href="#icon-instagram" /></svg></a>
                     </li>
                 </ul>
             </div>

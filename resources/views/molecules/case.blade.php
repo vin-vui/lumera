@@ -20,7 +20,7 @@
             <p class="text-cgraydark -small">{{ substr($case->description, 0, strpos($case->description, '.') + 1 ) }}</p>
         @endif
         <span class="m-case__arrow">
-            <svg class="icon -medium" aria-hidden="true" focusable="false">
+            <svg class="icon -small" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-arrow-diag" />
             </svg>
         </span>
