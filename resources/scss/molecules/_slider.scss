@@ -113,7 +113,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 2rem 0;
-    padding: 0 $column-gutter / 2 0 6rem;
+    padding: 0 calc($column-gutter / 2) 0 6rem;
 
     @media #{$lg} {
       margin: 2.5rem 0;

@@ -33,6 +33,7 @@ class FrontCreators extends Component
         if (!empty($this->selectedSpecialties)) {
             $creators->whereHas('specialties', function ($query) {
                 $query->whereIn('specialties.id', $this->selectedSpecialties);
+                $this->resetPage();
             });
         }
 
