@@ -7,6 +7,10 @@ export default class PopinButton extends module {
     this.events = {
       click: 'onClick'
     }
+
+    if (this.el.querySelector('.m-tags')) {
+      this.el.querySelector('.m-tags').addEventListener('wheel', this.onScroll.bind(this))
+    }
   }
 
   init() {
@@ -31,5 +35,9 @@ export default class PopinButton extends module {
     }
 
     this.call(this.function, null, 'Popin', this.popinModule)
+  }
+
+  onScroll(e) {
+    e.stopPropagation()
   }
 }

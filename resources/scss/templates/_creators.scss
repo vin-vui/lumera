@@ -27,7 +27,7 @@
 
   @media #{$md} {
     &__list {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: calc(33.3333% - 1.333rem) calc(33.3333% - 1.333rem) calc(33.3333% - 1.333rem);
     }
   }
 }
