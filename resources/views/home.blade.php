@@ -84,19 +84,19 @@
     </section>
     <section class="g-section">
         <div class="g-row mgb-5" wire:ignore>
-            <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tc1">
+            <div class="sm-column-12 lg-column-8 mlg-column-7 mlg-offset-1" data-module-split="tc1">
                 <div data-scroll data-scroll-call="enter, Split, tc1">
                     <h2 class="a-h2 js-split">Nos créateurs de contenu sont <span class="a-changeTitle js-change"><strong>talentueux</strong><strong>cultivés</strong><strong>brillants</strong><strong>passionnés</strong><strong>drôles</strong><strong>autodidactes</strong><strong>pédagogues</strong></span></h2>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">
+            <div class="sm-column-12 lg-column-4 mlg-column-3 pgy-1" data-module-split="cc1" data-delay="350" data-delay="800">
                 <div data-scroll data-scroll-call="enterText, Split, cc1">
                     <p class="js-split">Quel que soit leur secteur de prédilection, nos créateurs de contenu ont tout compris du monde dans lequel ils évoluent et de la complexité de communiquer à une cible 100% digitale.</p>
                 </div>
             </div>
         </div>
         <div class="g-row o-creators" data-scroll wire:ignore.self>
-            <div class="sm-column-12 lg-column-1 lg-offset-1">
+            <div class="sm-column-12 lg-column-1 mlg-offset-1">
                 <div class="o-creators__buttons">
                     {{-- RANDOMIZER --}}
                     <button wire:click="randomizer" class="a-button -round -small -white">
@@ -109,7 +109,7 @@
                     <a href="{{ route('front.creators') }}" class="a-button -round -small"><span>Voir tous</span></a>
                 </div>
             </div>
-            <div class="sm-column-12 lg-column-9 smo-nest" data-module-creators="creators-random" data-module-cursor>
+            <div class="sm-column-12 lg-column-11 mlg-column-9 smo-nest" data-module-creators="creators-random" data-module-cursor>
                 <ul class="no-bullet o-creators__list" data-scroll data-scroll-offset="50%, 0" data-scroll-call="enter, Creators, creators-random">
                     {{-- GET 3 CREATORS RANDOM --}}
                     @foreach ($allCreators as $creator)

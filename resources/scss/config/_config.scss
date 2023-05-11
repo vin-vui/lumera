@@ -61,8 +61,10 @@ $md-up: '#{$screen} and (min-width:#{nth($md-range, 1)})';
 $md-only: '#{$screen} and (min-width:#{nth($md-range, 1)}) and (max-width:#{nth($md-range, 2)})';
 $lg-up: '#{$screen} and (min-width:#{nth($lg-range, 1)})';
 $lg-only: '#{$screen} and (min-width:#{nth($lg-range, 1)}) and (max-width:#{nth($lg-range, 2)})';
-$xlg-up: '#{$screen} and (min-width:#{nth($xlg-range, 1)})';
-$xlg-only: '#{$screen} and (min-width:#{nth($xlg-range, 1)}) and (max-width:#{nth($xlg-range, 2)})';
+$mlg-up: '#{$screen} and (min-width:#{nth($xlg-range, 1)})';
+$xlg-up: '#{$screen} and (min-width:#{$xlg-breakpoint + 1px})';
+
+// $xlg-only: '#{$screen} and (min-width:#{nth($xlg-range, 1)}) and (max-width:#{nth($xlg-range, 2)})';
 $retina: (
   '#{$screen} and (-webkit-min-device-pixel-ratio: 2)',
   '#{$screen} and (min--moz-device-pixel-ratio: 2)',
@@ -76,10 +78,12 @@ $retina: (
 $sm: $sm-up;
 $md: $md-up;
 $lg: $lg-up;
+$mlg: $mlg-up;
 $xlg: $xlg-up;
 $bps: (
   #{$sm} 'sm',
   #{$md} 'md',
   #{$lg} 'lg',
+  #{$mlg} 'mlg',
   #{$xlg} 'xlg'
 );
