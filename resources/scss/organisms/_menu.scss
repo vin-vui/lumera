@@ -137,9 +137,14 @@
 
     &__contact {
       flex-direction: row;
-      gap: 4rem;
       align-items: center;
       justify-content: flex-end;
+    }
+  }
+
+  @media #{$xlg} {
+    &__contact {
+      gap: 4rem;
     }
   }
 }

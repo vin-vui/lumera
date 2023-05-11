@@ -35,8 +35,8 @@ export default class Website extends module {
     this.getScrollTo()
 
     window.addEventListener('contentChanged', () => {
-      this.getScrollTo()
       this.call('update', null, 'Scroll')
+      this.getScrollTo()
 
       const container = document.querySelector('.js-relaunch-modules')
       if (!container) {
@@ -69,6 +69,7 @@ export default class Website extends module {
     document.querySelectorAll('[data-scroll-to]').forEach(item => {
       item.addEventListener('click', () => {
         setTimeout(() => {
+          console.log('click');
           this.call('scrollTo', item.dataset.scrollTo, 'Scroll')
         }, 100);
       })
@@ -133,6 +134,7 @@ export default class Website extends module {
 
   afterEnter() {
     this.updateModules = true
+    this.getScrollTo()
     window.livewire.restart()
     this.resize(true)
   }

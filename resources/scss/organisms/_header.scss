@@ -27,7 +27,15 @@
       margin-top: -1rem;
 
       .icon {
-        width: 21.8rem;
+        width: 19.8rem;
+        height: 5rem;
+      }
+    }
+  }
+  @media #{$lg} {
+    &__logo {
+      .icon {
+        width: 19.8rem;
         height: 5rem;
       }
     }

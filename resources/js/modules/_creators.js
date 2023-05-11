@@ -29,33 +29,33 @@ export default class Creators extends module {
     tl.add({
       targets: this.el.querySelectorAll(`.m-cursorThumb`),
       translateY: ['100%', 0],
-      duration: 1500,
+      duration: 1000,
     })
     .add({
       targets: this.el.querySelectorAll(`.a-ratio`),
       translateY: ['-100%', 0],
-      duration: 1500,
-    }, '-=1500')
+      duration: 1000,
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`.m-creator__content`),
       opacity: [0, 1],
       duration: 10,
-    }, '-=1500')
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`.m-creator__content`),
       scaleY: [0, 1],
-      duration: 1500,
-    }, '-=1500')
+      duration: 1000,
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`.word`),
       translateY: ['100%', 0],
-      duration: 1500,
+      duration: 1000,
     }, '-=800')
     .add({
       targets: this.el.querySelectorAll(`.m-tags__item`),
       opacity: [0, 1],
       delay: anime.stagger(250),
-      duration: 1500,
+      duration: 1000,
     }, '-=800')
   }
 
@@ -88,13 +88,13 @@ export default class Creators extends module {
     tl.add({
       targets: this.el.querySelectorAll(`li:nth-of-type(1) .word, li:nth-of-type(2) .word, li:nth-of-type(3) .word`),
       translateY: '-100%',
-      duration: 1500,
+      duration: 1000,
     })
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(1) .m-tags__item, li:nth-of-type(2) .m-tags__item, li:nth-of-type(3) .m-tags__item`),
       opacity: 0,
-      duration: 1500,
-    }, '-=1500')
+      duration: 1000,
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(1) .m-creator__content, li:nth-of-type(2) .m-creator__content, li:nth-of-type(3) .m-creator__content`),
       opacity: 0,
@@ -108,22 +108,22 @@ export default class Creators extends module {
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(4) .m-cursorThumb, li:nth-of-type(5) .m-cursorThumb, li:nth-of-type(6) .m-cursorThumb`),
       translateY: ['100%', 0],
-      duration: 1500,
-    }, '-=1500')
+      duration: 1000,
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(4) .a-ratio, li:nth-of-type(5) .a-ratio, li:nth-of-type(6) .a-ratio`),
       translateY: ['-100%', 0],
-      duration: 1500,
-    }, '-=1500')
+      duration: 1000,
+    }, '-=1000')
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(4) .word, li:nth-of-type(5) .word, li:nth-of-type(6) .word`),
       translateY: ['100%', 0],
-      duration: 1500,
+      duration: 1000,
     }, '-=800')
     .add({
       targets: this.el.querySelectorAll(`li:nth-of-type(4) .m-tags__item, li:nth-of-type(5) .m-tags__item, li:nth-of-type(6) .m-tags__item`),
       opacity: [0, 1],
-      duration: 1500,
+      duration: 1000,
     }, '-=800')
   }
 }
