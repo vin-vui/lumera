@@ -1,6 +1,6 @@
 <footer class="o-footer" data-scroll>
     <div class="g-row">
-        <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 no-width">
+        <div class="sm-column-12 md-column-7 mlg-column-6 mlg-offset-1 no-width">
             <div data-module-split="tf1">
                 <div data-scroll data-scroll-call="enter, Split, tf1">
                     <p class="a-h2 mgb-3 js-split">Créons des campagnes marquantes <strong>ensemble</strong></p>
@@ -12,12 +12,12 @@
                 </div>
             </div>
         </div>
-        <div class="sm-column-12 md-column-5 lg-column-4 o-footer__contact">
+        <div class="sm-column-12 md-column-5 mlg-column-4 o-footer__contact">
             @include('molecules.contact')
         </div>
     </div>
     <div class="g-row lg-align-center-start">
-        <div class="sm-column-12 lg-column-10">
+        <div class="sm-column-12 mlg-column-10">
             <div class="o-footer__bottom">
                 <div class="o-footer__logo dp-none lg-dp-block"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
                 <nav class="o-menu__nav">
@@ -49,12 +49,12 @@
         </div>
     </div>
     <div class="g-row align-start-center o-footer__down">
-        <div class="sm-column-12 lg-column-3 lg-order-1">
+        <div class="sm-column-12 md-column-4 mlg-column-3 lg-order-1">
             <div class="text-right">
                 <button type="button" class="a-button -tertiary" data-scroll-to="#top">Revenir en haut de page</button>
             </div>
         </div>
-        <div class="sm-column-12 lg-column-7 lg-offset-1">
+        <div class="sm-column-12 md-column-8 mlg-column-7 mlg-offset-1">
             <div class="o-footer__logo lg-dp-none"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-logo-full" /></svg></div>
             <div class="o-footer__mentions text-cgraydark">
                 <p>© LMR - Lumera {{ now()->year }}</p>

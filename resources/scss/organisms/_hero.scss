@@ -180,6 +180,18 @@
     }
   }
 
+  @media only screen and (min-width: 1025px)  and (max-width: 1280px) {
+    &__slider {
+      flex: 0 0 40%;
+      width: 40%;
+      max-width: 40%;
+    }
+
+    &__arrows {
+      padding-left: 2rem;
+    }
+  }
+
   @media #{$lg} {
     &__slider {
       right: 5rem;

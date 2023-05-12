@@ -4,7 +4,7 @@
 <main class="t-cases">
     <section class="g-section -small">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th2">
+            <div class="sm-column-12 md-column-11 mlg-column-9 mgb-2" data-module-split="th2">
                 <div data-scroll data-scroll-call="enter, Split, th2">
                     <h1 class="a-h1 js-split">Des campagnes d’influence qui visent juste</h1>
                 </div>
@@ -18,14 +18,14 @@
     </section>
     <section class="g-section t-cases__page">
         <div class="g-row">
-            <ul class="no-bullet sm-column-12 lg-column-9 no-width t-cases__list">
+            <ul class="no-bullet sm-column-12 md-column-11 mlg-column-9 no-width t-cases__list">
                 @foreach ($cases as $case)
                 <li data-scroll>@include('molecules.case', ['complete' => true])</li>
                 @endforeach
             </ul>
         </div>
     </section>
-    <section class="g-section">
+    <section class="g-section owh">
         <div class="g-row">
             <div class="sm-column-12 lg-column-5" data-module-split="tc2">
                 <div data-scroll data-scroll-call="enter, Split, tc2">

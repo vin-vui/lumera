@@ -4,7 +4,7 @@
 <main class="t-creators">
     <section class="g-section -small">
         <div class="g-row">
-            <div class="sm-column-12 lg-column-9 mgb-2" data-module-split="th3">
+            <div class="sm-column-12 md-column-11 mlg-column-9 mgb-2" data-module-split="th3">
                 <div data-scroll data-scroll-call="enter, Split, th3">
                     <h1 class="a-h1 js-split">Lumière sur <br>nos créateurs</h1>
                 </div>
@@ -18,7 +18,7 @@
     </section>
     <section class="g-section t-creators__page">
         <div class="g-row t-creators__filters">
-            <div class="sm-column-5 lg-column-5" data-module-filters>
+            <div class="sm-column-5 md-column-6 mlg-column-5" data-module-filters>
                 <div class="m-filters">
                     <button type="button" data-filters="button" class="a-buttonFilter"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-filters" /></svg><span>Filtrer</span></button>
                     <div class="m-filters__panel" data-filters="panel">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             {{-- search by nick_name, last_name, first_name --}}
-            <div class="sm-column-7 lg-column-3 lg-offset-1" data-module-filters>
+            <div class="sm-column-7 md-column-4 mlg-column-3 lg-offset-1" data-module-filters>
                 <div class="text-right a-inputSearch__wrap">
                     <input wire:model="search" type="search" placeholder="Rechercher un créateur..." class="a-input a-inputSearch">
                 </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="js-relaunch-modules" id="list">
             <div class="g-row">
-                <ul class="no-bullet sm-column-12 md-column-12 lg-column-9 no-width t-creators__list" data-module-cursor>
+                <ul class="no-bullet sm-column-12 md-column-11 mlg-column-9 no-width t-creators__list" data-module-cursor>
                     @foreach ($creators as $creator)
                     <li class="m-slider__slide">
                         @include('molecules.creator', ['class' => ' -no-anime'])
