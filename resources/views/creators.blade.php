@@ -69,48 +69,50 @@
             {!! $pagination !!}
         </div>
     </section>
-    {{-- <section class="g-section m-slider__ow" wire:ignore>
-        <div class="g-row">
-            <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">
-                <div data-scroll data-scroll-call="enter, Split, tc3">
-                    <h2 class="a-h2 js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
-                </div>
-            </div>
-            <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc3" data-delay="250" data-duration="600">
-                <div data-scroll data-scroll-call="enterText, Split, cc3">
-                    <p class="js-split">Lumera consolide les relations entre des marques ambitieuses et des créateurs de contenu passionnés pour créer ensemble des campagnes de communication performantes qui s’adressent à des cibles en constante évolution.</p>
-                </div>
-            </div>
-        </div>
-        <div class="g-row">
-            <div class="sm-column-12 smo-nest">
-                <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-draggable="true" data-size="5">
-                    <div class="m-slider__viewport" data-slider="viewport">
-                        <ul class="no-bullet m-slider__container">
-                            @foreach ($cases as $case)
-                                <li class="m-slider__slide">@include('molecules.case')</li>
-                            @endforeach
-                        </ul>
+    @if ($cases)
+        <section class="g-section m-slider__ow" wire:ignore>
+            <div class="g-row">
+                <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">
+                    <div data-scroll data-scroll-call="enter, Split, tc3">
+                        <h2 class="a-h2 js-split">Découvrez toutes <strong>nos campagnes</strong></h2>
                     </div>
-
-                    <div class="m-slider__footer">
-                        <div class="m-slider__arrows">
-                            <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use xlink:href="#icon-arrow-left" /></svg>
-                            </button>
-                            <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use xlink:href="#icon-arrow-right" /></svg>
-                            </button>
+                </div>
+                <div class="sm-column-12 lg-column-5 lg-offset-1" data-module-split="cc3" data-delay="250" data-duration="600">
+                    <div data-scroll data-scroll-call="enterText, Split, cc3">
+                        <p class="js-split">Lumera consolide les relations entre des marques ambitieuses et des créateurs de contenu passionnés pour créer ensemble des campagnes de communication performantes qui s’adressent à des cibles en constante évolution.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="g-row">
+                <div class="sm-column-12 smo-nest">
+                    <div class="m-slider -anime -bg" data-scroll data-module-slider data-controls="true" data-draggable="true" data-size="5">
+                        <div class="m-slider__viewport" data-slider="viewport">
+                            <ul class="no-bullet m-slider__container">
+                                @foreach ($cases as $case)
+                                    <li class="m-slider__slide">@include('molecules.case')</li>
+                                @endforeach
+                            </ul>
                         </div>
 
-                        <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir tous</span></a>
+                        <div class="m-slider__footer">
+                            <div class="m-slider__arrows">
+                                <button type="button" class="m-slider__button" data-slider="prevBtn" title="Précédent">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use xlink:href="#icon-arrow-left" /></svg>
+                                </button>
+                                <button type="button" class="m-slider__button" data-slider="nextBtn" title="Suivant">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use xlink:href="#icon-arrow-right" /></svg>
+                                </button>
+                            </div>
+
+                            <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir tous</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section> --}}
+        </section>
+    @endif
     <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt2">

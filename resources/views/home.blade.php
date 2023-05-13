@@ -134,37 +134,39 @@
             </div>
         </div>
     </section>
-    {{-- <section class="g-section t-home__case" data-scroll data-scroll-offset="30%, 0" wire:ignore>
-        <div class="g-row">
-            <div class="sm-column-12 lg-column-5">
-                <div data-module-split="te1">
-                    <div data-scroll data-scroll-call="enter, Split, te1">
-                        <h2 class="a-h2 mgb-2 js-split">
-                            Le perfect <strong>match</strong> entre votre projet et son audience
-                        </h2>
+    @if ($cases->count() > 1)
+        <section class="g-section t-home__case" data-scroll data-scroll-offset="30%, 0" wire:ignore>
+            <div class="g-row">
+                <div class="sm-column-12 lg-column-5">
+                    <div data-module-split="te1">
+                        <div data-scroll data-scroll-call="enter, Split, te1">
+                            <h2 class="a-h2 mgb-2 js-split">
+                                Le perfect <strong>match</strong> entre votre projet et son audience
+                            </h2>
+                        </div>
+                    </div>
+                    <div data-module-split="ce1" data-delay="250" data-duration="800">
+                        <div data-scroll data-scroll-call="enterText, Split, ce1">
+                            <p class="js-split">De la compréhension des objectifs de l’entreprise à la fine connaissance de nos créateurs de contenus, Lumera sait très bien comment associer au mieux ses talents et ses clients. Pour chaque projet, nos équipes veillent à ce que le message de la marque, la personnalité des créateurs et les attentes de leurs communautés correspondent parfaitement pour une campagne performante.</p>
+                        </div>
+                    </div>
+                    <div class="t-home__case--cta mgt-4">
+                        <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a>
+                        {{-- DISPLAY REAL COUNT --}}
+                        {{-- <p>Plus de {{ $count }} autres clients et projets</p> --}}
                     </div>
                 </div>
-                <div data-module-split="ce1" data-delay="250" data-duration="800">
-                    <div data-scroll data-scroll-call="enterText, Split, ce1">
-                        <p class="js-split">De la compréhension des objectifs de l’entreprise à la fine connaissance de nos créateurs de contenus, Lumera sait très bien comment associer au mieux ses talents et ses clients. Pour chaque projet, nos équipes veillent à ce que le message de la marque, la personnalité des créateurs et les attentes de leurs communautés correspondent parfaitement pour une campagne performante.</p>
-                    </div>
+                <div class="sm-column-12 lg-column-6 lg-offset-1 smo-relative">
+                    <ul class="no-bullet t-home__case--list">
+                        {{-- GET 4 CASES RANDOM --}}
+                        @foreach ($cases as $case)
+                        <li>@include('molecules.case')</li>
+                        @endforeach
+                    </ul>
                 </div>
-                <div class="t-home__case--cta mgt-4">
-                    <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a> --}}
-                    {{-- DISPLAY REAL COUNT --}}
-                    {{-- <p>Plus de {{ $count }} autres clients et projets</p> --}}
-                {{-- </div>
             </div>
-            <div class="sm-column-12 lg-column-6 lg-offset-1 smo-relative">
-                <ul class="no-bullet t-home__case--list"> --}}
-                    {{-- GET 4 CASES RANDOM --}}
-                    {{-- @foreach ($cases as $case)
-                    <li>@include('molecules.case')</li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    </section> --}}
+        </section>
+    @endif
     <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt1">
