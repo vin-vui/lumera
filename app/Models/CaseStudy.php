@@ -23,6 +23,8 @@ class CaseStudy extends Model
         'description',
         'bloc_wysiwyg',
         'display',
+        'video_1',
+        'video_2',
     ];
 
     public function tags()
