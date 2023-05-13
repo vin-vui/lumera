@@ -69,8 +69,14 @@ export default class Website extends module {
     document.querySelectorAll('[data-scroll-to]').forEach(item => {
       item.addEventListener('click', () => {
         setTimeout(() => {
-          console.log('click');
-          this.call('scrollTo', item.dataset.scrollTo, 'Scroll')
+          if (window.innerWidth < 1025) {
+            window.scrollTo({
+              top: document.querySelector(item.dataset.scrollTo).offsetTop,
+              behavior: "smooth",
+            });
+          } else {
+            this.call('scrollTo', item.dataset.scrollTo, 'Scroll')
+          }
         }, 100);
       })
     })

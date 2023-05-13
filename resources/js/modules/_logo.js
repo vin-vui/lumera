@@ -36,37 +36,41 @@ export default class Cursor extends module {
   }
 
   mouseEnter() {
-    const tl = anime.timeline({
-      easing: 'easeOutBack',
-    })
+    if (window.innerWidth >= 1025) {
+      const tl = anime.timeline({
+        easing: 'easeOutBack',
+      })
 
-    tl.add({
-      targets: this.el.querySelector(`.a-logo`),
-      scale: [1, 2],
-      duration: 800
-    })
-    .add({
-      targets: this.el.querySelector(`.a-logo .icon`),
-      scale: [1, .8],
-      duration: 800,
-    }, '-=800')
+      tl.add({
+        targets: this.el.querySelector(`.a-logo`),
+        scale: [1, 2],
+        duration: 800
+      })
+      .add({
+        targets: this.el.querySelector(`.a-logo .icon`),
+        scale: [1, .8],
+        duration: 800,
+      }, '-=800')
+    }
   }
 
   mouseLeave() {
-    const tl = anime.timeline({
-      easing: 'easeOutBack',
-    })
+    if (window.innerWidth >= 1025) {
+      const tl = anime.timeline({
+        easing: 'easeOutBack',
+      })
 
-    tl.add({
-      targets: this.el.querySelector(`.a-logo`),
-      scale: [2, 1],
-      duration: 800
-    })
-    .add({
-      targets: this.el.querySelector(`.a-logo .icon`),
-      scale: [.8, 1],
-      duration: 800,
-    }, '-=800')
+      tl.add({
+        targets: this.el.querySelector(`.a-logo`),
+        scale: [2, 1],
+        duration: 800
+      })
+      .add({
+        targets: this.el.querySelector(`.a-logo .icon`),
+        scale: [.8, 1],
+        duration: 800,
+      }, '-=800')
+    }
   }
 
   enterMain() {

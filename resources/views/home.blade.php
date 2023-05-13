@@ -134,7 +134,7 @@
             </div>
         </div>
     </section>
-    <section class="g-section t-home__case" data-scroll data-scroll-offset="30%, 0" wire:ignore>
+    {{-- <section class="g-section t-home__case" data-scroll data-scroll-offset="30%, 0" wire:ignore>
         <div class="g-row">
             <div class="sm-column-12 lg-column-5">
                 <div data-module-split="te1">
@@ -150,21 +150,21 @@
                     </div>
                 </div>
                 <div class="t-home__case--cta mgt-4">
-                    <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a>
+                    <a href="{{ route('front.cases') }}" class="a-button -round -small"><span>Voir plus</span></a> --}}
                     {{-- DISPLAY REAL COUNT --}}
                     {{-- <p>Plus de {{ $count }} autres clients et projets</p> --}}
-                </div>
+                {{-- </div>
             </div>
             <div class="sm-column-12 lg-column-6 lg-offset-1 smo-relative">
-                <ul class="no-bullet t-home__case--list">
+                <ul class="no-bullet t-home__case--list"> --}}
                     {{-- GET 4 CASES RANDOM --}}
-                    @foreach ($cases as $case)
+                    {{-- @foreach ($cases as $case)
                     <li>@include('molecules.case')</li>
                     @endforeach
                 </ul>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt1">

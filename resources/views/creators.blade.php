@@ -69,7 +69,7 @@
             {!! $pagination !!}
         </div>
     </section>
-    <section class="g-section m-slider__ow" wire:ignore>
+    {{-- <section class="g-section m-slider__ow" wire:ignore>
         <div class="g-row">
             <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">
                 <div data-scroll data-scroll-call="enter, Split, tc3">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section wire:ignore>
         <div class="g-row mgb-6">
             <div class="sm-column-12 lg-column-7 lg-offset-1" data-module-split="tt2">

@@ -52,19 +52,21 @@
     // transition: transform $anim-duration * 2 cubic-bezier(.66, -.01, .14, 1.49);
   }
 
-  &:hover {
-    // transform: scale(2);
+  @media (hover: hover) and (any-pointer: fine) {
+    &:hover {
+      // transform: scale(2);
 
-    &::before {
-      transform: translate(-50%, -50%) scale(2);
-    }
+      &::before {
+        transform: translate(-50%, -50%) scale(2);
+      }
 
-    &::after {
-      animation: radial $anim-duration * 2 linear;
-    }
+      &::after {
+        animation: radial $anim-duration * 2 linear;
+      }
 
-    .icon {
-      // transform: scale(.8);
+      // .icon {
+      //   transform: scale(.8);
+      // }
     }
   }
 

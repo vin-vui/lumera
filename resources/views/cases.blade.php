@@ -18,11 +18,12 @@
     </section>
     <section class="g-section t-cases__page">
         <div class="g-row">
-            <ul class="no-bullet sm-column-12 md-column-11 mlg-column-9 no-width t-cases__list">
+            <p>Il n'y a pas de campagnes actuellement, elles seront bientôt mises en ligne</p>
+            {{-- <ul class="no-bullet sm-column-12 md-column-11 mlg-column-9 no-width t-cases__list">
                 @foreach ($cases as $case)
                 <li data-scroll>@include('molecules.case', ['complete' => true])</li>
                 @endforeach
-            </ul>
+            </ul> --}}
         </div>
     </section>
     <section class="g-section owh">

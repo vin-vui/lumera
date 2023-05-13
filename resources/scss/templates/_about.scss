@@ -2,10 +2,16 @@
   max-width: 65rem;
 
   &__content {
-    padding: 4rem;
+    padding: 2rem;
 
     p + p {
       margin-top: 2rem;
+    }
+  }
+
+  @media #{$md} {
+    &__content {
+      padding: 4rem;
     }
   }
 }

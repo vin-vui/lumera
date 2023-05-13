@@ -177,7 +177,7 @@
     </div>
 @endforeach
 
-@foreach (App\Models\CaseStudy::all() as $case)
+{{-- @foreach (App\Models\CaseStudy::all() as $case)
     <div id="case-{{ $case->id }}" role="dialog" aria-modal="true" aria-hidden="true" class="m-popin" data-module-popin>
         <div class="m-popin__container t-case" data-popin="container">
             <button class="m-popin__close" type="button" data-popin="close">
@@ -347,4 +347,4 @@
         </div>
         <div class="m-popin__overlay" tabindex="-1" data-popin="close"></div>
     </div>
-@endforeach
+@endforeach --}}
