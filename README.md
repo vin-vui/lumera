@@ -118,6 +118,16 @@
 @endforeach
 ```
 
+### Autres créateurs de l'étude de cas
+```php	
+$others = explode(',', $case->others);
+$countOthers = count($others);
+
+foreach ($others as $other) {
+    echo $other . '<br>';
+}
+```
+
 ### PARTAGE
 ```html
 {{ route('front.case', $case->id) }}
