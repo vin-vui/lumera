@@ -21,6 +21,7 @@ class CaseStudy extends Model
         'year',
         'case_title',
         'description',
+        'others',
         'bloc_wysiwyg',
         'display',
         'video_1',

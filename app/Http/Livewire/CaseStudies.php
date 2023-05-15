@@ -18,7 +18,7 @@ class CaseStudies extends Component
     use WireToast;
     use WithFileUploads;
 
-    public $case_tags, $image, $video_1, $video_2, $client, $year, $description, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators = [], $trixId;
+    public $case_tags, $image, $video_1, $video_2, $client, $year, $description, $others, $bloc_wysiwyg, $display, $case_id, $selected_tags = [], $selected_creators = [], $associated_creators = [], $trixId;
     public $confirming;
     public $isOpen = false;
     protected $listeners = ['reRenderParent'];
@@ -72,6 +72,7 @@ class CaseStudies extends Component
         $this->client = '';
         $this->year = '';
         $this->description = '';
+        $this->others = '';
         $this->bloc_wysiwyg = '';
         $this->display = false;
         $this->selected_tags = [];
@@ -90,6 +91,7 @@ class CaseStudies extends Component
             'client' => 'nullable',
             'year' => 'nullable',
             'description' => 'required',
+            'others' => 'required',
             'bloc_wysiwyg' => 'nullable',
             'display' => 'required',
         ]);
@@ -132,6 +134,7 @@ class CaseStudies extends Component
         $this->client = $case->client;
         $this->year = $case->year;
         $this->description = $case->description;
+        $this->others = $case->others;
         $this->bloc_wysiwyg = $case->bloc_wysiwyg;
         $this->display = $case->display;
         $this->selected_tags = $case->tags->pluck('id')->toArray();

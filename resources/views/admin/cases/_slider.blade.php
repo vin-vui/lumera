@@ -100,7 +100,7 @@
                             <div class="mb-8">
                                 <x-jet-label for="selected_creators" value="Créateurs" />
                                 <div class="flex gap-4">
-                                    <div class="basis-1/2">
+                                    <div class="basis-5/12">
                                         <x-jet-input class="block mt-1 w-full placeholder:italic" type="search" wire:model="search" placeholder="Rechercher un créateur..." />
                                         <div class="bg-white border border-t-0 border-gray-300 h-52 overflow-y-auto">
                                             <ul class="">
@@ -118,7 +118,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="basis-1/2">
+                                    <div class="">
                                         <x-jet-label class="mt-8" value="Associés" />
                                         <div class="flex flex-col gap-2 mt-2">
                                             @foreach ($this->associated_creators as $associated_creator)
@@ -127,6 +127,11 @@
                                             </div>
                                             @endforeach
                                         </div>
+                                    </div>
+                                    <div class="basis-5/12">
+                                        <x-jet-label class="mt-8" for="others" value="Autres créateurs" />
+                                        <textarea rows="5" id="others" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm" type="text" name="others" wire:model="others"></textarea>
+                                        @error('others') <span class="text-red-500">{{ $message }}</span>@enderror
                                     </div>
                                 </div>
                             </div>
