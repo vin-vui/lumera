@@ -91,7 +91,7 @@ class CaseStudies extends Component
             'client' => 'nullable',
             'year' => 'nullable',
             'description' => 'required',
-            'others' => 'required',
+            'others' => 'nullable',
             'bloc_wysiwyg' => 'nullable',
             'display' => 'required',
         ]);
