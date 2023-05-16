@@ -18,6 +18,7 @@
         <meta name="theme-color" content="#F4F4F4">
 
         <!-- Scripts -->
+        <script defer data-domain="lumera.social" src="https://plausible.io/js/script.js"></script>
         <script src="{{ asset('assets/vendor/loconative-min.js') }}"></script>
         @vite(['resources/scss/guest.scss', 'resources/js/guest.js'])
     </head>

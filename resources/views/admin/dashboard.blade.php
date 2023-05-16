@@ -86,5 +86,9 @@
                 </div>
             </div>
         </div>
+        <div class="mx-auto sm:px-6 lg:px-12 mt-4">
+            <iframe plausible-embed src="https://plausible.io/share/lumera.social?auth=-TbWTpYHCXXZ0eH59paqs&embed=true&theme=light" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1600px;"></iframe>
+            <script async src="https://plausible.io/js/embed.host.js"></script>
+        </div>
     </div>
 </x-app-layout>
