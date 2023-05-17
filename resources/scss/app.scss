@@ -6,65 +6,73 @@
 [x-cloak] { display: none !important; }
 
 .trix {
-    @apply w-full;
+  @apply w-full;
 }
 
 .trix h1 {
-    font-size: 2rem !important;
-    line-height: 2rem !important;
-    @apply leading-7 font-semibold mb-4;
+  @apply leading-7 font-semibold mb-4;
+
+  font-size: 2rem !important;
+  line-height: 2rem !important;
 }
 
 .trix h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.5rem !important;
-    @apply leading-6 font-semibold mb-4;
+  @apply leading-6 font-semibold mb-4;
+
+  font-size: 1.5rem !important;
+  line-height: 1.5rem !important;
 }
 
 .trix h3 {
-    font-size: 1.25rem !important;
-    line-height: 1.25rem !important;
-    @apply leading-5 font-semibold mb-4;
+  @apply leading-5 font-semibold mb-4;
+
+  font-size: 1.25rem !important;
+  line-height: 1.25rem !important;
 }
 
 .trix a:not(.no-underline) {
-    @apply underline;
+  @apply underline;
 }
 
 .trix a:visited {
-    color: green;
+  color: green;
 }
 
 .trix ul {
-    list-style-type: disc;
-    padding-left: 1rem;
+  padding-left: 1rem;
+  list-style-type: disc;
 }
 
 .trix ol {
-    list-style-type: decimal;
-    padding-left: 1rem;
+  padding-left: 1rem;
+  list-style-type: decimal;
 }
 
 .trix pre {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-    font-family: monospace;
-    font-size: 1.5em;
-    padding: 0.5em;
-    white-space: pre;
-    background-color: #eee;
-    overflow-x: auto;
+  display: inline-block;
+  vertical-align: top;
+  overflow-x: auto;
+  width: 100%;
+  padding: .5em;
+  background-color: #EEE;
+  font-size: 1.5em;
+  font-family: monospace;
+  white-space: pre;
 }
 
 .trix blockquote {
-    border: 0 solid #ccc;
-    border-left-width: 0px;
-    border-left-width: 0.3em;
-    margin-left: 0.3em;
-    padding-left: 0.6em;
+  margin-left: .3em;
+  padding-left: .6em;
+  border: 0 solid #CCC;
+  border-left-width: 0;
+  border-left-width: .3em;
 }
 
 .trix-button-group--file-tools {
-    display: none!important;
+  display: none!important;
+}
+
+.trix ul,
+.trix p {
+  margin-bottom: 2rem;
 }

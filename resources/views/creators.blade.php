@@ -69,7 +69,7 @@
             {!! $pagination !!}
         </div>
     </section>
-    @if ($cases)
+    @if ($cases->count() > 1)
         <section class="g-section m-slider__ow" wire:ignore>
             <div class="g-row">
                 <div class="sm-column-12 lg-column-5 smo-mgb-2" data-module-split="tc3">

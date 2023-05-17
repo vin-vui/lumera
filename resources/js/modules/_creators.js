@@ -61,7 +61,6 @@ export default class Creators extends module {
 
   onAnime() {
     // const text = new SplitType('.js-split', { types: 'lines, words' })
-
     anime.set(this.el.querySelectorAll(`li:nth-of-type(1) .m-creator__content, li:nth-of-type(2) .m-creator__content, li:nth-of-type(3) .m-creator__content`), {
       opacity: 1,
     })
@@ -80,8 +79,12 @@ export default class Creators extends module {
 
     const tl = anime.timeline({
       easing: 'cubicBezier(0.80, 0.00, 0.20, 1.00)',
+      begin: () => {
+        document.querySelector('.js-randomizer').classList.add('is-active')
+      },
       complete: () => {
         this.isAnimating = false
+        document.querySelector('.js-randomizer').classList.remove('is-active')
       }
     })
 

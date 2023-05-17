@@ -179,6 +179,39 @@
 
 @if (App\Models\CaseStudy::count() > 0)
     @foreach (App\Models\CaseStudy::all() as $case)
+        @php
+            $limitDisplay = 3;
+            $allCreators = array();
+
+            if ($case->others) {
+                $othersSplit = explode(',', $case->others);
+                foreach ($othersSplit as $key => $value) {
+                    $newCreator = array(
+                        'id' => $key,
+                        'first_name' => $value,
+                        'last_name' => '',
+                        'display' => 0
+                    );
+
+                    $allCreators[] = $newCreator;
+                }
+            }
+
+            foreach ($case->creators as $key => $value) {
+                $newCreator = array(
+                    'id' => $value->id,
+                    'first_name' => $value->first_name,
+                    'last_name' => $value->last_name,
+                    'display' => $value->display
+                );
+
+                $allCreators[] = $newCreator;
+            }
+            usort($allCreators, function ($a, $b) {
+                return strcmp($a['first_name'], $b['first_name']);
+            });
+            $countOffset = count($allCreators) - $limitDisplay;
+        @endphp
         <div id="case-{{ $case->id }}" role="dialog" aria-modal="true" aria-hidden="true" class="m-popin" data-module-popin>
             <div class="m-popin__container t-case" data-popin="container">
                 <button class="m-popin__close" type="button" data-popin="close">
@@ -202,17 +235,13 @@
                                     </div>
                                     <div>
                                         <p class="a-h5 mgb-1">Créateurs associés</p>
-                                        @php
-                                            $limitDisplay = 3;
-                                            $countOffset = $case->creators->count() - $limitDisplay;
-                                        @endphp
                                         <ul class="no-bullet t-case__creators">
-                                            @foreach ($case->creators as $creator)
+                                            @foreach ($allCreators as $creator)
                                                 @if ($loop->index < $limitDisplay)
                                                 <li>
-                                                    <button data-module-popin-button data-popin="creator-{{ $creator->id }}" class="a-button -inline -xsmall"{{ $creator->display == 0 ? ' disabled' : '' }}>
-                                                        <span>{{ $creator->first_name }} {{ $creator->last_name }}</span>
-                                                        @if ($creator->display == 1)
+                                                    <button data-module-popin-button data-popin="creator-{{ $creator['id'] }}" class="a-button -inline -xsmall"{{ $creator['display'] == 0 ? ' disabled' : '' }}>
+                                                        <span>{{ $creator['first_name'] }} {{ $creator['last_name'] }}</span>
+                                                        @if ($creator['display'] == 1)
                                                         <svg class="icon" aria-hidden="true" focusable="false">
                                                             <use xlink:href="#icon-arrow-diag" />
                                                         </svg>
@@ -222,7 +251,7 @@
                                                 @endif
                                             @endforeach
                                         </ul>
-                                        @if ($case->creators->count() > $limitDisplay)
+                                        @if (count($allCreators) > $limitDisplay)
                                         <div class="m-accordion -creators" data-module-accordion>
                                             <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators1">
                                                 <span>+{{ $countOffset == 1 ? $countOffset . ' autre' : $countOffset . ' autres' }}</span>
@@ -230,12 +259,12 @@
                                             <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-creators1">
                                                 <div class="m-accordion__content">
                                                     <ul class="no-bullet t-case__creators">
-                                                        @foreach ($case->creators as $creator)
+                                                        @foreach ($allCreators as $creator)
                                                             @if ($loop->index >= $limitDisplay)
                                                             <li>
-                                                                <button data-module-popin-button data-popin="creator-{{ $creator->id }}" class="a-button -inline -xsmall"{{ $creator->display == 0 ? ' disabled' : '' }}>
-                                                                    <span>{{ $creator->first_name }} {{ $creator->last_name }}</span>
-                                                                    @if ($creator->display == 1)
+                                                                <button data-module-popin-button data-popin="creator-{{ $creator['id'] }}" class="a-button -inline -xsmall"{{ $creator['display'] == 0 ? ' disabled' : '' }}>
+                                                                    <span>{{ $creator['first_name'] }} {{ $creator['last_name'] }}</span>
+                                                                    @if ($creator['display'] == 1)
                                                                     <svg class="icon" aria-hidden="true" focusable="false">
                                                                         <use xlink:href="#icon-arrow-diag" />
                                                                     </svg>
@@ -279,17 +308,13 @@
                                     </div>
                                     <div>
                                         <p class="a-h5 mgb-1">Créateurs associés</p>
-                                        @php
-                                            $limitDisplay = 3;
-                                            $countOffset = $case->creators->count() - $limitDisplay;
-                                        @endphp
                                         <ul class="no-bullet t-case__creators">
-                                            @foreach ($case->creators as $creator)
+                                            @foreach ($allCreators as $creator)
                                                 @if ($loop->index < $limitDisplay)
                                                 <li>
-                                                    <button data-module-popin-button data-popin="creator-{{ $creator->id }}" class="a-button -inline -xsmall"{{ $creator->display == 0 ? ' disabled' : '' }}>
-                                                        <span>{{ $creator->first_name }} {{ $creator->last_name }}</span>
-                                                        @if ($creator->display == 1)
+                                                    <button data-module-popin-button data-popin="creator-{{ $creator['id'] }}" class="a-button -inline -xsmall"{{ $creator['display'] == 0 ? ' disabled' : '' }}>
+                                                        <span>{{ $creator['first_name'] }} {{ $creator['last_name'] }}</span>
+                                                        @if ($creator['display'] == 1)
                                                         <svg class="icon" aria-hidden="true" focusable="false">
                                                             <use xlink:href="#icon-arrow-diag" />
                                                         </svg>
@@ -299,7 +324,7 @@
                                                 @endif
                                             @endforeach
                                         </ul>
-                                        @if ($case->creators->count() > $limitDisplay)
+                                        @if (count($allCreators) > $limitDisplay)
                                         <div class="m-accordion -creators" data-module-accordion>
                                             <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators1">
                                                 <span>+{{ $countOffset == 1 ? $countOffset . ' autre' : $countOffset . ' autres' }}</span>
@@ -307,12 +332,12 @@
                                             <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-creators1">
                                                 <div class="m-accordion__content">
                                                     <ul class="no-bullet t-case__creators">
-                                                        @foreach ($case->creators as $creator)
+                                                        @foreach ($allCreators as $creator)
                                                             @if ($loop->index >= $limitDisplay)
                                                             <li>
-                                                                <button data-module-popin-button data-popin="creator-{{ $creator->id }}" class="a-button -inline -xsmall"{{ $creator->display == 0 ? ' disabled' : '' }}>
-                                                                    <span>{{ $creator->first_name }} {{ $creator->last_name }}</span>
-                                                                    @if ($creator->display == 1)
+                                                                <button data-module-popin-button data-popin="creator-{{ $creator['id'] }}" class="a-button -inline -xsmall"{{ $creator['display'] == 0 ? ' disabled' : '' }}>
+                                                                    <span>{{ $creator['first_name'] }} {{ $creator['last_name'] }}</span>
+                                                                    @if ($creator['display'] == 1)
                                                                     <svg class="icon" aria-hidden="true" focusable="false">
                                                                         <use xlink:href="#icon-arrow-diag" />
                                                                     </svg>

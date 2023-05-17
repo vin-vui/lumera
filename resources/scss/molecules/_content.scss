@@ -25,10 +25,21 @@
   }
 
   ul {
+    margin-bottom: 2rem;
     list-style: disc !important;
   }
 
   ol {
+    margin-bottom: 2rem;
     list-style: decimal !important;
+  }
+
+  p + ul,
+  p + ol {
+    margin-top: 1rem;
+  }
+
+  li {
+    color: clr(cgraydark);
   }
 }

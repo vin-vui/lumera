@@ -51,10 +51,12 @@
     }
 
     &__scroll {
+      left: -1rem;
+      width: calc(100% + 2rem);
     }
 
     &__content {
-      padding: 1rem 0;
+      padding: 1rem;
       background-color: clr(cwhite);
     }
   }

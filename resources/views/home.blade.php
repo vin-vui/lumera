@@ -53,7 +53,6 @@
                 <div class="a-ratio" data-ratio="9/10">
                     <img src="{{asset('assets/img/about.jpg')}}" srcset="{{asset('assets/img/about.jpg')}} 1x, {{asset('assets/img/about@2x.jpg')}} 2x" alt="">
                 </div>
-                <button type="button" data-module-popin-button data-popin="about" class="a-button -round"><span>Pourquoi Lumera ?</span></button>
             </div>
             <div class="sm-column-12 md-column-7 lg-column-6 lg-offset-1 t-home__about--content" data-module-split="ta1">
                 <div data-scroll data-scroll-offset="30%, 0" data-scroll-call="enter, Split, ta1">
@@ -79,6 +78,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="mgt-4">
+                    <button type="button" data-module-popin-button data-popin="about" class="a-button -primary"><span>Pourquoi Lumera ?</span></button>
+                </div>
             </div>
         </div>
     </section>
@@ -99,7 +101,7 @@
             <div class="sm-column-12 lg-column-1 mlg-offset-1">
                 <div class="o-creators__buttons">
                     {{-- RANDOMIZER --}}
-                    <button wire:click="randomizer" class="a-button -round -small -white">
+                    <button wire:click="randomizer" class="a-button -round -small -white js-randomizer">
                         <span>
                             <svg class="icon" aria-hidden="true" focusable="false">
                                 <use xlink:href="#icon-random" />

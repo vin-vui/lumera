@@ -123,3 +123,15 @@
     }
   }
 }
+
+@media #{$sm-only} {
+  .js-randomizer {
+    &.is-active {
+      color: clr(cwhite) !important;
+
+      &::before {
+        background-color: var(--primary-light) !important;
+      }
+    }
+  }
+}
