@@ -131,6 +131,7 @@
                                     <div class="basis-5/12">
                                         <x-jet-label class="mt-8" for="others" value="Autres créateurs" />
                                         <textarea rows="5" id="others" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm" type="text" name="others" wire:model="others"></textarea>
+                                        <x-jet-label class="mt-1" for="others" value="Séparer les noms par une virgule sans espaces ex. Damien,Pierre,Robert" />
                                         @error('others') <span class="text-red-500">{{ $message }}</span>@enderror
                                     </div>
                                 </div>
