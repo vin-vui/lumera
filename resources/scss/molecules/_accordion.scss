@@ -56,8 +56,17 @@
     }
 
     &__content {
-      padding: 1rem;
+      padding: 0 1rem 1rem;
       background-color: clr(cwhite);
     }
+  }
+
+  &.-creators.-active > .m-accordion__title  {
+    display: none;
+  }
+
+  &.-bottom.-active .m-accordion__scroll {
+    top: auto;
+    bottom: 100%;
   }
 }

@@ -183,6 +183,17 @@
             $limitDisplay = 3;
             $allCreators = array();
 
+            foreach ($case->creators as $key => $value) {
+                $newCreator = array(
+                    'id' => $value->id,
+                    'first_name' => $value->first_name,
+                    'last_name' => $value->last_name,
+                    'display' => $value->display
+                );
+
+                $allCreators[] = $newCreator;
+            }
+
             if ($case->others) {
                 $othersSplit = explode(',', $case->others);
                 foreach ($othersSplit as $key => $value) {
@@ -197,19 +208,6 @@
                 }
             }
 
-            foreach ($case->creators as $key => $value) {
-                $newCreator = array(
-                    'id' => $value->id,
-                    'first_name' => $value->first_name,
-                    'last_name' => $value->last_name,
-                    'display' => $value->display
-                );
-
-                $allCreators[] = $newCreator;
-            }
-            usort($allCreators, function ($a, $b) {
-                return strcmp($a['first_name'], $b['first_name']);
-            });
             $countOffset = count($allCreators) - $limitDisplay;
         @endphp
         <div id="case-{{ $case->id }}" role="dialog" aria-modal="true" aria-hidden="true" class="m-popin" data-module-popin>
@@ -274,6 +272,9 @@
                                                             @endif
                                                         @endforeach
                                                     </ul>
+                                                    <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators1">
+                                                        <span>Voir moins</span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -325,11 +326,11 @@
                                             @endforeach
                                         </ul>
                                         @if (count($allCreators) > $limitDisplay)
-                                        <div class="m-accordion -creators" data-module-accordion>
-                                            <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators1">
+                                        <div class="m-accordion -creators -bottom" data-module-accordion>
+                                            <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators2">
                                                 <span>+{{ $countOffset == 1 ? $countOffset . ' autre' : $countOffset . ' autres' }}</span>
                                             </button>
-                                            <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-creators1">
+                                            <div class="m-accordion__scroll" data-accordion="scroll" id="accordion-creators2">
                                                 <div class="m-accordion__content">
                                                     <ul class="no-bullet t-case__creators">
                                                         @foreach ($allCreators as $creator)
@@ -347,6 +348,9 @@
                                                             @endif
                                                         @endforeach
                                                     </ul>
+                                                    <button type="button" class="m-accordion__title" data-accordion="button" aria-expanded="false" aria-controls="accordion-creators2">
+                                                        <span>Voir moins</span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
