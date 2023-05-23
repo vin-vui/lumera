@@ -109,8 +109,12 @@ $countOffset = count($allCreators) - $limitDisplay;
                         <div class="m-caseContent m-content">
                             {!! $case->bloc_wysiwyg !!}
                             <div class="m-videos">
-                                {!! $case->video_1 !!}
-                                {!! $case->video_2 !!}
+                                @if ($case->video_1)
+                                    <a href="{{ $case->video_1 }}" target="_blank" rel="noopener nofollow" class="a-button -primary">Voir la première vidéo</a>
+                                @endif
+                                @if ($case->video_2)
+                                    <a href="{{ $case->video_2 }}" target="_blank" rel="noopener nofollow" class="a-button -primary">Voir la deuxième vidéo</a>
+                                @endif
                             </div>
                         </div>
                         <div class="m-caseInfos">
