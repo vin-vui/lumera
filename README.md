@@ -1,3 +1,5 @@
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F36d1f56a-25e5-4d5a-b031-4de2794055cc%3Fdate%3D1&style=flat-square)](https://forge.laravel.com/servers/677179/sites/1965718)
+
 
 # __Blocs blade__
 
