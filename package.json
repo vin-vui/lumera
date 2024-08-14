@@ -30,6 +30,6 @@
         "embla-carousel-class-names": "^7.1.0",
         "modujs": "^1.4.2",
         "split-type": "^0.3.3",
-        "trix": "^2.1.1"
+        "trix": "^2.1.4"
     }
 }
