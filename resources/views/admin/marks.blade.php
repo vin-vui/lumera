@@ -64,7 +64,7 @@
                                 @endif
                             @endif
                         </div>
-                        <div x-data="{photoName: null, photoPreview: null}">
+                        <div id="file-upload-section" x-data="{photoName: null, photoPreview: null}">
                             <input type="file" class="hidden" wire:model="image" x-ref="photo" />
                             <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
                                 <span class="py-1">sélectionner une nouvelle image</span>

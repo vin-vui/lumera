@@ -11,3 +11,10 @@ window.Alpine = Alpine;
 Alpine.plugin(focus);
 
 Alpine.start();
+
+Livewire.hook('message.processed', (message, component) => {
+  const section = document.getElementById('file-upload-section');
+  if (section) {
+    Alpine.initTree(section);
+  }
+});

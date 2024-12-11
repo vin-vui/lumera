@@ -1,5 +1,4 @@
 <a href="/">
-    <?xml version="1.0" encoding="UTF-8"?>
     <svg class="h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 787.09 139.3">
         <defs>
             <style>

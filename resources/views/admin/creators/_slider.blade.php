@@ -24,14 +24,14 @@
                             <div class="">
                                 <x-jet-label value="Visuel" />
                                 @if($this->image != null)
-                                @if (!is_string($this->image))
-                                <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
-                                @else
-                                <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
-                                @endif
+                                    @if (!is_string($this->image))
+                                        <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @else
+                                        <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @endif
                                 @endif
                             </div>
-                            <div x-data="{photoName: null, photoPreview: null}">
+                            <div id="file-upload-section" x-data="{photoName: null, photoPreview: null}">
                                 <input type="file" class="hidden" wire:model="image" x-ref="photo" />
                                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
                                     <span class="py-1">sélectionner une nouvelle image</span>
@@ -54,7 +54,9 @@
                                         </svg>
                                     </div>
                                 </x-jet-secondary-button>
-                                @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
+                                @error('image')
+                                    <span class="text-red-500">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="mb-4 mt-8">
@@ -248,15 +250,15 @@
                         <div class="flex items-center justify-between px-4 py-4 sm:py-4 sm:px-6 bg-gray-50 sticky bottom-0 z-20">
                             <div class="">
                                 @if($this->creator_id != '')
-                                @if($confirming === $this->creator_id)
-                                <button wire:click="delete({{ $this->creator_id }})" class="px-4 py-2 text-sm font-medium border border-red-600 bg-red-600 text-white">
-                                    Etes-vous sûr ?
-                                </button>
-                                @else
-                                <button wire:click="confirmDelete({{ $this->creator_id }})" class="px-4 py-2 text-sm font-medium border bg-white border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all">
-                                    Supprimer
-                                </button>
-                                @endif
+                                    @if($confirming === $this->creator_id)
+                                        <button wire:click="delete({{ $this->creator_id }})" class="px-4 py-2 text-sm font-medium border border-red-600 bg-red-600 text-white">
+                                            Etes-vous sûr ?
+                                        </button>
+                                    @else
+                                        <button wire:click="confirmDelete({{ $this->creator_id }})" class="px-4 py-2 text-sm font-medium border bg-white border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all">
+                                            Supprimer
+                                        </button>
+                                    @endif
                                 @endif
                             </div>
                             <div class="flex gap-2">
