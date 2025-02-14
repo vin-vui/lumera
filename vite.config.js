@@ -4,7 +4,8 @@ import sassGlobImports from 'vite-plugin-sass-glob-import';
 
 export default defineConfig({
     server: {
-        origin: process.env.APP_URL
+      cors: true,
+      origin: process.env.APP_URL
     },
     plugins: [
         laravel({
@@ -25,7 +26,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
         },
-        styl: {
+        style: {
         },
       },
     },

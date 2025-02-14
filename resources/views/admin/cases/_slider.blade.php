@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-8" x-data="{ tagManager: false }">
+                            <div id="tagManager" class="mb-8" x-data="{ tagManager: false }">
                                 <x-jet-label value="Plateforme(s) Activée(s)" />
                                 <div class="flex flex-wrap gap-2 mt-1">
                                     @foreach($this->case_tags as $tag)

@@ -201,7 +201,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-8" x-data="{ specialtyManager: false }">
+                            <div id="specialtyManager" class="mb-8" x-data="{ specialtyManager: false }">
                                 <x-jet-label value="Domaines" />
                                 <div class="flex flex-wrap gap-2 mt-1">
                                     @foreach($this->creator_specialties as $specialty)
@@ -230,7 +230,13 @@
                             </div>
                             <div class="space-x-2 flex items-center">
                                 <x-jet-label for="display" value="Afficher ?" />
-                                <button id="display" type="button" wire:click="changeDisplay" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 bg-gray-200" x-data="{ on: {{ $display ? 'true' : 'false' }} }" role="switch" aria-checked="{{ $display ? 'true' : 'false' }}" :aria-checked="on.toString()" @click="on = !on" x-state:on="Enabled" x-state:off="Not Enabled" :class="{ 'bg-green-600': on, 'bg-gray-200': !(on) }">
+                                <button id="display" type="button" wire:click="changeDisplay"
+                                    class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 bg-gray-200"
+                                    x-data="{ on: {{ $display ? 'true' : 'false' }} }" role="switch"
+                                    aria-checked="{{ $display ? 'true' : 'false' }}"
+                                    :aria-checked="on.toString()" @click="on = !on"
+                                    x-state:on="Enabled" x-state:off="Not Enabled"
+                                    :class="{ 'bg-green-600': on, 'bg-gray-200': !(on) }">
                                     <span class="pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0" x-state:on="Enabled" x-state:off="Not Enabled" :class="{ 'translate-x-5': on, 'translate-x-0': !(on) }">
                                         <span class="absolute inset-0 flex h-full w-full items-center justify-center transition-opacity opacity-100 ease-in duration-200" aria-hidden="true" x-state:on="Enabled" x-state:off="Not Enabled" :class="{ 'opacity-0 ease-out duration-100': on, 'opacity-100 ease-in duration-200': !(on) }">
                                             <svg class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 12 12">

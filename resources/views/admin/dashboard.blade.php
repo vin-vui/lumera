@@ -88,8 +88,11 @@
         </div>
         <div class="mx-auto sm:px-4 lg:px-10 mt-4">
             <iframe plausible-embed src="https://plausible.io/share/lumera.social?auth=rCtELjHDMtVaNvA-CGYJs&embed=true&theme=light&background=transparent" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1600px;"></iframe>
-            <div style="font-size: 14px; padding-bottom: 14px;">Stats powered by <a target="_blank" style="color: #4F46E5; text-decoration: underline;" href="https://plausible.io">Plausible Analytics</a></div>
             <script async src="https://plausible.io/js/embed.host.js"></script>
+        </div>
+        <div class="inset-x-0 text-center text-white flex justify-center gap-2 text-xs p-2">
+            <p>PHP {{ phpversion() }}</p>
+            <p>Laravel V{{ Illuminate\Foundation\Application::VERSION }}</p>
         </div>
     </div>
 </x-app-layout>
