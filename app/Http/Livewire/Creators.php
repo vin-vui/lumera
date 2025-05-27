@@ -182,7 +182,8 @@ class Creators extends Component
         }
 
         if ($save_image) {
-            $dataValid['image'] = Storage::disk('uploads')->put('/', $this->image);
+            // $dataValid['image'] = Storage::disk('uploads')->put('/', $this->image);
+            $dataValid['image'] = $this->image->store('/', 'uploads');
         }
 
         if ($this->creator_id == '') {
