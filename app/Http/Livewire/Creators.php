@@ -183,7 +183,7 @@ class Creators extends Component
         }
 
         if ($save_image) {
-            $imageName = Carbon::now()->timestamp . '-' . $this->image->getClientOriginalName() . '.' . $this->image->getClientOriginalExtension();
+            $imageName = Carbon::now()->timestamp . '.' . $this->image->getClientOriginalExtension();
             $dataValid['image'] = Storage::disk('uploads')->put($imageName, $this->image);
             Log::debug('image:' . $imageName);
         }
