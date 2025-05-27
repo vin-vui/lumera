@@ -193,7 +193,15 @@ class Creators extends Component
                 mkdir($livewireTmpTmpPath, 0775, true);
                 Log::debug('Creating livewire-tmp/livewire-tmp directory');
             }
-            $imageName = Carbon::now()->timestamp . '.' . $this->image->getClientOriginalExtension();
+            $originalName = $this->image->getClientOriginalName();
+            $extension = pathinfo($originalName, PATHINFO_EXTENSION);
+
+            if (empty($extension)) {
+                // Fallback: déterminer l'extension à partir du MIME type
+                $extension = $this->getMimeExtension($this->image->getMimeType());
+            }
+
+            $imageName = Carbon::now()->timestamp . '.' . $extension;
             $dataValid['image'] = Storage::disk('uploads')->put($imageName, $this->image);
             Log::debug('image:' . $imageName);
         }
