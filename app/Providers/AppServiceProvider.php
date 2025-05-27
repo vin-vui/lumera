@@ -23,9 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $tmpDir = storage_path('app/livewire-tmp');
-        if (!is_dir($tmpDir)) {
-            @mkdir($tmpDir, 0777, true);
+        if (!file_exists(storage_path('app/livewire-tmp'))) {
+            mkdir(storage_path('app/livewire-tmp'), 0775, true);
+        }
+
+        if (!file_exists(storage_path('app/livewire-tmp/livewire-tmp'))) {
+            mkdir(storage_path('app/livewire-tmp/livewire-tmp'), 0775, true);
         }
 
         if ($this->app->environment('local')) {
