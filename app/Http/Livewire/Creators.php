@@ -183,42 +183,7 @@ class Creators extends Component
         }
 
         if ($save_image) {
-            $livewireTmpPath = storage_path('app/livewire-tmp');
-            if (!file_exists($livewireTmpPath)) {
-                mkdir($livewireTmpPath, 0775, true);
-                Log::debug('Creating livewire-tmp directory');
-            }
-            $livewireTmpTmpPath = storage_path('app/livewire-tmp/livewire-tmp');
-            if (!file_exists($livewireTmpTmpPath)) {
-                mkdir($livewireTmpTmpPath, 0775, true);
-                Log::debug('Creating livewire-tmp/livewire-tmp directory');
-            }
-
-            $mimeType = $this->image->getMimeType();
-            $extension = '';
-
-            switch ($mimeType) {
-                case 'image/jpeg':
-                    $extension = 'jpg';
-                    break;
-                case 'image/png':
-                    $extension = 'png';
-                    break;
-                case 'image/gif':
-                    $extension = 'gif';
-                    break;
-                case 'image/webp':
-                    $extension = 'webp';
-                    break;
-                // Ajoutez d'autres cas selon vos besoins
-                default:
-                    $extension = 'jpg'; // Fallback par défaut
-            }
-
-            $imageName = Carbon::now()->timestamp . '.' . $extension;
-
-            $dataValid['image'] = Storage::disk('uploads')->put($imageName, $this->image);
-            Log::debug('image:' . $imageName);
+            $dataValid['image'] = Storage::disk('uploads')->put('/', $this->image);
         }
 
         if ($this->creator_id == '') {

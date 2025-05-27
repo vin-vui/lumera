@@ -56,9 +56,13 @@
                     <div class="">
                         <div class="">
                             <x-jet-label value="Visuel" />
-                            @if($this->image != null)
-                                <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
-                            @endif
+                                @if($this->image != null)
+                                    @if (!is_string($this->image))
+                                        <img src="{{ $this->image->temporaryUrl() }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @else
+                                        <img src="{{ Storage::disk('uploads')->url($this->image) }}" alt="" class="mt-2 h-64 object-cover w-full">
+                                    @endif
+                                @endif
                         </div>
                         <div id="file-upload-section" x-data="{photoName: null, photoPreview: null}">
                             <input type="file" class="hidden" wire:model="image" x-ref="photo" />
