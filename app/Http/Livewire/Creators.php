@@ -183,9 +183,9 @@ class Creators extends Component
         }
 
         if ($save_image) {
-            // $dataValid['image'] = Storage::disk('uploads')->put('/', $this->image);
-            $dataValid['image'] = $this->image->store('/', 'uploads');
-            Log::debug('image:' . $dataValid['image']);
+            $imageName = Carbon::now()->timestamp . '-' . $this->image->getClientOriginalName() . '.' . $this->image->getClientOriginalExtension();
+            $dataValid['image'] = Storage::disk('uploads')->put($imageName, $this->image);
+            Log::debug('image:' . $imageName);
         }
 
         if ($this->creator_id == '') {
